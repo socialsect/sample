@@ -31,7 +31,7 @@ const ConstitutionalAIGovernance = () => {
     "provider": {
       "@type": "Organization",
       "name": "FERZ",
-      "url": "https://ferzconsulting.com",
+    
       "logo": "https://ferzconsulting.com/wp-content/uploads/2025/04/las-banner-logo.png"
     },
     "url": "https://ferzconsulting.com/services-overview/design-of-ai-governance-models/",
