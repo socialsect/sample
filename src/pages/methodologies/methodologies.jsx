@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import './Methodologies.css';
+import './methodologies.css';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer/Footer';
 const FerzMethodologies = () => {
