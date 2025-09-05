@@ -111,8 +111,8 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
         ));
     }
 
-    float alpha = 1.0 - line_strength;
-    fragColor = vec4(uColor.rgb * alpha, alpha);
+    float colorVal = 1.0 - line_strength;
+    fragColor = vec4(uColor * colorVal, colorVal);
 }
 
 void main() {
@@ -120,11 +120,11 @@ void main() {
 }
 `;
 
-  const Threads = ({
+const Threads = ({
   color = [1, 1, 1],
   amplitude = 1,
   distance = 0,
-  enableMouseInteraction = true, // Default to true for easier debugging
+  enableMouseInteraction = false,
   ...rest
 }) => {
   const containerRef = useRef(null);
@@ -134,26 +134,12 @@ void main() {
     if (!containerRef.current) return;
     const container = containerRef.current;
 
-    const renderer = new Renderer({ 
-      alpha: true,
-      antialias: true,
-      premultipliedAlpha: false 
-    });
+    const renderer = new Renderer({ alpha: true });
     const gl = renderer.gl;
     gl.clearColor(0, 0, 0, 0);
     gl.enable(gl.BLEND);
     gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
-    
-    // Ensure canvas takes full space and can receive events
-    const canvas = gl.canvas;
-    canvas.style.position = 'absolute';
-    canvas.style.top = '0';
-    canvas.style.left = '0';
-    canvas.style.width = '100%';
-    canvas.style.height = '100%';
-    canvas.style.display = 'block';
-    
-    container.appendChild(canvas);
+    container.appendChild(gl.canvas);
 
     const geometry = new Triangle(gl);
     const program = new Program(gl, {
@@ -199,16 +185,22 @@ void main() {
     function handleMouseLeave() {
       targetMouse = [0.5, 0.5];
     }
-    // Always add event listeners, but only process events if enableMouseInteraction is true
-    container.addEventListener("mousemove", handleMouseMove);
-    container.addEventListener("mouseleave", handleMouseLeave);
+    if (enableMouseInteraction) {
+      container.addEventListener("mousemove", handleMouseMove);
+      container.addEventListener("mouseleave", handleMouseLeave);
+    }
 
     function update(t) {
-      const smoothing = 0.05;
-      currentMouse[0] += smoothing * (targetMouse[0] - currentMouse[0]);
-      currentMouse[1] += smoothing * (targetMouse[1] - currentMouse[1]);
-      program.uniforms.uMouse.value[0] = currentMouse[0];
-      program.uniforms.uMouse.value[1] = currentMouse[1];
+      if (enableMouseInteraction) {
+        const smoothing = 0.05;
+        currentMouse[0] += smoothing * (targetMouse[0] - currentMouse[0]);
+        currentMouse[1] += smoothing * (targetMouse[1] - currentMouse[1]);
+        program.uniforms.uMouse.value[0] = currentMouse[0];
+        program.uniforms.uMouse.value[1] = currentMouse[1];
+      } else {
+        program.uniforms.uMouse.value[0] = 0.5;
+        program.uniforms.uMouse.value[1] = 0.5;
+      }
       program.uniforms.iTime.value = t * 0.001;
 
       renderer.render({ scene: mesh });

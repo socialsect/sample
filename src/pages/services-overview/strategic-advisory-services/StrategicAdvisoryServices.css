@@ -1,0 +1,285 @@
+/* Strategic Advisory Services Page Styles */
+.strategic-page {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: #ffffff;
+  background-color: #000000;
+  min-height: 100vh;
+}
+
+.strategic-product-card {  
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(40, 40, 40, 0.9) 100%);  
+  border: 1px solid rgba(255, 255, 255, 0.1);  
+  border-radius: 20px;  
+  padding: 2rem;  
+  backdrop-filter: blur(20px);  
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);  
+  position: relative;  
+  overflow: visible;  
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);  
+}  
+
+.strategic-product-card::before {  
+  content: '';  
+  position: absolute;  
+  top: 0;  
+  left: 0;  
+  right: 0;  
+  bottom: 0;  
+  background: linear-gradient(135deg, rgba(250, 33, 49, 0.05) 0%, transparent 50%);  
+  border-radius: 20px;  
+  opacity: 0;  
+  transition: inherit;  
+}  
+
+.strategic-product-card::after {  
+  content: '';  
+  position: absolute;  
+  top: -1px;  
+  left: -1px;  
+  right: -1px;  
+  bottom: -1px;  
+  background: linear-gradient(135deg, rgba(250, 33, 49, 0.3), rgba(74, 158, 255, 0.2), transparent);  
+  border-radius: 21px;  
+  opacity: 0;  
+  z-index: -1;  
+  transition: inherit;  
+}  
+
+.strategic-product-card:hover::before {  
+  opacity: 1;  
+}  
+
+.strategic-product-card:hover::after {  
+  opacity: 1;  
+}  
+
+.strategic-product-card:hover {  
+  transform: translateY(-10px) scale(1.02);  
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6),  
+              0 0 0 1px rgba(250, 33, 49, 0.2),  
+              inset 0 1px 0 rgba(255, 255, 255, 0.2);  
+}  
+
+/* Optional group hover effect to de-emphasize siblings */  
+.strategic-product-card-group:hover .strategic-product-card:not(:hover) {  
+  filter: blur(0.3px);  
+  opacity: 0.85;  
+  transform: scale(0.99);  
+}  
+
+/* Container */
+.strategic-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Hero Section */
+.strategic-hero {
+  position: relative;
+  overflow: hidden;
+  background: #000;
+  min-height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.strategic-hero-content {
+  z-index: 2;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.strategic-hero-title {
+  font-size: 3.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  color: #ffffff;
+  font-family: 'Clash Display', sans-serif;
+}
+
+.strategic-hero-subtitle {
+  font-size: 1.25rem;
+  color: #ffffff;
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+
+.strategic-cta-btn {
+  background: #fa2132;
+  color: #fff;
+  padding: 16px 36px;
+  font-family: 'Satoshi';
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.strategic-cta-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  background: #e4182a;
+}
+
+/* Section Header */
+.strategic-section-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.strategic-section-header h2 {
+  font-size: 2.7rem;
+  font-family: 'Clash Display', sans-serif;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+.strategic-section-header p {
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Services Section */
+.strategic-services {
+  padding: 100px 0;
+}
+
+.strategic-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 40px;
+}
+
+.strategic-service-card {
+  background: #111111;
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  transition: all 0.35s ease;
+  position: relative;
+}
+
+.strategic-service-card:hover {
+  border-color: #fa2132;
+  transform: translateY(-5px);
+}
+
+.strategic-service-number {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #fa2132;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 24px;
+}
+
+.strategic-service-card h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+.strategic-service-description {
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  margin-bottom: 24px;
+}
+
+.strategic-service-details {
+  list-style: none;
+  padding: 0;
+}
+
+.strategic-service-details li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  font-size: 1rem;
+  color: #cbd5e1;
+}
+
+/* Why FERZ */
+.strategic-why-ferz {
+  padding: 100px 0;
+  background: #0b0b0b;
+}
+
+.strategic-why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+.strategic-why-card {
+  background: #161616;
+  padding: 32px;
+  border-radius: 18px;
+  border: 1px solid transparent;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.strategic-why-card:hover {
+  border-color: #fa2132;
+  transform: translateY(-4px);
+}
+
+.strategic-why-icon {
+  color: #fa2132;
+  margin-bottom: 20px;
+}
+
+.strategic-why-card h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: #fff;
+}
+
+.strategic-why-card p {
+  color: #cbd5e1;
+  font-size: 1rem;
+}
+
+/* CTA Section */
+.strategic-cta {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2b2b2b 100%);
+  text-align: center;
+}
+
+.strategic-cta h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  font-family: 'Clash Display', sans-serif;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .strategic-hero-title {
+    font-size: 2.5rem;
+  }
+  .strategic-section-header h2 {
+    font-size: 2rem;
+  }
+}

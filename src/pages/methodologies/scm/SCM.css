@@ -1,0 +1,771 @@
+/* Reset styles only for elements within scm-app */
+.scm-app * {
+  box-sizing: border-box;
+}
+
+.scm-app {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: white;
+  background: black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content wrapper to prevent footer overlap */
+.scm-main-content {
+  flex: 1 0 auto;
+  width: 100%;
+}
+
+.scm-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Navigation Breadcrumb */
+.scm-app .scm-breadcrumb {
+  background: #1a1a1a;
+  padding: 15px 0;
+  border-bottom: 1px solid #333;
+  margin-bottom: 3rem;
+}
+
+.scm-breadcrumb .breadcrumb-link {
+  color: #999;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.scm-breadcrumb .breadcrumb-link:hover {
+  color: #fa2132;
+  text-decoration: underline;
+}
+
+.scm-breadcrumb .breadcrumb-current {
+  color: #fa2132;
+  font-weight: 600;
+}
+
+.scm-breadcrumb .breadcrumb-separator {
+  color: #999;
+  margin: 0 8px;
+}
+
+/* Header */
+.scm-app .scm-header {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #333333 100%);
+  color: white;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.scm-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 80%, rgba(250, 33, 50, 0.15) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(250, 33, 50, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.scm-header-content {
+  position: relative;
+  z-index: 1;
+}
+
+.scm-methodology-title {
+  font-size: 3.2em;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.scm-methodology-tagline {
+  font-size: 1.3em;
+  margin-bottom: 25px;
+  opacity: 0.95;
+  font-weight: 500;
+  color: #ccc;
+}
+
+.scm-traditional-limitation {
+  background: rgba(250, 33, 50, 0.15);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(250, 33, 50, 0.3);
+  margin-bottom: 30px;
+  font-size: 1.1em;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.scm-traditional-limitation:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(250, 33, 50, 0.1);
+  border-color: rgba(250, 33, 50, 0.5);
+}
+
+.scm-methodology-breakthrough {
+  background: rgba(250, 33, 50, 0.1);
+  padding: 35px;
+  border-radius: 15px;
+  border: 1px solid rgba(250, 33, 50, 0.2);
+  font-size: 1.1em;
+  backdrop-filter: blur(10px);
+}
+
+.scm-breakthrough-title {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #fa2132;
+}
+
+.scm-breakthrough-content {
+  margin-bottom: 20px;
+  font-size: 1.05em;
+  line-height: 1.7;
+}
+
+.scm-breakthrough-description {
+  margin-bottom: 25px;
+  font-size: 1em;
+  line-height: 1.6;
+  opacity: 0.9;
+  font-style: italic;
+}
+
+.scm-breakthrough-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.scm-breakthrough-features div {
+  background: rgba(40, 40, 40, 0.8);
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 3px solid #fa2132;
+  transition: all 0.3s ease;
+}
+
+.scm-breakthrough-features div:hover {
+  background: rgba(60, 60, 60, 0.9);
+  transform: translateX(5px);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Sections */
+.scm-app .scm-section-title {
+  font-size: 2.5em;
+  text-align: center;
+  margin: 70px 0 25px;
+  color: white;
+  font-weight: 600;
+}
+
+.scm-section-subtitle {
+  font-size: 1.1em;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #ccc;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.scm-section {
+  padding: 40px 0;
+}
+
+.scm-section-alt {
+  background: #111;
+}
+
+/* Mathematical Foundation */
+.scm-app .scm-math-foundation {
+  background: linear-gradient(135deg, #1a1a1a, #333);
+  padding: 60px;
+  border-radius: 25px;
+  margin: 60px 0;
+  border: 3px solid #fa2132;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.scm-math-foundation:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(250, 33, 50, 0.1);
+}
+
+.scm-math-foundation::before {
+  content: 'PUBLISHED RESEARCH';
+  position: absolute;
+  top: -15px;
+  left: 40px;
+  background: #fa2132;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 0.9em;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.scm-foundation-title {
+  color: white;
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.scm-foundation-subtitle {
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 1.1em;
+}
+
+.scm-mathematical-formula {
+  background: #333;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  font-family: 'Courier New', monospace;
+  font-size: 1.1em;
+  border-left: 4px solid #fa2132;
+  text-align: center;
+  color: #fa2132;
+}
+
+.scm-principle-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.scm-principle-card {
+  padding: 25px;
+  background: rgba(40, 40, 40, 0.8);
+  border-radius: 12px;
+  border: 1px solid #333;
+  transition: all 0.3s ease;
+  height: 100%;
+  cursor: pointer;
+}
+
+.scm-principle-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(250, 33, 50, 0.2);
+  border-color: #fa2132;
+  background: rgba(60, 60, 60, 0.9);
+}
+
+.scm-principle-card h4 {
+  color: #fa2132;
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+.scm-disclaimer {
+  background: #2a1a1a;
+  border-left: 4px solid #fa2132;
+  padding: 20px;
+  margin: 30px 0;
+  border-radius: 8px;
+  font-size: 0.95em;
+  color: #ccc;
+}
+
+/* Process Flow */
+.scm-app .scm-process-flow {
+  background: #222;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(250, 33, 50, 0.1);
+  margin: 50px 0;
+  border: 2px solid #fa2132;
+}
+
+.scm-process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.scm-step-card {
+  background: rgba(30, 30, 30, 0.8);
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 30px;
+  border: 1px solid #333;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.scm-step-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(250, 33, 50, 0.15);
+  border-color: #fa2132;
+  background: rgba(40, 40, 40, 0.9);
+}
+
+.scm-step-card:hover .scm-step-number {
+  transform: scale(1.1);
+  background: #ff3b4a;
+}
+
+.scm-step-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.scm-step-number {
+  background: #fa2132;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 15px;
+  font-size: 1.1em;
+}
+
+.scm-step-title {
+  color: #fa2132;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+/* Innovation Comparison */
+.scm-innovation-comparison {
+  background: linear-gradient(135deg, #1a1a1a, #222);
+  padding: 50px;
+  border-radius: 20px;
+  margin: 50px 0;
+  border-left: 8px solid #fa2132;
+}
+
+.scm-comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.scm-traditional-approach {
+  background: #2a1a1a;
+  padding: 30px;
+  border-radius: 15px;
+  border: 2px solid #666;
+}
+
+.scm-ferz-approach {
+  background: #1a2a1a;
+  padding: 30px;
+  border-radius: 15px;
+  border: 2px solid #fa2132;
+}
+
+.scm-traditional-approach h4 {
+  color: #999;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.scm-ferz-approach h4 {
+  color: #fa2132;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.scm-traditional-approach ul,
+.scm-ferz-approach ul {
+  margin-left: 20px;
+  margin-top: 15px;
+  line-height: 1.8;
+}
+
+.scm-result-negative {
+  margin-top: 20px;
+  font-weight: 600;
+  color: #999;
+}
+
+.scm-result-positive {
+  margin-top: 20px;
+  font-weight: 600;
+  color: #fa2132;
+}
+
+/* Technical Specifications */
+.scm-tech-specs {
+  background: #222;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(250, 33, 50, 0.1);
+  margin: 50px 0;
+  border-top: 6px solid #fa2132;
+}
+
+.scm-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.scm-spec-card {
+  background: #333;
+  padding: 25px;
+  border-radius: 12px;
+  border-left: 4px solid #fa2132;
+}
+
+.scm-spec-card h5 {
+  color: white;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+.scm-spec-value {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #fa2132;
+  margin-bottom: 8px;
+}
+
+/* Applications & Use Cases */
+.scm-applications-section {
+  background: #1a1a1a;
+  padding: 50px;
+  border-radius: 20px;
+  margin: 50px 0;
+  border-left: 6px solid #fa2132;
+}
+
+.scm-use-cases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.scm-use-case-card {
+  background: #333;
+  padding: 30px;
+  border-radius: 15px;
+  border-top: 4px solid #fa2132;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.scm-use-case-card h4 {
+  color: #fa2132;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.scm-impact {
+  margin-top: 10px;
+  color: #fa2132;
+}
+
+.scm-industry-tag {
+  background: #fa2132;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.8em;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* Patent Protection */
+.scm-patent-protection {
+  background: linear-gradient(135deg, #1a1a1a, #222);
+  color: white;
+  padding: 50px;
+  border-radius: 20px;
+  margin: 50px 0;
+  text-align: center;
+  border: 2px solid #fa2132;
+}
+
+.scm-patent-protection h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #fa2132;
+}
+
+.scm-patent-protection > p {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.scm-patent-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.scm-patent-card {
+  background: rgba(250, 33, 50, 0.1);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid rgba(250, 33, 50, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.scm-patent-number {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #fa2132;
+  margin-bottom: 8px;
+}
+
+.scm-patent-date {
+  margin-top: 8px;
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+.scm-strategic-advantage {
+  margin-top: 30px;
+  font-size: 1.1em;
+  color: #fa2132;
+}
+
+/* Performance Metrics */
+.scm-metrics-section {
+  background: linear-gradient(135deg, #1a2a1a, #222);
+  padding: 50px;
+  border-radius: 20px;
+  margin: 50px 0;
+  border-left: 8px solid #fa2132;
+}
+
+.scm-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.scm-metric-card {
+  background: #333;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  border-top: 3px solid #fa2132;
+}
+
+.scm-metric-value {
+  font-size: 2.2em;
+  font-weight: bold;
+  color: #fa2132;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.scm-metric-description {
+  font-size: 0.95em;
+  color: #ccc;
+}
+
+/* Call to Action */
+.scm-cta-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #000, #1a1a1a, #333);
+  color: white;
+  text-align: center;
+  margin-top: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.scm-cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 70%, rgba(250, 33, 50, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 70% 30%, rgba(250, 33, 50, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.scm-cta-content {
+  position: relative;
+  z-index: 1;
+}
+
+.scm-cta-content h2 {
+  font-size: 2.3em;
+  margin-bottom: 20px;
+  color: #fa2132;
+}
+
+.scm-cta-content > p {
+  font-size: 1.2em;
+  margin-top: 20px;
+  opacity: 0.9;
+}
+
+.scm-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.scm-cta-button {
+  display: inline-block;
+  background: #fa2132;
+  color: white;
+  padding: 15px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1em;
+  margin-top: 30px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.scm-cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease;
+  z-index: -1;
+}
+
+.scm-cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(250, 33, 50, 0.3);
+  background: #ff3b4a;
+}
+
+.scm-cta-button:hover::before {
+  left: 0;
+}
+
+.scm-btn-secondary {
+  background: transparent;
+  color: white;
+  padding: 16px 32px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 2px solid #fa2132;
+  transition: all 0.3s ease;
+  font-size: 1.05em;
+}
+
+.scm-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(250, 33, 50, 0.4);
+  background: #e01e2b;
+}
+
+.scm-btn-secondary:hover {
+  background: #fa2132;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.scm-cta-features {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+  opacity: 0.9;
+}
+
+.scm-cta-features > div {
+  text-align: center;
+}
+
+.scm-feature-title {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #fa2132;
+}
+
+/* Footer */
+.scm-footer {
+  padding: 50px 0;
+  background: #1a1a1a;
+  text-align: center;
+  font-size: 0.9em;
+  color: #999;
+}
+
+.scm-footer p {
+  margin-bottom: 10px;
+}
+
+.scm-footer strong {
+  color: #fa2132;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .scm-methodology-title {
+    font-size: 2.5em;
+  }
+
+  .scm-comparison-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .scm-math-foundation,
+  .scm-process-flow,
+  .scm-innovation-comparison {
+    padding: 30px;
+  }
+
+  .scm-cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .scm-container {
+    padding: 0 15px;
+  }
+
+  .scm-section-title {
+    font-size: 2em;
+  }
+}

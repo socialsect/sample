@@ -1,0 +1,369 @@
+/* Services Overview Page Styles */
+.overview-main {
+  min-height: 100vh;
+  background: #000000;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.overview-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  box-sizing: border-box;
+}
+
+/* Hero section breaks out of container */
+.overview-hero-section {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  text-align: center;
+  padding: 6rem 2rem;
+  margin-bottom: 6rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000000;
+  box-sizing: border-box;
+}
+
+.overview-hero-content {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.overview-hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.overview-hero-description {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-top : 7rem;
+  color: #ffffff;
+  background: #000000;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.overview-hero-subtitle {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #ffffff;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  font-style: italic;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Section Titles */
+.overview-section-title {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 4rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Service Portfolio Section */
+.overview-service-portfolio-section {
+  margin-bottom: 8rem;
+}
+
+.overview-service-category {
+  margin-bottom: 6rem;
+}
+
+.overview-category-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  border-bottom: 2px solid #fa2132;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  display: block;
+}
+
+.overview-service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  margin-top: 3rem;
+  align-items: start;
+}
+
+/* Special grid for sections with fewer cards */
+.overview-service-grid.single-card {
+  grid-template-columns: 1fr;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.overview-service-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(250, 33, 49, 0.2);
+  border-radius: 16px;
+  padding: 3rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  height: fit-content;
+  min-height: 200px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.overview-service-card:hover {
+  transform: translateY(-5px);
+  background: rgba(250, 33, 49, 0.05);
+  border-color: rgba(250, 33, 49, 0.4);
+  box-shadow: 0 10px 30px rgba(250, 33, 49, 0.2);
+}
+
+.overview-service-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #fa2132;
+  text-align: center;
+}
+
+.overview-service-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+/* Strategic Value Section */
+.overview-strategic-value-section {
+  margin-bottom: 8rem;
+}
+
+.overview-value-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  align-items: start;
+}
+
+.overview-value-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(250, 33, 49, 0.15);
+  border-radius: 16px;
+  padding: 3rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  height: fit-content;
+  min-height: 180px;
+}
+
+.overview-value-card:hover {
+  transform: translateY(-5px);
+  background: rgba(250, 33, 49, 0.03);
+  border-color: rgba(250, 33, 49, 0.3);
+}
+
+.overview-value-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #fa2132;
+}
+
+.overview-value-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+/* Why FERZ Section */
+.overview-why-ferz-section {
+  margin-bottom: 8rem;
+}
+
+.overview-reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  align-items: start;
+}
+
+.overview-reason-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(250, 33, 49, 0.1);
+  border-radius: 16px;
+  padding: 3rem;
+  transition: all 0.3s ease;
+  height: fit-content;
+  min-height: 220px;
+}
+
+.overview-reason-card:hover {
+  transform: translateY(-5px);
+  background: rgba(250, 33, 49, 0.02);
+  border-color: rgba(250, 33, 49, 0.25);
+}
+
+.overview-reason-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #fa2132;
+  text-align: center;
+}
+
+.overview-reason-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+/* CTA Section */
+.overview-cta-section {
+  text-align: center;
+  padding: 6rem 0;
+  background: rgba(250, 33, 49, 0.03);
+  border: 1px solid rgba(250, 33, 49, 0.1);
+  border-radius: 20px;
+  margin-top: 4rem;
+}
+
+.overview-cta-description {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #ffffff;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+.overview-cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.overview-cta-button {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.overview-cta-button.primary {
+  background: #fa2132;
+  color: #ffffff;
+}
+
+.overview-cta-button.primary:hover {
+  background: #fa2132;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(250, 33, 49, 0.3);
+}
+
+.overview-cta-button.secondary {
+  background: transparent;
+  color: #fa2132;
+  border: 2px solid #fa2132;
+}
+
+.overview-cta-button.secondary:hover {
+  background: rgba(250, 33, 49, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .overview-container {
+    padding: 1rem;
+  }
+  
+  .overview-hero-section {
+    padding: 4rem 1rem;
+  }
+  
+  .overview-hero-content {
+    padding: 0 0.5rem;
+  }
+  
+  .overview-hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .overview-hero-description {
+    font-size: 1.1rem;
+  }
+  
+  .overview-section-title {
+    font-size: 2rem;
+  }
+  
+  .overview-service-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .overview-value-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .overview-reasons-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .overview-cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .overview-cta-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .overview-hero-section {
+    padding: 2rem 0.5rem;
+  }
+  
+  .overview-hero-content {
+    padding: 0 0.25rem;
+  }
+  
+  .overview-hero-title {
+    font-size: 2rem;
+  }
+  
+  .overview-service-card,
+  .overview-value-card,
+  .overview-reason-card {
+    padding: 1.5rem;
+  }
+}

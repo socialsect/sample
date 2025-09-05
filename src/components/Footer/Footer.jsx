@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Phone, Linkedin, Twitter, Facebook } from 'lucide-react';
 import DarkVeil from '../DarkVeil/darkveil';
 import './Footer.css';
 
@@ -8,128 +9,106 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-      {/* Animated Background */}
-      <div className="footer-background">
-        <DarkVeil 
-          intensity={0.4}
-          speed={0.6}
-          glowIntensity={0.12}
-          patternOpacity={0.025}
-        />
-        <div className="footer-glow"></div>
-        <div className="footer-pattern"></div>
-      </div>
-      
+     
       <div className="footer-container">
         {/* Main Footer Content */}
         <div className="footer-main">
-          {/* Company Info */}
+          {/* About Company */}
           <div className="footer-section company-info">
-            <div className="footer-logo">
-              <img src="/FERZWHITELETTERS.svg" alt="FERZ" />
-            </div>
+            <h3 className="footer-title">About Company</h3>
             <p className="company-description">
-              Leading the future of AI governance with innovative frameworks, 
-              strategic insights, and transformative solutions that drive 
-              sustainable technological advancement.
+              FERZ—Formalizing Emergent Reasoning Zones—advances the frontier of AI precision through deterministic governance. In an era defined by probabilistic systems, we deliver frameworks that enforce clarity, consistency, and control where others accept uncertainty. Our work spans linguistic formalization, AI output validation, and cross-domain compliance—empowering organizations to govern intelligent systems with the rigor high-stakes environments demand.
             </p>
-            <div className="social-links">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-link">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                  <rect x="2" y="9" width="4" height="12"></rect>
-                  <circle cx="4" cy="4" r="2"></circle>
-                </svg>
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-link">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
-                </svg>
-              </a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="social-link">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                </svg>
-              </a>
-            </div>
           </div>
 
-          {/* Services */}
-          <div className="footer-section">
-            <h3 className="footer-title">Services</h3>
-            <ul className="footer-links">
-              <li><Link to="/ai-governance" className="footer-link">AI Governance</Link></li>
-              <li><Link to="/risk-assessment" className="footer-link">Risk Assessment</Link></li>
-              <li><Link to="/compliance-frameworks" className="footer-link">Compliance Frameworks</Link></li>
-              <li><Link to="/strategic-advisory" className="footer-link">Strategic Advisory</Link></li>
-              <li><Link to="/implementation-support" className="footer-link">Implementation Support</Link></li>
-            </ul>
-          </div>
-
-          {/* Solutions */}
-          <div className="footer-section">
-            <h3 className="footer-title">Solutions</h3>
-            <ul className="footer-links">
-              <li><Link to="/enterprise-ai" className="footer-link">Enterprise AI</Link></li>
-              <li><Link to="/financial-services" className="footer-link">Financial Services</Link></li>
-              <li><Link to="/healthcare-ai" className="footer-link">Healthcare AI</Link></li>
-              <li><Link to="/automotive-ai" className="footer-link">Automotive AI</Link></li>
-              <li><Link to="/retail-ai" className="footer-link">Retail AI</Link></li>
-            </ul>
-          </div>
-
-          {/* Company */}
+          {/* Company Menu */}
           <div className="footer-section">
             <h3 className="footer-title">Company</h3>
             <ul className="footer-links">
-              <li><Link to="/about" className="footer-link">About Us</Link></li>
-              <li><Link to="/team" className="footer-link">Our Team</Link></li>
-              <li><Link to="/careers" className="footer-link">Careers</Link></li>
-              <li><Link to="/news" className="footer-link">News & Insights</Link></li>
-              <li><Link to="/contact" className="footer-link">Contact</Link></li>
+              <li><a href="/" className="footer-link">Home</a></li>
+              <li><a href="/about-us" className="footer-link">About Us</a></li>
+              <li><a href="/services-overview" className="footer-link">Services</a></li>
+              <li><a href="/products" className="footer-link">Products</a></li>
+              <li><a href="/methodologies" className="footer-link">Methodologies</a></li>
+              <li><a href="/articles" className="footer-link">Articles</a></li>
+              <li><a href="/contact-us" className="footer-link">Contact Us</a></li>
             </ul>
           </div>
 
-          {/* Resources */}
+          {/* Our Services */}
           <div className="footer-section">
-            <h3 className="footer-title">Resources</h3>
-            <ul className="footer-links">
-              <li><Link to="/whitepapers" className="footer-link">Whitepapers</Link></li>
-              <li><Link to="/case-studies" className="footer-link">Case Studies</Link></li>
-              <li><Link to="/webinars" className="footer-link">Webinars</Link></li>
-              <li><Link to="/blog" className="footer-link">Blog</Link></li>
-              <li><Link to="/research" className="footer-link">Research</Link></li>
+            <h3 className="footer-title">Our Services</h3>
+            <ul className="footer-links" aria-label="Services footer menu">
+              <li><a href="/services/ai-consulting" className="footer-link">AI Consulting</a></li>
+              <li><a href="/services/ai-enablement-strategy" className="footer-link">AI-Enablement Strategy</a></li>
+              <li><a href="/services/design-of-ai-governance-models" className="footer-link">Design of AI Governance Models</a></li>
+              <li><a href="/services/it-innovation-modernization" className="footer-link">IT Innovation and Modernization</a></li>
+              <li><a href="/services/strategic-advisory-services" className="footer-link">Strategic Advisory services</a></li>
+              <li><a href="/services/within-paradigm-improvements" className="footer-link">Within-Paradigm Improvements</a></li>
             </ul>
+          </div>
+
+          {/* Products */}
+          <div className="footer-section">
+            <h3 className="footer-title">Products</h3>
+            <ul className="footer-links">
+              <li><a href="/products/lasof" className="footer-link">LASO(f)</a></li>
+              <li><a href="/products/delia" className="footer-link">DELIA</a></li>
+              <li><a href="/products/constitutional-blockchain-architecture" className="footer-link">Blockchain Architecture</a></li>
+              <li><a href="/products/strata-g" className="footer-link">Strata-G</a></li>
+              <li><a href="/products/ferz-behavioral-engine" className="footer-link">Ferz Behavioral Engine</a></li>
+              <li><a href="/products/causacore" className="footer-link">Causa Core</a></li>
+            </ul>
+          </div>
+
+          {/* Address */}
+          <div className="footer-section">
+            <h3 className="footer-title">Address</h3>
+            <address className="footer-address">
+              <p>Headquartered in the Northern Virginia / Washington, D.C. Metropolitan Area (Engagements available globally; consultations by appointment)</p>
+              <div className="footer-contact-row">
+                <a href="tel:+12123806044" aria-label="Call Ferz Consulting at +1 212 380 6044" className="footer-contact">
+                  <Phone size={16} className="footer-inline-icon" />
+                  <span>+1 212 380 6044</span>
+                </a>
+                <a href="mailto:contact@ferzconsulting.com" className="footer-contact">
+                  <span>contact@ferzconsulting.com</span>
+                </a>
+                <a href="https://www.linkedin.com/company/ferzllc/" target="_blank" rel="noopener noreferrer" className="footer-contact">
+                  <Linkedin size={16} className="footer-inline-icon" />
+                  <span>LinkedIn</span>
+                </a>
+                <a href="https://x.com/FERZ_AI" target="_blank" rel="noopener noreferrer" className="footer-contact">
+                  <Twitter size={16} className="footer-inline-icon" />
+                  <span>X</span>
+                </a>
+                <a href="https://www.facebook.com/FERZConsulting" target="_blank" rel="noopener noreferrer" className="footer-contact">
+                  <Facebook size={16} className="footer-inline-icon" />
+                  <span>Facebook</span>
+                </a>
+              </div>
+            </address>
           </div>
         </div>
 
         {/* Footer Bottom */}
         <div className="footer-bottom">
-          <div className="footer-bottom-content">
-            <div className="footer-legal">
-              <p>&copy; {currentYear} FERZ. All rights reserved.</p>
-              <div className="legal-links">
-                <Link to="/privacy" className="legal-link">Privacy Policy</Link>
-                <Link to="/terms" className="legal-link">Terms of Service</Link>
-                <Link to="/cookies" className="legal-link">Cookie Policy</Link>
-              </div>
+        <div className="footer-brand">
+              <a href="/">
+                <img src="/FERZWHITELETTERS.svg" alt="footer logo" width="150" />
+              </a>
             </div>
-            <div className="footer-newsletter">
-              <h4>Stay Updated</h4>
-              <p>Get the latest insights on AI governance</p>
-              <div className="newsletter-form">
-                <input 
-                  type="email" 
-                  placeholder="Enter your email" 
-                  className="newsletter-input"
-                />
-                <button className="newsletter-button">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <line x1="22" y1="2" x2="11" y2="13"></line>
-                    <polygon points="22,2 15,22 11,13 2,9"></polygon>
-                  </svg>
-                </button>
-              </div>
+          <div className="footer-bottom-content">
+           
+            <div className="legal-links">
+              <a href="/disclaimer" className="legal-link">Disclaimer</a>
+              <a href="/privacy-policy" className="legal-link">Privacy Policy</a>
+              <a href="/ai-integrity-statement" className="legal-link">AI Integrity Statement</a>
+              <a href="/work-with-ferz" className="legal-link">Work With FERZ</a>
+              <a href="/licensing-and-partnerships" className="legal-link">Licensing & Partnerships</a>
+            </div>
+            <div className="footer-legal">
+              <p>FERZ — Formalizing Emergent Reasoning Zones © {currentYear} FERZ LLC</p>
             </div>
           </div>
         </div>

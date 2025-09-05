@@ -1,0 +1,738 @@
+/* Service Template Styles */
+.stemp-page {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #fff;
+  background: #000;
+  min-height: 100vh;
+}
+
+.stemp-page * {
+  box-sizing: border-box;
+}
+
+.stemp-page h1, .stemp-page h2, .stemp-page h3, .stemp-page h4, .stemp-page h5, .stemp-page h6 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.stemp-page p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  color: #e2e8f0;
+}
+
+.stemp-page strong {
+  font-weight: 600;
+  color: #fa2132;
+}
+
+.stemp-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Breadcrumb Navigation */
+.stemp-breadcrumb {
+  background: #000;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.stemp-breadcrumb a {
+  color: #9ca3af;
+  text-decoration: none;
+  font-size: 0.95em;
+  transition: color 0.3s ease;
+}
+
+.stemp-breadcrumb a:hover {
+  color: #fa2132;
+}
+
+.stemp-breadcrumb .stemp-current {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Header */
+.stemp-header {
+  background: #000;
+  color: white;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.stemp-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 80%, rgba(250, 33, 49, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(250, 33, 49, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.stemp-header-content {
+  position: relative;
+  z-index: 1;
+}
+
+.stemp-title {
+  font-size: 3.2em;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.stemp-focus {
+  font-size: 1.3em;
+  margin-bottom: 25px;
+  opacity: 0.95;
+  font-weight: 500;
+  color: #e2e8f0;
+}
+
+.stemp-challenge-statement {
+  background: rgba(255,255,255,0.05);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(255,255,255,0.1);
+  margin-bottom: 30px;
+  font-size: 1.1em;
+  backdrop-filter: blur(10px);
+}
+
+.stemp-solution-statement {
+  background: rgba(250,33,49, 0.08);
+  padding: 35px;
+  border-radius: 15px;
+  border: 1px solid rgba(250,33,49, 0.2);
+  font-size: 1.1em;
+  backdrop-filter: blur(10px);
+}
+
+.stemp-solution-header {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.stemp-solution-description {
+  margin-bottom: 20px;
+  font-size: 1.05em;
+  line-height: 1.7;
+}
+
+.stemp-solution-audience {
+  margin-bottom: 25px;
+  font-size: 1em;
+  line-height: 1.6;
+  opacity: 0.9;
+  font-style: italic;
+}
+
+.stemp-strategic-outcomes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Sections */
+.stemp-section {
+  padding: 40px 0;
+  background: #000;
+}
+
+.stemp-section-alt {
+  background: #1a1a1a;
+}
+
+.stemp-section-title {
+  font-size: 2.3em;
+  text-align: center;
+  margin: 70px 0 25px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.stemp-section-subtitle {
+  font-size: 1.1em;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #e2e8f0;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Challenge-Solution Grid */
+.stemp-challenge-solution-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.stemp-challenge-card {
+  background: #1a1a1a;
+  border-left: 6px solid #fa2132;
+  padding: 35px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.stemp-challenge-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(250, 33, 49, 0.15);
+  border-left-width: 8px;
+}
+
+.stemp-challenge-card h3 {
+  color: #fa2132;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.stemp-solution-card {
+  background: #1a1a1a;
+  border-left: 6px solid #fa2132;
+  padding: 35px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.stemp-solution-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(250, 33, 49, 0.15);
+  border-left-width: 8px;
+}
+
+.stemp-solution-card h3 {
+  color: #fa2132;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.stemp-patent-advantage {
+  margin-top: 50px;
+  padding: 30px;
+  background: #1a1a1a;
+  border-radius: 15px;
+  border: 2px dashed #fa2132;
+}
+
+.stemp-patent-advantage h3 {
+  color: #fff;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.stemp-patent-advantage p {
+  text-align: center;
+  font-size: 1.1em;
+  color: #e2e8f0;
+}
+
+/* FERZ Methodology */
+.stemp-methodology-section {
+  background: #1a1a1a;
+  padding: 60px;
+  border-radius: 25px;
+  margin: 60px 0;
+  border: 3px solid #fa2132;
+  position: relative;
+}
+
+.stemp-methodology-section::before {
+  content: 'FERZ METHODOLOGY';
+  position: absolute;
+  top: -15px;
+  left: 40px;
+  background: #fa2132;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 0.9em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 8px rgba(250, 33, 49, 0.3);
+}
+
+.stemp-methodology-title {
+  color: #fff;
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.stemp-methodology-subtitle {
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 1.1em;
+  color: #e2e8f0;
+}
+
+.stemp-methodology-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.stemp-methodology-step {
+  background: #000;
+  padding: 30px;
+  border-radius: 15px;
+  border-left: 4px solid #fa2132;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.stemp-methodology-step:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(250, 33, 49, 0.15);
+  border-left-width: 6px;
+}
+
+.stemp-methodology-step::before {
+  content: attr(data-step);
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  background: #fa2132;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.stemp-methodology-step h4 {
+  color: #fff;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* Engagement Model */
+.stemp-engagement-model {
+  background: #1a1a1a;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  margin: 50px 0;
+  border: 2px solid #fa2132;
+}
+
+.stemp-engagement-title {
+  color: #fff;
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.stemp-engagement-subtitle {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.1em;
+  color: #e2e8f0;
+}
+
+.stemp-engagement-phases {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.stemp-phase-card {
+  background: #000;
+  padding: 25px;
+  border-radius: 12px;
+  border-left: 4px solid #fa2132;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.stemp-phase-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(250, 33, 49, 0.1);
+  border-left-width: 6px;
+}
+
+.stemp-phase-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.stemp-phase-number {
+  background: #fa2132;
+  color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 15px;
+  font-size: 0.9em;
+}
+
+.stemp-phase-title {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+/* Outcomes & Metrics */
+.stemp-outcomes-section {
+  background: #1a1a1a;
+  padding: 50px;
+  border-radius: 20px;
+  margin: 50px 0;
+  border-left: 8px solid #fa2132;
+}
+
+.stemp-outcomes-title {
+  color: #fff;
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.stemp-outcomes-subtitle {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.1em;
+  color: #e2e8f0;
+}
+
+.stemp-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.stemp-metric-card {
+  background: #000;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.stemp-metric-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(250, 33, 49, 0.15);
+}
+
+.stemp-metric-value {
+  font-size: 2.2em;
+  font-weight: bold;
+  color: #fa2132;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.stemp-metric-description {
+  font-size: 0.95em;
+  color: #e2e8f0;
+}
+
+.stemp-disclaimer {
+  background: rgba(250,33,49,0.05);
+  border-left: 4px solid #fa2132;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 8px;
+  font-size: 0.95em;
+  color: #e2e8f0;
+}
+
+/* Investment Framework */
+.stemp-investment-section {
+  background: #1a1a1a;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  margin: 50px 0;
+  border-top: 4px solid #fa2132;
+}
+
+.stemp-investment-title {
+  color: #fff;
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.stemp-investment-subtitle {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.1em;
+  color: #e2e8f0;
+}
+
+.stemp-investment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.stemp-investment-item {
+  text-align: center;
+  padding: 25px;
+  background: #000;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.stemp-investment-item:hover {
+  transform: translateY(-2px);
+  background: #1a1a1a;
+  box-shadow: 0 6px 20px rgba(250, 33, 49, 0.1);
+}
+
+.stemp-investment-value {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #fa2132;
+  margin-bottom: 10px;
+}
+
+.stemp-value-realization {
+  margin-top: 40px;
+  padding: 25px;
+  background: rgba(250,33,49,0.05);
+  border-radius: 12px;
+  border: 2px solid #fa2132;
+  text-align: center;
+}
+
+.stemp-value-realization h3 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.stemp-value-realization p {
+  font-size: 1.05em;
+  color: #e2e8f0;
+}
+
+/* Readiness Assessment */
+.stemp-readiness-section {
+  background: #1a1a1a;
+  padding: 50px;
+  border-radius: 20px;
+  margin: 50px 0;
+  border-left: 6px solid #fa2132;
+}
+
+.stemp-readiness-title {
+  color: #fff;
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.stemp-readiness-subtitle {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.1em;
+  color: #e2e8f0;
+}
+
+.stemp-readiness-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.stemp-readiness-item {
+  background: #000;
+  padding: 25px;
+  border-radius: 12px;
+  border-left: 4px solid #fa2132;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.stemp-readiness-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(250, 33, 49, 0.1);
+  border-left-width: 6px;
+}
+
+.stemp-readiness-item h4 {
+  color: #fff;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.stemp-readiness-summary {
+  margin-top: 30px;
+  text-align: center;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Call to Action */
+.stemp-cta-section {
+  padding: 80px 0;
+  background: #000;
+  color: white;
+  text-align: center;
+  margin-top: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.stemp-cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 70%, rgba(250, 33, 49, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 70% 30%, rgba(250, 33, 49, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.stemp-cta-content {
+  position: relative;
+  z-index: 1;
+}
+
+.stemp-cta-title {
+  font-size: 2.3em;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.stemp-cta-subtitle {
+  font-size: 1.2em;
+  margin-top: 20px;
+  opacity: 0.9;
+  color: #e2e8f0;
+}
+
+.stemp-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.stemp-btn-primary {
+  background: #fa2132;
+  color: white;
+  padding: 16px 32px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.05em;
+  display: inline-block;
+}
+
+.stemp-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(250, 33, 49, 0.4);
+  background: #dc2626;
+}
+
+.stemp-btn-secondary {
+  background: transparent;
+  color: white;
+  padding: 16px 32px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 2px solid white;
+  transition: all 0.3s ease;
+  font-size: 1.05em;
+  display: inline-block;
+}
+
+.stemp-btn-secondary:hover {
+  background: white;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+.stemp-cta-metrics {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+  opacity: 0.9;
+}
+
+.stemp-cta-metric {
+  text-align: center;
+}
+
+.stemp-cta-metric-value {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #fa2132;
+}
+
+.stemp-cta-metric-label {
+  color: #e2e8f0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .stemp-title {
+    font-size: 2.5em;
+  }
+
+  .stemp-challenge-solution-grid,
+  .stemp-methodology-grid,
+  .stemp-engagement-phases {
+    grid-template-columns: 1fr;
+  }
+
+  .stemp-methodology-section,
+  .stemp-engagement-model,
+  .stemp-outcomes-section {
+    padding: 30px;
+  }
+
+  .stemp-cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stemp-container {
+    padding: 0 15px;
+  }
+}

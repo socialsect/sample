@@ -8,46 +8,46 @@ export const sitemapData = {
       description: 'Explore our comprehensive AI and strategic consulting services.',
       subcategories: [
         {
+          id: 'services-overview',
+          title: 'Services Overview',
+          path: '/services-overview',
+          description: 'Comprehensive overview of our AI governance and constitutional compliance services.'
+        },
+        {
           id: 'ai-consulting',
           title: 'AI Consulting',
-          path: '/services/ai-consulting',
-          description: 'Strategic AI implementation and optimization consulting.'
+          path: '/services-overview/ai-consulting',
+          description: 'FERZ Consulting - Trustworthy AI solutions for regulated industries. Specializing in constitutional AI frameworks for compliance and governance.'
         },
         {
           id: 'it-innovation-modernization',
           title: 'IT Innovation & Modernization',
-          path: '/services/it-innovation-modernization',
-          description: 'Transform your IT infrastructure with modern solutions.'
+          path: '/services-overview/it-innovation-modernization',
+          description: 'FERZ builds AI-native IT infrastructure for compliance and scalability. Book a technical assessment now.'
         },
         {
           id: 'strategic-advisory-services',
           title: 'Strategic Advisory Services',
-          path: '/services/strategic-advisory-services',
-          description: 'High-level strategic guidance for business transformation.'
+          path: '/services-overview/strategic-advisory-services',
+          description: 'FERZ equips visionary executives with strategies to lead the constitutional AI era, ensuring compliance and competitive advantage.'
         },
         {
           id: 'ai-enablement-strategy',
           title: 'AI Enablement Strategy',
-          path: '/services/ai-enablement-strategy',
-          description: 'Develop comprehensive AI adoption strategies.'
+          path: '/services-overview/ai-enablement-strategy',
+          description: 'FERZ builds roadmaps for constitutional AI integration in regulated industries. Book a session today.'
         },
         {
           id: 'within-paradigm-improvements',
           title: 'Within Paradigm Improvements',
-          path: '/services/within-paradigm-improvements',
-          description: 'Optimize existing processes and systems.'
+          path: '/services-overview/within-paradigm-improvements',
+          description: 'FERZ optimizes systems for constitutional AI readiness. Boost efficiency and compliance now. Schedule an assessment.'
         },
         {
           id: 'ai-governance-model-design',
           title: 'AI Governance Model Design',
-          path: '/services/ai-governance-model-design',
-          description: 'Design robust governance frameworks for AI implementation.'
-        },
-        {
-          id: 'lasof-implementation-ai-compliance',
-          title: 'LASOF Implementation & AI Compliance',
-          path: '/services/lasof-implementation-ai-compliance',
-          description: 'Ensure AI compliance with LASOF framework implementation.'
+          path: '/services-overview/design-of-ai-governance-models',
+          description: 'FERZ designs constitutional AI governance with mathematical guarantees. Ensure compliance and trust. Book a consultation.'
         }
       ]
     },
@@ -60,7 +60,7 @@ export const sitemapData = {
         {
           id: 'ferz-behavioral-ai-engine',
           title: 'FERZ Behavioral AI Engine',
-          path: '/products/ferz-behavioral-ai-engine',
+          path: '/products/ferz-behavioral-engine',
           description: 'Advanced behavioral AI engine for predictive analytics.'
         },
         {
@@ -85,14 +85,21 @@ export const sitemapData = {
           id: 'lasof',
           title: 'LASOF',
           path: '/products/lasof',
-          description: 'Legal AI Safety and Oversight Framework.'
+          description: 'Deterministic Linguistic, Action, and Semiotic Governance for AI - A patent-pending framework that controls both what AI systems say and what they do.'
         },
         {
           id: 'lasof-ag',
-          title: 'LASOF-AG',
-          path: '/products/lasof-ag',
-          description: 'Advanced governance module for LASOF framework.'
-        }
+          title: 'LASO(f)-AG',
+          path: '/products/lasof/lasof-ag',
+          description: 'Deterministic Action Validation for AI Governance - Extends the LASO(f) framework to govern AI actions with deterministic validation.'
+        },
+        {
+          id: 'causacore',
+          title: 'CausaCore™',
+          path: '/products/causacore',
+          description: 'Multi-Engine Framework for Cross-Domain Causal Inference - Governance-aligned causal modeling system with four specialized engines.'
+        },
+
       ]
     },
     {
@@ -105,19 +112,19 @@ export const sitemapData = {
           id: 'ai-capsule',
           title: 'AI Capsule',
           path: '/methodologies/ai-capsule',
-          description: 'Modular AI implementation methodology.'
+          description: 'FERZ\'s constitutional methodology for machine-readable system reconstruction. Download research paper and learn more.'
         },
         {
           id: 'mrcf',
           title: 'MRCF',
           path: '/methodologies/mrcf',
-          description: 'Multi-dimensional Risk and Compliance Framework.'
+          description: 'FERZ\'s proprietary methodology for structuring inquiry and accelerating clarity. Transform reasoning with recursive cognition engineering.'
         },
         {
           id: 'scm',
           title: 'SCM',
           path: '/methodologies/scm',
-          description: 'Strategic Change Management methodology.'
+          description: 'FERZ\'s deterministic approach to compressing large documents into AI-readable, audit-verifiable structures. Reduce document size by up to 97%.'
         }
       ]
     }
@@ -128,6 +135,12 @@ export const sitemapData = {
       title: 'Home',
       path: '/',
       description: 'Welcome to FERZ Consulting'
+    },
+    {
+      id: 'services-overview',
+      title: 'Services Overview',
+      path: '/services-overview',
+      description: 'Comprehensive overview of our AI governance and constitutional compliance services.'
     },
     {
       id: 'ip-portfolio',

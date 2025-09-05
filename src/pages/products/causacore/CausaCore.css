@@ -1,0 +1,505 @@
+/* CausaCore Product Page Styles */
+.causacore-page {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: #ffffff;
+  background-color: #000000;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+  padding: 80px 0;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-content {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  color: #ffffff;
+  font-family: 'Clash Display', sans-serif;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  z-index: 15;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #fa2132 0%, #dc2626 100%);
+  color: white;
+  box-shadow: 0 4px 14px rgba(220, 38, 38, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(220, 38, 38, 0.4);
+}
+
+/* Section Headers */
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-family: 'Clash Display', sans-serif;
+}
+
+.section-header p {
+  font-size: 1.125rem;
+  color: #e2e8f0;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Definition Section */
+.definition-section {
+  padding: 80px 0;
+  background: #000000;
+}
+
+.definition-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.definition-content p {
+  font-size: 1.25rem;
+  color: #e2e8f0;
+  line-height: 1.6;
+}
+
+/* Engines Section */
+.engines-section {
+  padding: 80px 0;
+  background: #111111;
+}
+
+.engines-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.engine-card {
+  background: #1a1a1a;
+  padding: 32px;
+  border-radius: 16px;
+  text-align: center;
+  border: 1px solid #333333;
+  transition: transform 0.3s ease;
+}
+
+.engine-card:hover {
+  transform: translateY(-4px);
+}
+
+.engine-number {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background: #fa2132;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+}
+
+.engine-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.engine-card p {
+  color: #e2e8f0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.engines-description {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.engines-description p {
+  font-size: 1.125rem;
+  color: #e2e8f0;
+  line-height: 1.6;
+}
+
+/* Applications Section */
+.applications-section {
+  padding: 80px 0;
+  background: #000000;
+}
+
+.applications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 32px;
+}
+
+.application-card {
+  background: #1a1a1a;
+  padding: 32px;
+  border-radius: 16px;
+  border: 1px solid #333333;
+  transition: transform 0.3s ease;
+}
+
+.application-card:hover {
+  transform: translateY(-4px);
+}
+
+.app-icon {
+  margin-bottom: 20px;
+  color: #fa2132;
+}
+
+.application-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.application-card p {
+  color: #e2e8f0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Strategic Section */
+.strategic-section {
+  padding: 80px 0;
+  background: #111111;
+}
+
+.strategic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.strategic-card {
+  background: #1a1a1a;
+  padding: 32px;
+  border-radius: 16px;
+  border: 1px solid #333333;
+  transition: transform 0.3s ease;
+}
+
+.strategic-card:hover {
+  transform: translateY(-4px);
+}
+
+.strategic-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.strategic-card p {
+  color: #e2e8f0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Architecture Section */
+.architecture-section {
+  padding: 80px 0;
+  background: #000000;
+}
+
+.architecture-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.architecture-card {
+  background: #1a1a1a;
+  padding: 32px;
+  border-radius: 16px;
+  border: 1px solid #333333;
+  transition: transform 0.3s ease;
+}
+
+.architecture-card:hover {
+  transform: translateY(-4px);
+}
+
+.architecture-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.architecture-card p {
+  color: #e2e8f0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Execution Section */
+.execution-section {
+  padding: 80px 0;
+  background: #111111;
+}
+
+.execution-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.execution-card {
+  background: #1a1a1a;
+  padding: 32px;
+  border-radius: 16px;
+  border: 1px solid #333333;
+  transition: transform 0.3s ease;
+}
+
+.execution-card:hover {
+  transform: translateY(-4px);
+}
+
+.execution-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.execution-card p {
+  color: #e2e8f0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Patent Section */
+.patent-section {
+  padding: 80px 0;
+  background: #000000;
+}
+
+.patent-details {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.patent-card {
+  background: #1a1a1a;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid #333333;
+}
+
+.patent-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: #ffffff;
+}
+
+.patent-card p {
+  color: #e2e8f0;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.patent-note {
+  color: #ffffff !important;
+  font-size: 1.125rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .engines-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  .applications-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  
+  .strategic-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  
+  .architecture-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  
+  .execution-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 60px 0;
+    min-height: 50vh;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.25rem;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .engines-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .applications-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .strategic-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .architecture-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .execution-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .section-header h2 {
+    font-size: 1.75rem;
+  }
+  
+  .engine-card {
+    padding: 24px;
+  }
+  
+  .application-card {
+    padding: 24px;
+  }
+  
+  .strategic-card {
+    padding: 24px;
+  }
+  
+  .architecture-card {
+    padding: 24px;
+  }
+  
+  .execution-card {
+    padding: 24px;
+  }
+  
+  .patent-card {
+    padding: 24px;
+  }
+}

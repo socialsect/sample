@@ -1,0 +1,241 @@
+/* =======================================
+   | Within Paradigm Improvements Styles |
+   ======================================= */
+   .within-page {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+    background-color: #000000;
+    min-height: 100vh;
+  }
+  
+  /* Container */
+  .within-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  
+  /* ---------------- HERO ---------------- */
+  .within-hero {
+    position: relative;
+    overflow: hidden;
+    background: #000;
+    min-height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .within-hero-content {
+    max-width: 850px;
+    margin: 0 auto;
+    z-index: 2;
+  }
+  .within-hero-title {
+    font-size: 3.6rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 24px;
+    font-family: 'Satoshi', sans-serif;
+  }
+  .within-hero-subtitle {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 36px;
+    line-height: 1.7;
+  }
+  .within-cta-btn {
+    background: #fa2132;
+    color: #fff;
+    padding: 16px 36px;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Satoshi';
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* box-shadow: 0 10px 25px rgba(250,33,50,0.35); */
+  }
+  .within-cta-btn:hover {
+    background: #e4182a;
+    transform: translateY(-3px) scale(1.02);
+  }
+  
+  /* ---------------- SECTION HEADER ---------------- */
+  .within-section-header {
+    text-align: center;
+    margin-bottom: 70px;
+  }
+  .within-section-header h2 {
+    font-size: 2.7rem;
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  .within-section-header p {
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+  
+  /* ---------------- STRATEGY ---------------- */
+  .within-strategy {
+    padding: 100px 0;
+    background: #000;
+  }
+  .within-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(360px,1fr));
+    gap: 40px;
+  }
+  .within-card {
+    background: #111;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+  }
+  .within-card:hover {
+    border-color: #fa2132;
+    transform: translateY(-5px);
+  }
+  .within-card-icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #fa2132 0%, #dc2626 100%);
+    border-radius: 16px;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  .within-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 18px;
+    font-weight: 600;
+  }
+  .within-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .within-card li {
+    margin-bottom: 10px;
+    color: #cbd5e1;
+    position: relative;
+    padding-left: 20px;
+  }
+  .within-card li::before {
+    content: '•';
+    color: #fa2132;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+  }
+  
+  /* ---------------- PHASES ---------------- */
+  .within-phases {
+    padding: 100px 0;
+    background: #0b0b0b;
+  }
+  .within-phases-grid {
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  }
+  .within-phase-card {
+    background: #161616;
+    padding: 30px 25px;
+    border-radius: 16px;
+    border: 1px solid transparent;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  .within-phase-card:hover {
+    border-color: #fa2132;
+    transform: translateY(-4px);
+  }
+  .within-phase-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+  .within-phase-card p {
+    color: #cbd5e1;
+  }
+  
+  /* ---------------- BENEFITS ---------------- */
+  .within-benefits {
+    padding: 100px 0;
+    background:#000;
+  }
+  .within-benefits-grid {
+    grid-template-columns: repeat(auto-fit,minmax(340px,1fr));
+  }
+  .within-benefit-card {
+    background: #111;
+    padding: 40px 30px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+  }
+  .within-benefit-card:hover {
+    border-color: #fa2132;
+    transform: translateY(-5px);
+  }
+  .within-benefit-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+  }
+  .within-benefit-card ul {
+    list-style: none;
+    padding: 0;
+  }
+  .within-benefit-card li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #cbd5e1;
+    margin-bottom: 12px;
+  }
+  
+  /* ---------------- CTA ---------------- */
+  .within-cta {
+    padding:100px 0;
+    background: linear-gradient(135deg,#1a1a1a 0%,#2d2d2d 100%);
+    text-align:center;
+  }
+  .within-cta h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: 'Satoshi', sans-serif;
+    margin-bottom: 20px;
+  }
+  .within-cta p {
+    color:#cbd5e1;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+  
+  /* ---------------- Responsive ---------------- */
+  @media(max-width:1024px){
+    .within-hero-title {font-size:3rem;}
+  }
+  @media(max-width:768px){
+    .within-hero-title {font-size:2.4rem;}
+    .within-section-header h2 {font-size:2rem;}
+    .within-grid {grid-template-columns:1fr; gap:30px;}
+    .within-benefits-grid {grid-template-columns:1fr;}
+  }
+  @media(max-width:480px){
+    .within-container {padding:0 16px;}
+    .within-hero-title {font-size:2rem;}
+    .within-section-header h2 {font-size:1.7rem;}
+    .within-cta-btn {width:100%; max-width:320px; justify-content:center;}
+  }
+  

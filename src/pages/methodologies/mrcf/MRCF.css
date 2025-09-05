@@ -1,0 +1,833 @@
+/* Base styles */
+.mrcf-page {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: white;
+  background: black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.mrcf-page * {
+  box-sizing: border-box;
+}
+
+.mrcf-page .mrcf-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Reset some global styles that might be affecting the layout */
+.mrcf-page h1,
+.mrcf-page h2,
+.mrcf-page h3,
+.mrcf-page h4,
+.mrcf-page h5,
+.mrcf-page h6,
+.mrcf-page p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+}
+
+/* Navigation Breadcrumb */
+.mrcf-page .mrcf-breadcrumb {
+  background: #1a1a1a;
+  padding: 15px 0;
+  border-bottom: 1px solid #333;
+}
+
+.mrcf-page .mrcf-breadcrumb-link {
+  color: #999;
+  text-decoration: none;
+  font-size: 0.95em;
+  transition: color 0.3s ease;
+}
+
+.mrcf-page .mrcf-breadcrumb-link:hover {
+  color: #fa2132;
+}
+
+.mrcf-page .mrcf-breadcrumb-current {
+  color: #fa2132;
+  font-weight: 600;
+}
+
+/* Authority Badge */
+.mrcf-page .mrcf-authority-badge {
+  background: linear-gradient(135deg, #fa2132, #d11a2a);
+  color: white;
+  padding: 12px 0;
+  font-size: 0.9em;
+  position: relative;
+  z-index: 10;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 10px rgba(250, 33, 50, 0.2);
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.mrcf-page .mrcf-authority-badge:hover {
+  background: linear-gradient(135deg, #ff2b3d, #e61e30);
+  box-shadow: 0 4px 15px rgba(250, 33, 50, 0.3);
+  transform: translateY(-1px);
+}
+
+.mrcf-page .mrcf-authority-badge-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  justify-content: center;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 0.85em;
+}
+
+.mrcf-page .mrcf-authority-icon {
+  font-size: 1.2em;
+  animation: pulse 2s infinite;
+  display: flex;
+  align-items: center;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.mrcf-page .mrcf-authority-tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.85em;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+  pointer-events: none;
+  border: 1px solid #333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.mrcf-page .mrcf-authority-badge:hover .mrcf-authority-tooltip {
+  opacity: 1;
+  visibility: visible;
+  margin-bottom: 5px;
+}
+
+/* Header */
+.mrcf-page .mrcf-header {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #333333 100%);
+  color: white;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.mrcf-page .mrcf-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 80%, rgba(250, 33, 50, 0.15) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(250, 33, 50, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.mrcf-page .mrcf-header-content {
+  position: relative;
+  z-index: 1;
+}
+
+.mrcf-page .mrcf-methodology-title {
+  font-size: 2.8em;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ffffff !important;
+  line-height: 1.2;
+  text-align: center;
+  background-clip: text;
+  color: transparent;
+  
+  @media (max-width: 768px) {
+    font-size: 2.2em;
+  }
+}
+
+.mrcf-page .mrcf-methodology-tagline {
+  font-size: 1.4em;
+  margin-bottom: 25px;
+  opacity: 0.95;
+  font-weight: 500;
+  color: #ccc;
+}
+
+.mrcf-page .mrcf-traditional-limitation {
+  background: rgba(250, 33, 50, 0.15);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(250, 33, 50, 0.3);
+  margin-bottom: 30px;
+  font-size: 1.1em;
+  backdrop-filter: blur(10px);
+}
+
+.mrcf-page .mrcf-methodology-breakthrough {
+  background: rgba(250, 33, 50, 0.1);
+  padding: 35px;
+  border-radius: 15px;
+  border: 1px solid rgba(250, 33, 50, 0.2);
+  font-size: 1.1em;
+  backdrop-filter: blur(10px);
+}
+
+.mrcf-page .mrcf-breakthrough-title {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #fa2132;
+}
+
+.mrcf-page .mrcf-breakthrough-content {
+  margin-bottom: 20px;
+  font-size: 1.05em;
+  line-height: 1.7;
+}
+
+.mrcf-page .mrcf-breakthrough-description {
+  margin-bottom: 25px;
+  font-size: 1em;
+  line-height: 1.6;
+  opacity: 0.9;
+  font-style: italic;
+}
+
+.mrcf-page .mrcf-breakthrough-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Sections */
+.mrcf-page .mrcf-section-title {
+  font-size: 2.5em;
+  text-align: center;
+  margin: 70px 0 25px;
+  color: white;
+  font-weight: 600;
+}
+
+.mrcf-page .mrcf-section-subtitle {
+  font-size: 1.1em;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #ccc;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mrcf-page .mrcf-section {
+  padding: 40px 0;
+}
+
+.mrcf-page .mrcf-section-alt {
+  background: #111;
+}
+
+/* Mathematical Foundation */
+.mrcf-page .mrcf-math-foundation {
+  background: linear-gradient(135deg, #1a1a1a, #333);
+  padding: 60px;
+  border-radius: 25px;
+  margin: 60px 0;
+  border: 3px solid #fa2132;
+  position: relative;
+}
+
+.mrcf-page .mrcf-math-foundation::before {
+  content: 'MATHEMATICAL FOUNDATION';
+  position: absolute;
+  top: -15px;
+  left: 40px;
+  background: #fa2132;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 0.9em;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.mrcf-page .mrcf-foundation-title {
+  color: white;
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.mrcf-page .mrcf-foundation-subtitle {
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 1.1em;
+}
+
+.mrcf-page .mrcf-principle-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.mrcf-page .mrcf-principle-card {
+  background: #222;
+  padding: 35px;
+  border-radius: 15px;
+  border-left: 4px solid #fa2132;
+  position: relative;
+}
+
+.mrcf-principle-card::before {
+  content: attr(data-principle);
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  background: #fa2132;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+.mrcf-page .mrcf-principle-card h4 {
+  color: #fa2132;
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+.mrcf-page .mrcf-step-math {
+  background: #333;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 15px 0;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+  border-left: 3px solid #fa2132;
+  color: #ffffff;
+}
+
+.mrcf-page .mrcf-disclaimer {
+  background: #2a1a1a;
+  border-left: 4px solid #fa2132;
+  padding: 20px;
+  margin: 30px 0;
+  border-radius: 8px;
+  font-size: 0.95em;
+  color: #ccc;
+}
+
+/* Ten Principles Framework */
+.mrcf-ten-principles {
+  background: linear-gradient(135deg, #1a1a1a, #222);
+  padding: 50px;
+  border-radius: 20px;
+  margin: 50px 0;
+  border-left: 8px solid #fa2132;
+}
+
+.mrcf-principles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.mrcf-principle-item {
+  background: #333;
+  padding: 25px;
+  border-radius: 12px;
+  border-left: 4px solid #fa2132;
+  position: relative;
+}
+
+.mrcf-principle-number {
+  position: absolute;
+  top: -10px;
+  right: 15px;
+  background: #fa2132;
+  color: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.mrcf-principle-item h5 {
+  color: #fa2132;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+/* Methodology Process Flow */
+.mrcf-process-flow {
+  background: #222;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(250, 33, 50, 0.1);
+  margin: 50px 0;
+  border: 2px solid #fa2132;
+}
+
+.mrcf-process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.mrcf-step-card {
+  background: #333;
+  padding: 30px;
+  border-radius: 15px;
+  position: relative;
+  border-left: 4px solid #fa2132;
+}
+
+.mrcf-step-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.mrcf-step-number {
+  background: #fa2132;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 15px;
+  font-size: 1.1em;
+}
+
+.mrcf-step-title {
+  color: #fa2132;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+/* Innovation Comparison */
+.mrcf-innovation-comparison {
+  background: linear-gradient(135deg, #1a1a1a, #222);
+  padding: 50px;
+  border-radius: 20px;
+  margin: 50px 0;
+  border-left: 8px solid #fa2132;
+}
+
+.mrcf-comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.mrcf-traditional-approach {
+  background: #2a1a1a;
+  padding: 30px;
+  border-radius: 15px;
+  border: 2px solid #666;
+}
+
+.mrcf-ferz-approach {
+  background: #1a2a1a;
+  padding: 30px;
+  border-radius: 15px;
+  border: 2px solid #fa2132;
+}
+
+.mrcf-traditional-approach h4 {
+  color: #999;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.mrcf-ferz-approach h4 {
+  color: #fa2132;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.mrcf-traditional-approach ul,
+.mrcf-ferz-approach ul {
+  margin-left: 20px;
+  margin-top: 15px;
+  line-height: 1.8;
+}
+
+.mrcf-result-negative {
+  margin-top: 20px;
+  font-weight: 600;
+  color: #999;
+}
+
+.mrcf-result-positive {
+  margin-top: 20px;
+  font-weight: 600;
+  color: #fa2132;
+}
+
+/* Technical Specifications */
+.mrcf-tech-specs {
+  background: #222;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(250, 33, 50, 0.1);
+  margin: 50px 0;
+  border-top: 6px solid #fa2132;
+}
+
+.mrcf-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.mrcf-spec-card {
+  background: #333;
+  padding: 25px;
+  border-radius: 12px;
+  border-left: 4px solid #fa2132;
+}
+
+.mrcf-spec-card h5 {
+  color: white;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+.mrcf-spec-value {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #fa2132;
+  margin-bottom: 8px;
+}
+
+/* Applications & Use Cases */
+.mrcf-applications-section {
+  background: #1a1a1a;
+  padding: 50px;
+  border-radius: 20px;
+  margin: 50px 0;
+  border-left: 6px solid #fa2132;
+}
+
+.mrcf-use-cases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.mrcf-use-case-card {
+  background: #333;
+  padding: 30px;
+  border-radius: 15px;
+  border-top: 4px solid #fa2132;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.mrcf-use-case-card h4 {
+  color: #fa2132;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.mrcf-impact {
+  margin-top: 10px;
+  color: #fa2132;
+}
+
+.mrcf-industry-tag {
+  background: #fa2132;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.8em;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* Patent Protection */
+.mrcf-patent-protection {
+  background: linear-gradient(135deg, #1a1a1a, #222);
+  color: white;
+  padding: 50px;
+  border-radius: 20px;
+  margin: 50px 0;
+  text-align: center;
+  border: 2px solid #fa2132;
+}
+
+.mrcf-patent-protection h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #fa2132;
+}
+
+.mrcf-patent-protection > p {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.mrcf-patent-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.mrcf-patent-card {
+  background: rgba(250, 33, 50, 0.1);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid rgba(250, 33, 50, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.mrcf-patent-number {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #fa2132;
+  margin-bottom: 8px;
+}
+
+.mrcf-patent-date {
+  margin-top: 8px;
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+.mrcf-strategic-advantage {
+  margin-top: 30px;
+  font-size: 1.1em;
+  color: #fa2132;
+}
+
+/* Performance Metrics */
+.mrcf-metrics-section {
+  background: linear-gradient(135deg, #1a2a1a, #222);
+  padding: 50px;
+  border-radius: 20px;
+  margin: 50px 0;
+  border-left: 8px solid #fa2132;
+}
+
+.mrcf-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.mrcf-metric-card {
+  background: #333;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  border-top: 3px solid #fa2132;
+}
+
+.mrcf-metric-value {
+  font-size: 2.2em;
+  font-weight: bold;
+  color: #fa2132;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.mrcf-metric-description {
+  font-size: 0.95em;
+  color: #ccc;
+}
+
+/* Call to Action */
+.mrcf-cta-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #000, #1a1a1a, #333);
+  color: white;
+  text-align: center;
+  margin-top: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mrcf-cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 70%, rgba(250, 33, 50, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 70% 30%, rgba(250, 33, 50, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.mrcf-cta-content {
+  position: relative;
+  z-index: 1;
+}
+
+.mrcf-cta-content h2 {
+  font-size: 2.3em;
+  margin-bottom: 20px;
+  color: #fa2132;
+}
+
+.mrcf-cta-content > p {
+  font-size: 1.2em;
+  margin-top: 20px;
+  opacity: 0.9;
+}
+
+.mrcf-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.mrcf-btn-primary {
+  background: #fa2132;
+  color: white;
+  padding: 16px 32px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.05em;
+}
+
+.mrcf-btn-secondary {
+  background: transparent;
+  color: white;
+  padding: 16px 32px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 2px solid #fa2132;
+  transition: all 0.3s ease;
+  font-size: 1.05em;
+}
+
+.mrcf-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(250, 33, 50, 0.4);
+  background: #e01e2b;
+}
+
+.mrcf-btn-secondary:hover {
+  background: #fa2132;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.mrcf-cta-features {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+  opacity: 0.9;
+}
+
+.mrcf-cta-features > div {
+  text-align: center;
+}
+
+.mrcf-feature-title {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #fa2132;
+}
+
+/* Footer */
+.mrcf-footer {
+  padding: 50px 0;
+  background: #1a1a1a;
+  text-align: center;
+  font-size: 0.9em;
+  color: #999;
+}
+
+.mrcf-footer p {
+  margin-bottom: 10px;
+}
+
+.mrcf-footer strong {
+  color: #fa2132;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mrcf-methodology-title {
+    font-size: 2.8em;
+  }
+
+  .mrcf-comparison-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mrcf-math-foundation,
+  .mrcf-process-flow,
+  .mrcf-innovation-comparison {
+    padding: 30px;
+  }
+
+  .mrcf-cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mrcf-container {
+    padding: 0 15px;
+  }
+
+  .mrcf-section-title {
+    font-size: 2em;
+  }
+}

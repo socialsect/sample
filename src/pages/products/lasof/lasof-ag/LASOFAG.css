@@ -1,0 +1,552 @@
+/* Standardized FERZ CTA styles */
+.engine-cta {
+  padding: 6rem 0;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(250, 33, 49, 0.08) 0%, transparent 100%);
+  position: relative;
+  z-index: 15;
+}
+
+.engine-cta h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  font-family: "Satoshi", sans-serif;
+}
+
+.engine-cta-subtitle {
+  font-size: 1.3rem;
+  color: #ccc;
+  margin-bottom: 3rem;
+}
+
+.engine-cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.5rem 3rem;
+  background: linear-gradient(135deg, #fa2132 0%, #000 100%);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: "Satoshi", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 15;
+  overflow: hidden;
+}
+
+.engine-cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+  transition: left 0.6s ease;
+}
+
+.engine-cta-button:hover::before {
+  left: 100%;
+}
+
+.engine-cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(250, 33, 49, 0.3);
+  background: linear-gradient(135deg, #000 0%, #fa2132 100%);
+}
+/* LASOFAG Product Page Styles */
+.lasofag-page {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: #ffffff;
+  background-color: #000000;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+  padding: 80px 0;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-content {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  color: #ffffff;
+  font-family: 'Clash Display', sans-serif;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: #ffffff;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #fa2132 0%, #dc2626 100%);
+  color: white;
+  box-shadow: 0 4px 14px rgba(220, 38, 38, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(220, 38, 38, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid #4a5568;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  border-color: #718096;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Section Headers */
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-family: 'Clash Display', sans-serif;
+}
+
+.section-header p {
+  font-size: 1.125rem;
+  color: #e2e8f0;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Overview Section */
+.overview-section {
+  padding: 80px 0;
+  background: #000000;
+}
+
+.overview-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.overview-text p {
+  font-size: 1.125rem;
+  color: #e2e8f0;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+/* Tiers Section */
+.tiers-section {
+  padding: 80px 0;
+  background: #111111;
+}
+
+.tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 32px;
+}
+
+.tier-card {
+  background: #1a1a1a;
+  padding: 32px;
+  border-radius: 16px;
+  border-left: 4px solid #fa2132;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #333333;
+}
+
+.tier-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.tier-number {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #fa2132;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.tier-card h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.tier-card p {
+  color: #e2e8f0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Integration Section */
+.integration-section {
+  padding: 80px 0;
+  background: #000000;
+}
+
+.integration-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.integration-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 32px;
+  background: #1a1a1a;
+  border-radius: 16px;
+  border: 1px solid #333333;
+}
+
+.integration-icon {
+  color: #fa2132;
+  flex-shrink: 0;
+  margin-top: 8px;
+}
+
+.integration-text h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.integration-text p {
+  color: #e2e8f0;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+/* Features Section */
+.features-section {
+  padding: 80px 0;
+  background: #111111;
+}
+
+.lasofag-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.feature-card {
+  background: #1a1a1a;
+  padding: 32px;
+  border-radius: 16px;
+  text-align: center;
+  border: 1px solid #333333;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+}
+
+.feature-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.feature-card p {
+  color: #e2e8f0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Why It Matters Section */
+.why-matters-section {
+  padding: 80px 0;
+  background: #000000;
+}
+
+.why-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.why-content > p {
+  font-size: 1.125rem;
+  color: #e2e8f0;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.applications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 32px;
+}
+
+.application-card {
+  background: #1a1a1a;
+  padding: 32px;
+  border-radius: 16px;
+  text-align: center;
+  border: 1px solid #333333;
+  transition: transform 0.3s ease;
+}
+
+.application-card:hover {
+  transform: translateY(-4px);
+}
+
+.app-icon {
+  margin-bottom: 20px;
+  color: #fa2132;
+}
+
+.application-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.application-card p {
+  color: #e2e8f0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* CTA Section */
+.cta-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+  color: white;
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-family: 'Clash Display', sans-serif;
+}
+
+.cta-content p {
+  font-size: 1.125rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Patent Section */
+.patent-section {
+  padding: 80px 0;
+  background: #111111;
+}
+
+.patent-details {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.patent-card {
+  background: #1a1a1a;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid #333333;
+}
+
+.patent-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: #ffffff;
+}
+
+.patent-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.patent-card li {
+  background: #2a2a2a;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  border-left: 4px solid #fa2132;
+  line-height: 1.6;
+  color: #e2e8f0;
+}
+
+.patent-card strong {
+  color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .tiers-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  
+  .integration-item {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 60px 0;
+    min-height: 50vh;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .tiers-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .lasofag-features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .applications-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .integration-item {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+  
+  .hero-title {
+    font-size: 1.75rem;
+  }
+  
+  .section-header h2 {
+    font-size: 1.75rem;
+  }
+  
+  .tier-card {
+    padding: 24px;
+  }
+  
+  .application-card {
+    padding: 24px;
+  }
+  
+  .patent-card {
+    padding: 24px;
+  }
+}

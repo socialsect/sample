@@ -1,0 +1,733 @@
+/* -----------------------------------
+   FERZ Core Layout, Brand & Container
+----------------------------------- */
+
+.laso-main {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #fff;
+  background: #000;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+.laso-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* -----------------------------------
+   Hero Section
+----------------------------------- */
+
+.laso-header {
+  background: #000;
+  padding: 120px 0 80px;
+  min-height: 80vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.laso-hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 1.5rem 0;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.laso-hero-tagline {
+  font-size: 1.25rem;
+  color: #e2e8f0;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+  max-width: 800px;
+  font-weight: 400;
+  opacity: 0.9;
+  text-align: center;
+}
+
+/* -----------------------------------
+   Problem Points & Solution Summary
+----------------------------------- */
+
+.laso-problem-statement {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 20px;
+  font-size: 1rem;
+  color: #e2e8f0;
+  transition: all 0.3s;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.laso-solution-summary {
+  background: rgba(250,33,49, 0.08);
+  color: #fff;
+  border-radius: 10px;
+  padding: 18px 22px;
+  margin-top: 20px;
+  font-size: 1.08em;
+  text-align: center;
+}
+
+.laso-what-is-lasof {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.laso-solution-description {
+  margin-bottom: 25px;
+  font-size: 1.05em;
+  line-height: 1.7;
+}
+
+.laso-solution-highlight {
+  font-size: 1.3em;
+  margin-bottom: 15px;
+}
+
+.laso-benefit-item {
+  margin-bottom: 10px;
+}
+
+.laso-benefit-item:last-child {
+  margin-bottom: 0;
+}
+
+/* -----------------------------------
+   Sections
+----------------------------------- */
+
+.laso-section {
+  padding: 80px 0;
+  background: #000;
+  color: #fff;
+}
+
+.laso-section[style*="background: #f8fafc"] {
+  background: #000 !important;
+}
+
+.laso-competitive-section {
+  background: #000;
+}
+
+.laso-execution-section {
+  background: #000;
+}
+
+.laso-section-title {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #fff;
+  font-weight: 700;
+  position: relative;
+}
+
+.laso-section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: #fa2132;
+}
+
+.laso-section-subtitle {
+  font-size: 1.1em;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #e2e8f0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9;
+  display: block;
+  width: 100%;
+}
+
+/* -----------------------------------
+   Architecture Section
+----------------------------------- */
+
+.laso-architecture-container {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.laso-architecture-title {
+  color: #fa2132;
+  margin-bottom: 20px;
+}
+
+.laso-architecture-placeholder {
+  background: #1a1a1a;
+  padding: 40px;
+  border-radius: 15px;
+  border: 2px dashed #fa2132;
+  margin-bottom: 30px;
+}
+
+.laso-diagram-placeholder {
+  background: #000;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.laso-diagram-text {
+  color: #6b7280;
+  font-style: italic;
+  margin: 0;
+}
+
+.laso-diagram-subtext {
+  font-size: 0.9em;
+  color: #9ca3af;
+  margin-top: 10px;
+}
+
+.laso-architecture-flow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.laso-flow-step {
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 0.8em;
+  color: white;
+}
+
+.laso-input-processing {
+  background: linear-gradient(135deg, #fa2132, #dc2626);
+}
+
+.laso-rule-selection {
+  background: linear-gradient(135deg, #0ea5e9, #0369a1);
+}
+
+.laso-execution {
+  background: linear-gradient(135deg, #16a34a, #15803d);
+}
+
+.laso-validation {
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+}
+
+.laso-output {
+  background: linear-gradient(135deg, #7c3aed, #6d28d9);
+}
+
+/* -----------------------------------
+   Cards and Grids
+----------------------------------- */
+
+.laso-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.laso-grid:hover .laso-risk-card:not(:hover),
+.laso-grid:hover .laso-solution-card:not(:hover) {
+  filter: blur(1px);
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+.laso-risk-card {
+  background: #1a1a1a;
+  border-left: 6px solid #dc2626;
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid #333;
+  transition: transform 0.3s, box-shadow 0.3s, filter 0.3s ease, opacity 0.3s ease;
+  color: #fff;
+}
+
+.laso-risk-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  filter: blur(0);
+  opacity: 1;
+  z-index: 10;
+  position: relative;
+}
+
+.laso-risk-card h3 {
+  color: #dc2626;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.laso-risk-card p {
+  color: #e2e8f0;
+  margin-bottom: 15px;
+}
+
+.laso-risk-card strong {
+  color: #fa2132;
+}
+
+.laso-solution-card {
+  background: #1a1a1a;
+  border-left: 6px solid #16a34a;
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid #333;
+  transition: transform 0.3s, box-shadow 0.3s, filter 0.3s ease, opacity 0.3s ease;
+  color: #fff;
+}
+
+.laso-solution-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  filter: blur(0);
+  opacity: 1;
+  z-index: 10;
+  position: relative;
+}
+
+.laso-solution-card h3 {
+  color: #16a34a;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.laso-solution-card p {
+  color: #e2e8f0;
+  margin-bottom: 15px;
+}
+
+.laso-solution-list {
+  color: #e2e8f0;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+.laso-solution-list li {
+  color: #e2e8f0;
+  margin-bottom: 8px;
+}
+
+/* -----------------------------------
+   Technical Foundation
+----------------------------------- */
+
+.laso-tech-foundation {
+  background: #1a1a1a;
+  padding: 40px;
+  border-radius: 15px;
+  margin: 40px 0;
+  border: 2px solid #fa2132;
+  border: 1px solid #333;
+  color: #fff;
+}
+
+.laso-tech-foundation-title {
+  color: #fa2132;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.laso-tech-foundation-description {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.1em;
+  color: #e2e8f0;
+}
+
+.laso-innovation-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.laso-innovation-highlight {
+  background: rgba(250,33,49,0.05);
+  padding: 25px;
+  border-radius: 12px;
+  border-left: 4px solid #fa2132;
+  margin: 20px 0;
+  border: 1px solid #333;
+  color: #fff;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.laso-innovation-highlight:hover {
+  filter: blur(0);
+  opacity: 1;
+  z-index: 10;
+  position: relative;
+}
+
+.laso-innovation-highlight h4 {
+  color: #fa2132;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.laso-innovation-highlight p {
+  color: #e2e8f0;
+}
+
+/* -----------------------------------
+   Competitive Comparison
+----------------------------------- */
+
+.laso-comparison-table {
+  background: #1a1a1a;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+  margin-top: 40px;
+  border: 1px solid #333;
+}
+
+.laso-comparison-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.laso-comparison-table th,
+.laso-comparison-table td {
+  padding: 20px;
+  text-align: left;
+  border-bottom: 1px solid #333;
+  color: #fff;
+}
+
+.laso-comparison-table th {
+  background: #fa2132;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+}
+
+.laso-ferz-row {
+  background: rgba(250,33,49,0.1);
+  font-weight: 600;
+}
+
+.laso-checkmark {
+  color: #16a34a;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.laso-x-mark {
+  color: #dc2626;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.laso-competitive-insight {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 1.1em;
+  color: #e2e8f0;
+}
+
+/* -----------------------------------
+   Metrics
+----------------------------------- */
+
+.laso-metric-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.laso-metric-grid:hover .laso-metric-card:not(:hover) {
+  filter: blur(1px);
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+.laso-metric-card {
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-top: 4px solid #fa2132;
+  border: 1px solid #333;
+  transition: transform 0.3s, box-shadow 0.3s, filter 0.3s ease, opacity 0.3s ease;
+  color: #fff;
+}
+
+.laso-metric-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  filter: blur(0);
+  opacity: 1;
+  z-index: 10;
+  position: relative;
+}
+
+.laso-metric-number {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #fa2132;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.laso-metric-card p {
+  color: #e2e8f0;
+}
+
+/* -----------------------------------
+   Patent Section
+----------------------------------- */
+
+.laso-patent-section {
+  background: rgba(250,33,49,0.05);
+  padding: 40px;
+  border-radius: 15px;
+  margin: 40px 0;
+  border-left: 6px solid #fa2132;
+  border: 1px solid #333;
+  color: #fff;
+}
+
+.laso-patent-section h3 {
+  color: #fa2132;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.laso-patent-section p {
+  color: #e2e8f0;
+  margin-bottom: 15px;
+}
+
+.laso-patent-coverage {
+  margin-top: 15px;
+  color: #e2e8f0;
+}
+
+.laso-patent-list {
+  color: #e2e8f0;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+.laso-patent-list li {
+  color: #e2e8f0;
+  margin-bottom: 10px;
+}
+
+.laso-competitive-moat {
+  margin-top: 15px;
+  color: #e2e8f0;
+}
+
+.laso-ip-link {
+  margin-top: 15px;
+}
+
+.laso-patent-link {
+  color: #fa2132;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.laso-patent-link:hover {
+  text-decoration: underline;
+}
+
+/* -----------------------------------
+   Disclaimer
+----------------------------------- */
+
+.laso-disclaimer {
+  background: rgba(245,158,11,0.1);
+  border-left: 4px solid #f59e0b;
+  padding: 20px;
+  margin: 30px 0;
+  border-radius: 8px;
+  font-size: 0.95em;
+  color: #f59e0b;
+  border: 1px solid #333;
+  text-align: center;
+}
+
+/* -----------------------------------
+   Call to Action
+----------------------------------- */
+
+.laso-cta-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: white;
+  text-align: center;
+  margin-top: 60px;
+  border-top: 4px solid #fa2132;
+  border-bottom: 4px solid #fa2132;
+}
+
+.laso-cta-section h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.laso-cta-subtitle {
+  font-size: 1.2em;
+  margin-top: 20px;
+  opacity: 0.9;
+  color: #e2e8f0;
+}
+
+.laso-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.laso-btn-primary {
+  background: #fa2132;
+  color: #ffffff;
+  padding: 15px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.laso-btn-secondary {
+  background: transparent;
+  color: #fa2132;
+  padding: 15px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 2px solid #fa2132;
+  transition: all 0.3s ease;
+}
+
+.laso-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(250, 33, 50, 0.3);
+  background: #dc2626;
+}
+
+.laso-btn-secondary:hover {
+  background: #fa2132;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(250, 33, 50, 0.3);
+}
+
+.laso-cta-metrics {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  opacity: 0.9;
+}
+
+.laso-cta-metric {
+  text-align: center;
+}
+
+.laso-cta-metric-number {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #fa2132;
+}
+
+.laso-cta-metric-label {
+  color: #e2e8f0;
+}
+
+/* -----------------------------------
+   Secondary CTA
+----------------------------------- */
+
+.laso-secondary-cta {
+  padding: 40px 0;
+  text-align: center;
+  background: #000;
+}
+
+.laso-secondary-cta-title {
+  color: #fa2132;
+  margin-bottom: 20px;
+}
+
+/* -----------------------------------
+   Responsive Design
+----------------------------------- */
+
+@media (max-width: 768px) {
+  .laso-hero-title {
+    font-size: 2.5em;
+  }
+
+  .laso-cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .laso-container {
+    padding: 0 15px;
+  }
+
+  .laso-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .laso-metric-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .laso-architecture-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .laso-innovation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .laso-cta-metrics {
+    grid-template-columns: 1fr;
+  }
+}
+

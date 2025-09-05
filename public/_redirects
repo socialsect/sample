@@ -1,0 +1,20 @@
+# Redirects for FERZ Consulting Website
+# This file ensures proper routing and custom 404 handling
+
+# Handle client-side routing for SPA
+/* /index.html 200
+
+# Custom 404 page
+/404 /index.html 200
+
+# Redirect old URLs to new ones (if any)
+# /old-page /new-page 301
+
+# Force HTTPS (optional)
+# http://ferzconsulting.com/* https://ferzconsulting.com/:splat 301
+
+# Handle trailing slashes
+/*/ /:splat 301
+
+# Ensure custom 404 for all undefined routes
+/* /index.html 404

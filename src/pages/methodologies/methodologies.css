@@ -1,0 +1,879 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.meth-app {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #ffffff;
+  background: #000000;
+  padding-top: 80px; /* Add padding to account for fixed navbar */
+}
+
+.meth-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Authority Badge */
+.meth-authority-badge {
+  background: linear-gradient(135deg, #fa2132, #c81e2a);
+  color: white;
+  text-align: center;
+  padding: 12px 0;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+/* Header */
+.meth-header {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #2a2a2a 100%);
+  color: white;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.meth-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 80%, rgba(250, 33, 50, 0.2) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(250, 33, 50, 0.15) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.meth-header-content {
+  position: relative;
+  z-index: 1;
+}
+
+.meth-title {
+  font-size: 4em;
+  font-weight: 700;
+  margin-bottom: 30px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.meth-tagline {
+  font-size: 1.5em;
+  margin-bottom: 40px;
+  opacity: 0.95;
+  font-weight: 500;
+  text-align: center;
+  color: #fa2132;
+}
+
+.meth-philosophy-statement {
+  background: rgba(250, 33, 50, 0.1);
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(250, 33, 50, 0.3);
+  margin-bottom: 40px;
+  font-size: 1.2em;
+  backdrop-filter: blur(10px);
+  text-align: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Sections */
+.meth-section-title {
+  font-size: 2.8em;
+  text-align: center;
+  margin: 80px 0 30px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.meth-section-subtitle {
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #cccccc;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.meth-section {
+  padding: 50px 0;
+}
+
+.meth-bg-dark {
+  background: #0a0a0a;
+}
+
+/* Philosophy Section */
+.meth-philosophy-section {
+  background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+  color: white;
+  padding: 80px 0;
+  margin: 60px 0;
+}
+
+.meth-philosophy-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.meth-philosophy-title {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  font-weight: 600;
+  color: #fa2132;
+}
+
+.meth-philosophy-text {
+  font-size: 1.2em;
+  line-height: 1.8;
+  opacity: 0.9;
+  margin-bottom: 40px;
+}
+
+.meth-philosophy-pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.meth-pillar-card {
+  background: rgba(250, 33, 50, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(250, 33, 50, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.meth-pillar-card h4 {
+  font-size: 1.3em;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #fa2132;
+}
+
+/* Authority Foundation */
+.meth-authority-foundation {
+  background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+  padding: 60px;
+  border-radius: 25px;
+  margin: 60px 0;
+  border: 3px solid #fa2132;
+  position: relative;
+}
+
+.meth-authority-foundation::before {
+  content: 'INNOVATION AUTHORITY';
+  position: absolute;
+  top: -15px;
+  left: 40px;
+  background: #fa2132;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 0.9em;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.meth-foundation-title {
+  color: #ffffff;
+  font-size: 2.2em;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.meth-foundation-subtitle {
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 1.1em;
+  color: #cccccc;
+}
+
+/* Authority Metrics */
+.meth-authority-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.meth-authority-card {
+  background: #000000;
+  padding: 35px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(250, 33, 50, 0.2);
+  border-top: 5px solid #fa2132;
+  position: relative;
+  overflow: hidden;
+}
+
+.meth-authority-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(45deg, #fa2132, #c81e2a, #fa2132);
+}
+
+.meth-authority-number {
+  font-size: 3em;
+  font-weight: bold;
+  color: #fa2132;
+  display: block;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+.meth-authority-metric {
+  font-size: 1.1em;
+  color: #cccccc;
+  font-weight: 500;
+}
+
+.meth-research-highlight {
+  margin-top: 50px;
+  text-align: center;
+  background: rgba(250, 33, 50, 0.1);
+  padding: 35px;
+  border-radius: 15px;
+  border: 2px solid #fa2132;
+}
+
+.meth-research-title {
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-size: 1.4em;
+}
+
+.meth-research-text {
+  font-size: 1.1em;
+  color: #cccccc;
+  line-height: 1.7;
+}
+
+/* Methodology Cards */
+.meth-methodologies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.meth-methodology-card {
+  background: #1a1a1a;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(250, 33, 50, 0.1);
+  border-top: 6px solid #fa2132;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  transform: translateY(0);
+  z-index: 1;
+}
+
+.meth-methodology-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(45deg, rgba(250, 33, 50, 0.2), rgba(250, 33, 50, 0.1));
+  border-radius: 50%;
+  transform: translate(30px, -30px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+  opacity: 0.8;
+}
+
+.meth-methodology-card:hover {
+  transform: translateY(-10px) scale(1.01);
+  box-shadow: 0 30px 60px rgba(250, 33, 50, 0.3);
+  background: #1e1e1e;
+  border-top-color: #ff4d5f;
+}
+
+.meth-methodology-card:hover::before {
+  transform: scale(4) translate(20px, -10px);
+  opacity: 0.3;
+}
+
+/* Add hover effect for methodology card titles */
+.meth-methodology-card h3 {
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.meth-methodology-card h3::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #fa2132;
+  transition: width 0.3s ease;
+}
+
+.meth-methodology-card:hover h3::after {
+  width: 100%;
+}
+
+/* Add hover effect for the focus text */
+.meth-methodology-focus {
+  display: inline-block;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.meth-methodology-card:hover .meth-methodology-focus {
+  transform: translateX(10px);
+  color: #ff4d5f;
+}
+
+/* Add hover effect for the outcomes box */
+.meth-methodology-outcomes {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(0);
+}
+
+.meth-methodology-card:hover .meth-methodology-outcomes {
+  transform: translateX(5px);
+  background: #2f2f2f;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced link hover effect */
+.meth-methodology-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.meth-methodology-link::after {
+  content: '→';
+  margin-left: 5px;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
+}
+
+.meth-methodology-card:hover .meth-methodology-link {
+  color: #ff4d5f;
+}
+
+.meth-methodology-card:hover .meth-methodology-link::after {
+  opacity: 1;
+  transform: translateX(5px);
+}
+
+.meth-methodology-card h3 {
+  color: #ffffff;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.meth-methodology-focus {
+  color: #fa2132;
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+.meth-methodology-description {
+  margin-bottom: 25px;
+  font-size: 1.05em;
+  line-height: 1.7;
+  color: #cccccc;
+}
+
+.meth-methodology-outcomes {
+  background: #2a2a2a;
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid #fa2132;
+  margin-bottom: 25px;
+}
+
+.meth-methodology-outcomes h4 {
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.meth-methodology-link {
+  color: #fa2132;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 5px 0;
+}
+
+.meth-methodology-link::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fa2132;
+  transition: width 0.3s ease;
+}
+
+.meth-methodology-card:hover .meth-methodology-link::before {
+  width: 100%;
+}
+
+.meth-methodology-link:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(250, 33, 50, 0.5);
+}
+
+/* Integrated Framework */
+.meth-integrated-section {
+  background: #0a0a0a;
+  padding: 60px 0;
+}
+
+.meth-integration-flow {
+  background: #1a1a1a;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  margin-top: 40px;
+}
+
+.meth-flow-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.meth-flow-step {
+  text-align: center;
+}
+
+.meth-flow-icon {
+  background: linear-gradient(135deg, #fa2132, #c81e2a);
+  color: white;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8em;
+  font-weight: bold;
+  margin: 0 auto 20px;
+}
+
+.meth-flow-icon-secondary {
+  background: linear-gradient(135deg, #fa2132, #ff4757);
+}
+
+.meth-flow-icon-tertiary {
+  background: linear-gradient(135deg, #c81e2a, #fa2132);
+}
+
+.meth-flow-step h3 {
+  color: #ffffff;
+  margin-bottom: 15px;
+  font-size: 1.3em;
+}
+
+.meth-flow-step p {
+  color: #cccccc;
+}
+
+.meth-synergy-highlight {
+  margin-top: 40px;
+  padding: 30px;
+  background: rgba(250, 33, 50, 0.1);
+  border-radius: 15px;
+  border: 2px solid #fa2132;
+  text-align: center;
+}
+
+.meth-synergy-title {
+  color: #ffffff;
+  margin-bottom: 15px;
+  font-size: 1.4em;
+}
+
+.meth-synergy-text {
+  font-size: 1.1em;
+  color: #cccccc;
+  line-height: 1.7;
+}
+
+/* IP Protection Strategy */
+.meth-ip-protection {
+  background: linear-gradient(135deg, #fa2132, #c81e2a);
+  color: white;
+  padding: 50px;
+  border-radius: 20px;
+  margin: 50px 0;
+  text-align: center;
+}
+
+.meth-ip-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.meth-ip-subtitle {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.meth-ip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.meth-ip-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.meth-ip-label {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.meth-ip-card p {
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+.meth-strategic-advantage {
+  margin-top: 30px;
+  font-size: 1.1em;
+}
+
+/* Implementation Readiness */
+.meth-readiness-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.meth-readiness-card {
+  background: #1a1a1a;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(250, 33, 50, 0.1);
+}
+
+.meth-readiness-primary {
+  border-left: 6px solid #fa2132;
+}
+
+.meth-readiness-secondary {
+  border-left: 6px solid #ff4757;
+}
+
+.meth-readiness-tertiary {
+  border-left: 6px solid #c81e2a;
+}
+
+.meth-readiness-card h3 {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.meth-readiness-card p {
+  margin-bottom: 20px;
+  color: #cccccc;
+}
+
+.meth-readiness-features {
+  font-weight: 600;
+  color: #fa2132;
+}
+
+.meth-comprehensive-transform {
+  margin-top: 50px;
+  text-align: center;
+  background: rgba(250, 33, 50, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  border-left: 6px solid #fa2132;
+}
+
+.meth-comprehensive-transform h3 {
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.meth-comprehensive-transform p {
+  font-size: 1.1em;
+  color: #cccccc;
+}
+
+/* Research & Development Authority */
+.meth-rd-pipeline {
+  background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+  padding: 50px;
+  border-radius: 20px;
+  margin: 50px 0;
+  border-left: 8px solid #fa2132;
+}
+
+.meth-rd-title {
+  color: #ffffff;
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.meth-rd-subtitle {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.1em;
+  color: #cccccc;
+}
+
+.meth-rd-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.meth-rd-card {
+  background: #000000;
+  padding: 25px;
+  border-radius: 12px;
+  border-left: 4px solid #fa2132;
+}
+
+.meth-rd-card h5 {
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+.meth-rd-card p {
+  color: #cccccc;
+}
+
+/* Call to Action */
+.meth-cta-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #1a1a1a, #2a2a2a, #3a3a3a);
+  color: white;
+  text-align: center;
+  margin-top: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.meth-cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 70%, rgba(250, 33, 50, 0.2) 0%, transparent 50%),
+              radial-gradient(circle at 70% 30%, rgba(250, 33, 50, 0.15) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.meth-cta-content {
+  position: relative;
+  z-index: 1;
+}
+
+.meth-cta-title {
+  font-size: 2.8em;
+  margin-bottom: 25px;
+  color: #fa2132;
+}
+
+.meth-cta-subtitle {
+  font-size: 1.3em;
+  margin-top: 20px;
+  opacity: 0.9;
+}
+
+.meth-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.meth-btn-primary {
+  background: #fa2132;
+  color: white;
+  padding: 18px 35px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.1em;
+}
+
+.meth-btn-secondary {
+  background: transparent;
+  color: white;
+  padding: 18px 35px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 2px solid white;
+  transition: all 0.3s ease;
+  font-size: 1.1em;
+}
+
+.meth-btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(250, 33, 50, 0.4);
+  background: #c81e2a;
+}
+
+.meth-btn-secondary:hover {
+  background: white;
+  color: #000000;
+  transform: translateY(-2px);
+}
+
+.meth-cta-features {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  opacity: 0.9;
+}
+
+.meth-cta-feature {
+  text-align: center;
+}
+
+.meth-cta-feature-title {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #fa2132;
+}
+
+.meth-cta-feature-desc {
+  font-size: 1.1em;
+}
+
+/* Footer */
+.meth-footer {
+  padding: 60px 0;
+  background: #0a0a0a;
+  text-align: center;
+  font-size: 0.9em;
+  color: #666666;
+}
+
+.meth-footer-disclaimer {
+  margin-top: 10px;
+  color: #888888;
+}
+
+.meth-footer-authority {
+  margin-top: 8px;
+  color: #aaaaaa;
+}
+
+.meth-footer-authority strong {
+  color: #fa2132;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .meth-title {
+    font-size: 2.8em;
+  }
+
+  .meth-methodologies-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .meth-methodology-card {
+    padding: 35px;
+  }
+
+  .meth-authority-foundation,
+  .meth-philosophy-section {
+    padding: 40px 20px;
+  }
+
+  .meth-cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .meth-container {
+    padding: 0 15px;
+  }
+
+  .meth-section-title {
+    font-size: 2.2em;
+  }
+
+  .meth-readiness-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .meth-flow-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .meth-authority-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .meth-ip-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .meth-rd-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .meth-cta-features {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

@@ -18,6 +18,18 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Lock body scroll when menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMenuOpen]);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     setSelectedCategory(null);
@@ -107,18 +119,11 @@ const Navbar = () => {
 
           <div className="navbar-right">
             <button 
-              className="search-button"
-              onClick={() => setSearchQuery('')}
-              aria-label="Search"
-            >
-              <Search size={18} />
-            </button>
-            <button 
               className="contact-button"
               onClick={(e) => handleLinkClick('/contact-us', e)}
               aria-label="Access a briefing"
             >
-              Access a Briefing
+             Contact Us
             </button>
           </div>
         </div>

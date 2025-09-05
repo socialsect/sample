@@ -1,0 +1,390 @@
+/* AI Consulting Page Styles */
+/* Card styles are in shared/CardStyles.css */
+
+/* Base Styles */
+.ai-consulting-page {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #fff;
+  background: #000;
+  min-height: 100vh;
+}
+
+.ai-consulting-page * {
+  box-sizing: border-box;
+}
+
+/* Typography */
+.ai-consulting-page h1,
+.ai-consulting-page h2,
+.ai-consulting-page h3,
+.ai-consulting-page h4,
+.ai-consulting-page h5,
+.ai-consulting-page h6 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.ai-consulting-page p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  color: #e2e8f0;
+  opacity: 0.9;
+}
+
+.ai-consulting-page .ai-strong {
+  font-weight: 600;
+  color: #fa2132;
+  background: none;
+  -webkit-text-fill-color: #fa2132;
+  background-clip: text;
+}
+
+/* Layout */
+.ai-consulting-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.ai-consulting-header {
+  background: #000;
+  color: white;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.ai-consulting-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 80%, rgba(250, 33, 49, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(250, 33, 49, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.ai-consulting-header .ai-consulting-container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Card Overrides */
+.ai-card {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.ai-card h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.ai-card h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: #fa2132;
+  transition: width 0.4s ease;
+}
+
+.ai-card:hover h3 {
+  color: #fa2132;
+}
+
+.ai-card:hover h3::after {
+  width: 80px;
+  background: linear-gradient(90deg, #fa2132, #d91e2a, transparent);
+}
+
+/* Metrics */
+.ai-metric {
+  font-size: 2.2rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #fa2132, #ff6b6b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+/* Grid Layout */
+.ai-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+/* Responsive Grid */
+@media (min-width: 768px) {
+  .ai-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .ai-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Header */
+.ai-consulting-header {
+  background: #000;
+  color: white;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.ai-consulting-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 80%, rgba(250, 33, 49, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(250, 33, 49, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.ai-consulting-header .ai-consulting-container {
+  position: relative;
+  z-index: 1;
+}
+
+.ai-eyebrow {
+  font-size: 0.9em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fa2132;
+  margin-bottom: 1rem;
+}
+
+.ai-consulting-header h1 {
+  font-size: 3.2em;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.ai-lead {
+  font-size: 1.3em;
+  margin-bottom: 25px;
+  opacity: 0.95;
+  font-weight: 500;
+  color: #e2e8f0;
+  line-height: 1.6;
+}
+
+.ai-pills-container {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.ai-pill {
+  background: rgba(250, 33, 49, 0.1);
+  color: #fa2132;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: 500;
+  border: 1px solid rgba(250, 33, 49, 0.3);
+}
+
+.ai-cta {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.ai-btn {
+  background: #fa2132;
+  color: white;
+  padding: 16px 32px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.05em;
+  display: inline-block;
+}
+
+.ai-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(250, 33, 49, 0.4);
+  background: #dc2626;
+}
+
+.ai-btn-alt {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.ai-btn-alt:hover {
+  background: white;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+/* Main Content */
+main {
+  background: #000;
+}
+
+.ai-wrap {
+  padding: 80px 0;
+  margin: 60px 0;
+}
+
+.ai-wrap:nth-child(even) {
+  background: #1a1a1a;
+}
+
+.ai-wrap h2 {
+  font-size: 2.3em;
+  margin-bottom: 30px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.ai-wrap p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  color: #e2e8f0;
+  line-height: 1.7;
+}
+
+.ai-callout {
+  background: rgba(250, 33, 49, 0.05);
+  border-left: 4px solid #fa2132;
+  padding: 25px;
+  margin: 30px 0;
+  border-radius: 8px;
+  font-size: 1.05em;
+  color: #e2e8f0;
+}
+
+.ai-caps {
+  font-size: 0.9em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fa2132;
+}
+
+/* Two Column Layout */
+.ai-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.ai-two h3 {
+  color: #fa2132;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 1.3em;
+}
+
+.ai-two p {
+  margin-bottom: 15px;
+}
+
+/* Footer */
+footer.ai-wrap {
+  background: #1a1a1a;
+  text-align: center;
+  padding: 40px 0;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .ai-muted {
+  color: #9ca3af;
+  font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ai-consulting-header h1 {
+    font-size: 2.5em;
+  }
+
+  .ai-lead {
+    font-size: 1.1em;
+  }
+
+  .ai-pills-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ai-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ai-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-two {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .ai-consulting-container {
+    padding: 0 15px;
+  }
+
+  .ai-wrap {
+    padding: 60px 0;
+    margin: 40px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .ai-consulting-header {
+    padding: 60px 0;
+  }
+
+  .ai-consulting-header h1 {
+    font-size: 2em;
+  }
+
+  .ai-btn {
+    padding: 14px 24px;
+    font-size: 1em;
+  }
+}
