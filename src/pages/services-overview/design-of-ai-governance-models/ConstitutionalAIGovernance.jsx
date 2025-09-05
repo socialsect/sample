@@ -18,7 +18,6 @@ import {
 } from 'lucide-react';
 import Navbar from '../../../components/Navbar';
 import Footer from '../../../components/Footer/Footer';
-import Threads from '../../../components/Threads/Threads';
 import './ConstitutionalAIGovernance.css';
 
 const ConstitutionalAIGovernance = () => {
