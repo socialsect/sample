@@ -8,12 +8,6 @@ export const sitemapData = {
       description: 'Explore our comprehensive AI and strategic consulting services.',
       subcategories: [
         {
-          id: 'services-overview',
-          title: 'Services Overview',
-          path: '/services-overview',
-          description: 'Comprehensive overview of our AI governance and constitutional compliance services.'
-        },
-        {
           id: 'ai-consulting',
           title: 'AI Consulting',
           path: '/services-overview/ai-consulting',
@@ -137,22 +131,32 @@ export const sitemapData = {
       description: 'Welcome to FERZ Consulting'
     },
     {
-      id: 'services-overview',
-      title: 'Services Overview',
-      path: '/services-overview',
-      description: 'Comprehensive overview of our AI governance and constitutional compliance services.'
-    },
-    {
       id: 'ip-portfolio',
       title: 'IP Portfolio',
       path: '/ip-portfolio',
       description: 'Explore FERZ\'s intellectual property portfolio and governance frameworks.'
     },
     {
-      id: 'about-us',
-      title: 'About Us',
-      path: '/about-us',
-      description: 'Learn about our company, mission, and values.'
+      id: 'services-overview',
+      title: 'Services Overview',
+      path: '/services-overview',
+      description: 'Comprehensive overview of our AI governance and constitutional compliance services.'
+    },  {
+      id: 'Products-Overview',
+      title: 'Products Overview',
+      path: '/products',
+      description: 'Explore FERZ\'s products and solutions.'
+    },  {
+      id: 'Methodologies-Overview',
+      title: 'Methodologies Overview',
+      path: '/methodologies',
+      description: 'Explore FERZ\'s methodologies and frameworks.'
+    },
+    {
+      id: 'contact-us',
+      title: 'Contact Us',
+      path: '/contact-us',
+      description: 'Get in touch with our team.'
     },
     {
       id: 'articles',
@@ -161,10 +165,12 @@ export const sitemapData = {
       description: 'Read our latest insights and thought leadership.'
     },
     {
-      id: 'contact-us',
-      title: 'Contact Us',
-      path: '/contact-us',
-      description: 'Get in touch with our team.'
-    }
+      id: 'about-us',
+      title: 'About Us',
+      path: '/about-us',
+      description: 'Learn about our company, mission, and values.'
+    },
+  
+
   ]
 };
