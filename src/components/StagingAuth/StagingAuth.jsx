@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Eye, EyeOff, Lock, X } from 'lucide-react';
+import EnvDebug from './EnvDebug';
 import './StagingAuth.css';
 
 const StagingAuth = ({ children }) => {
@@ -8,11 +9,34 @@ const StagingAuth = ({ children }) => {
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(true);
   const [showPassword, setShowPassword] = useState(false);
-
+useEffect(() => {
+  console.log(password);
+}, [password]);
   // Check if we're in staging environment
   const isStaging = process.env.NODE_ENV === 'development' || 
                    window.location.hostname.includes('vercel.app') ||
                    window.location.hostname.includes('netlify.app');
+
+  // Get environment variable with multiple fallbacks
+  const getStagingPassword = () => {
+    // Try Vite's import.meta.env first
+    if (import.meta.env.VITE_STAGING_PASSWORD) {
+      return import.meta.env.VITE_STAGING_PASSWORD;
+    }
+    
+    // Try process.env for Vercel
+    if (process.env.VITE_STAGING_PASSWORD) {
+      return process.env.VITE_STAGING_PASSWORD;
+    }
+    
+    // Try window object (for runtime injection)
+    if (window.VITE_STAGING_PASSWORD) {
+      return window.VITE_STAGING_PASSWORD;
+    }
+    
+    // Default fallback
+    return 'FERZ2025';
+  };
 
   useEffect(() => {
     // Check if already authenticated (stored in sessionStorage)
@@ -27,7 +51,15 @@ const StagingAuth = ({ children }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const correctPassword = import.meta.env.VITE_STAGING_PASSWORD || 'ferz-staging-2024';
+    const correctPassword = getStagingPassword();
+    
+    console.log('Environment check:', {
+      importMeta: import.meta.env.VITE_STAGING_PASSWORD,
+      processEnv: process.env.VITE_STAGING_PASSWORD,
+      windowEnv: window.VITE_STAGING_PASSWORD,
+      correctPassword,
+      userInput: password
+    });
     
     if (password === correctPassword) {
       setIsAuthenticated(true);
@@ -75,6 +107,7 @@ const StagingAuth = ({ children }) => {
 
   return (
     <div className="staging-auth-container">
+      <EnvDebug />
       <div className="staging-auth-card">
         <div className="staging-auth-header">
           <h2>
