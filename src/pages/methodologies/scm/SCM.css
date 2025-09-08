@@ -636,72 +636,54 @@
 .scm-cta-buttons {
   display: flex;
   justify-content: center;
-  gap: 25px;
-  margin-top: 40px;
+  gap: 1rem;
+  margin-top: 2rem;
   flex-wrap: wrap;
 }
 
-.scm-cta-button {
-  display: inline-block;
+.scm-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   background: #fa2132;
   color: white;
-  padding: 15px 40px;
-  border-radius: 50px;
+  padding: 0.85rem 1.5rem;
+  border-radius: 12px;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 1.1em;
-  margin-top: 30px;
+  font-weight: 700;
+  font-size: 1rem;
   transition: all 0.3s ease;
-  border: 2px solid transparent;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.scm-cta-button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.1);
-  transition: all 0.4s ease;
-  z-index: -1;
-}
-
-.scm-cta-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(250, 33, 50, 0.3);
-  background: #ff3b4a;
-}
-
-.scm-cta-button:hover::before {
-  left: 0;
-}
-
-.scm-btn-secondary {
-  background: transparent;
-  color: white;
-  padding: 16px 32px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  border: 2px solid #fa2132;
-  transition: all 0.3s ease;
-  font-size: 1.05em;
+  border: none;
+  cursor: pointer;
 }
 
 .scm-btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(250, 33, 50, 0.4);
-  background: #e01e2b;
+  background: #d91e2a;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 15px rgba(250, 33, 50, 0.3);
+}
+
+.scm-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: #fa2132;
+  padding: 0.85rem 1.5rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  border: 1px solid #fa2132;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .scm-btn-secondary:hover {
   background: #fa2132;
   color: white;
-  transform: translateY(-2px);
+  transform: translateY(-1px);
+  box-shadow: 0 5px 15px rgba(250, 33, 50, 0.3);
 }
 
 .scm-cta-features {

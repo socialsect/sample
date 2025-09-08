@@ -1,14 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Search } from 'lucide-react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { sitemapData } from './sitemapData';
 import './Navbar.css';
 const Navbar = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [isScrolled, setIsScrolled] = useState(false);
+  
+  // Check if we're on the IP Portfolio page
+  const isIPPortfolioPage = location.pathname === '/ip-portfolio';
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
@@ -127,9 +131,9 @@ const Navbar = () => {
             <button 
               className="contact-button"
               onClick={(e) => handleLinkClick('/contact-us', e)}
-              aria-label="Access a briefing"
+              aria-label={isIPPortfolioPage ? "Access a briefing" : "Contact us"}
             >
-             Contact Us
+             {isIPPortfolioPage ? 'Access a briefing' : 'Contact Us'}
             </button>
           </div>
         </div>
@@ -181,9 +185,9 @@ const Navbar = () => {
             <button 
               className="overlay-contact-button"
               onClick={(e) => handleLinkClick('/contact-us', e)}
-              aria-label="Access a briefing"
+              aria-label={isIPPortfolioPage ? "Access a briefing" : "Contact us"}
             >
-              Access a Briefing
+              {isIPPortfolioPage ? 'Access a Briefing' : 'Contact Us'}
             </button>
           </div>
 

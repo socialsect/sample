@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import Navbar from '../../../components/Navbar';
 import Footer from '../../../components/Footer/Footer';
+import Breadcrumb from '../../../components/Breadcrumb/Breadcrumb';
 import './AIConsulting.css';
 import '../../../styles/shared/CardStyles.css';
 
@@ -48,7 +49,12 @@ const AIConsulting = () => {
       </Helmet>
 
       <Navbar />
-
+      <Breadcrumb items={[
+        { label: 'Home', path: '/' },
+        { label: 'Services', path: '/services-overview' },
+        { label: 'AI Consulting', path: '/services-overview/ai-consulting' }
+      ]} />
+      <div className="breadcrumb-spacer" />
       <div className="ai-consulting-page">
         <header className="ai-consulting-header">
           <div className="ai-consulting-container">

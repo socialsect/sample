@@ -9,9 +9,7 @@ const StagingAuth = ({ children }) => {
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(true);
   const [showPassword, setShowPassword] = useState(false);
-useEffect(() => {
-  console.log(password);
-}, [password]);
+
   // Check if we're in staging environment
   const isStaging = process.env.NODE_ENV === 'development' || 
                    window.location.hostname.includes('vercel.app') ||
@@ -55,7 +53,7 @@ useEffect(() => {
     
     console.log('Environment check:', {
       importMeta: import.meta.env.VITE_STAGING_PASSWORD,
-      processEnv: process.env.VITE_STAGING_PASSWORD,
+      // processEnv: process.env.VITE_STAGING_PASSWORD,..
       windowEnv: window.VITE_STAGING_PASSWORD,
       correctPassword,
       userInput: password

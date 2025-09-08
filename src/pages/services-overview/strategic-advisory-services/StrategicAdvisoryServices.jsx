@@ -1,6 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Footer from "../../../components/Footer/Footer"
+import Navbar from '../../../components/Navbar';
+import Breadcrumb from '../../../components/Breadcrumb/Breadcrumb';
 const StrategicAdvisoryPage = () => {
   // Structured Data for Strategic Advisory Services
   const structuredData = {
@@ -43,6 +45,13 @@ const StrategicAdvisoryPage = () => {
       </Helmet>
       
       <div className="strategic-advisory-page">
+        <Navbar />
+        <Breadcrumb items={[
+          { label: 'Home', path: '/' },
+          { label: 'Services', path: '/services-overview' },
+          { label: 'Strategic Advisory Services', path: '/services-overview/strategic-advisory-services' }
+        ]} />
+        <div className="breadcrumb-spacer" />
       <style jsx>{`
         .strategic-advisory-page {
           font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
@@ -56,7 +65,14 @@ const StrategicAdvisoryPage = () => {
         .strat-wrap {
           max-width: 90%;
           margin: 0 auto;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
           padding: 2.75rem 1.25rem;
+        }
+
+        .strat-wrap:first-of-type {
+          margin-top: 40px;
         }
 
         .strat-eyebrow {
@@ -106,6 +122,8 @@ const StrategicAdvisoryPage = () => {
           display: flex;
           gap: 0.75rem;
           flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
           margin-top: 1rem;
         }
 
@@ -164,74 +182,177 @@ const StrategicAdvisoryPage = () => {
 
         .strat-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-          gap: 1.5rem;
-          margin: 1.5rem 0;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 2rem;
+          margin: 2rem 0;
         }
 
         .strat-card {
-          background: #111827;
-          padding: 1.25rem;
-          border-radius: 12px;
-          border: 1px solid #374151;
+          background: #000000;
+          padding: 2rem;
+          border-radius: 16px;
+          border: 2px solid #fa2132;
           transition: all 0.3s ease;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .strat-card::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 4px;
+          background: linear-gradient(90deg, #fa2132, #ff6b7a);
         }
 
         .strat-card:hover {
-          border-color: #fa2132;
-          transform: translateY(-2px);
-          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+          border-color: #ff6b7a;
+          transform: translateY(-4px);
+          box-shadow: 0 12px 32px rgba(250, 33, 50, 0.2);
+        }
+
+        .strat-card h3 {
+          color: #ffffff;
+          font-size: 1.4rem;
+          font-weight: 700;
+          margin: 0 0 1rem 0;
+          line-height: 1.3;
+        }
+
+        .strat-card p {
+          color: #e5e7eb;
+          font-size: 1rem;
+          line-height: 1.6;
+          margin: 0 0 0.75rem 0;
+        }
+
+        .strat-card .strat-muted {
+          color: #9ca3af;
+          font-size: 0.9rem;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
         }
 
         .strat-metric {
-          font-size: 1.4rem;
+          font-size: 2.5rem;
           font-weight: 700;
           color: #fa2132;
+          margin-bottom: 1rem;
+          text-align: center;
+          background: linear-gradient(135deg, #fa2132, #ff6b7a);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
         }
 
         .strat-phase {
+          background: #000000;
+          border: 2px solid #fa2132;
+          border-radius: 16px;
+          padding: 2rem;
           margin-bottom: 1.5rem;
+          transition: all 0.3s ease;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .strat-phase::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 4px;
+          background: linear-gradient(90deg, #fa2132, #ff6b7a);
+        }
+
+        .strat-phase:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 12px 32px rgba(250, 33, 50, 0.2);
+          border-color: #ff6b7a;
         }
 
         .strat-phase-header {
           display: flex;
           align-items: center;
-          gap: 0.75rem;
-          margin-bottom: 0.5rem;
+          gap: 1rem;
+          margin-bottom: 1rem;
         }
 
         .strat-phase-number {
           background: #fa2132;
           color: #ffffff;
-          width: 1.5rem;
-          height: 1.5rem;
+          width: 2.5rem;
+          height: 2.5rem;
           border-radius: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
-          font-size: 0.75rem;
+          font-size: 1.1rem;
           font-weight: 700;
+          box-shadow: 0 4px 12px rgba(250, 33, 50, 0.3);
+          flex-shrink: 0;
+        }
+
+        .strat-phase h3 {
+          color: #ffffff;
+          font-size: 1.4rem;
+          font-weight: 700;
+          margin: 0;
+          line-height: 1.3;
+        }
+
+        .strat-phase p {
+          color: #e5e7eb;
+          font-size: 1rem;
+          line-height: 1.6;
+          margin: 0;
         }
 
         .strat-investment-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-          gap: 1rem;
-          margin: 1.5rem 0;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 2rem;
+          margin: 2rem 0;
         }
 
         .strat-investment-item {
           text-align: center;
-          padding: 1rem;
-          background: #111827;
-          border-radius: 10px;
-          border: 1px solid #374151;
+          padding: 2rem;
+          background: #000000;
+          border-radius: 16px;
+          border: 2px solid #fa2132;
           transition: all 0.3s ease;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .strat-investment-item::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 4px;
+          background: linear-gradient(90deg, #fa2132, #ff6b7a);
         }
 
         .strat-investment-item:hover {
-          border-color: #fa2132;
-          transform: translateY(-2px);
+          border-color: #ff6b7a;
+          transform: translateY(-4px);
+          box-shadow: 0 12px 32px rgba(250, 33, 50, 0.2);
+        }
+
+        .strat-investment-item h3,
+        .strat-investment-item p {
+          color: #ffffff;
+        }
+
+        .strat-investment-item .strat-muted {
+          color: #9ca3af;
         }
 
         .strat-two {
@@ -257,10 +378,45 @@ const StrategicAdvisoryPage = () => {
           
           .strat-grid {
             grid-template-columns: 1fr;
+            gap: 1.5rem;
           }
           
           .strat-investment-grid {
             grid-template-columns: 1fr;
+          }
+
+          .strat-phase {
+            padding: 1.5rem;
+          }
+
+          .strat-phase-header {
+            gap: 0.75rem;
+          }
+
+          .strat-phase-number {
+            width: 2rem;
+            height: 2rem;
+            font-size: 1rem;
+          }
+
+          .strat-phase h3 {
+            font-size: 1.2rem;
+          }
+
+          .strat-card {
+            padding: 1.5rem;
+          }
+
+          .strat-card h3 {
+            font-size: 1.2rem;
+          }
+
+          .strat-investment-item {
+            padding: 1.5rem;
+          }
+
+          .strat-metric {
+            font-size: 2rem;
           }
         }
 
@@ -271,6 +427,7 @@ const StrategicAdvisoryPage = () => {
       `}</style>
 
       <header className="strat-wrap" role="banner">
+        <Navbar />
         <div className="strat-eyebrow">Strategic Advisory Service</div>
         <h1 className="strat-h1">Strategic Advisory: C-Suite Leadership for Constitutional AI</h1>
         <p className="strat-lead">
@@ -536,33 +693,10 @@ const StrategicAdvisoryPage = () => {
       <style jsx>{`
       .strat-custom-footer {
         width: 100% !important;
-        // margin: 0 !important;
-        // // padding: 0 !important;
-        }
-        .strat-investment-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-          gap: 1rem;
-          margin: 1.5rem 0;
-        }
-
-        .strat-investment-item {
-          text-align: center;
-          padding: 1rem;
-          background: #111827;
-          border-radius: 10px;
-          border: 1px solid #374151;
-          transition: all 0.3s ease;
-        }
-
-        .strat-investment-item:hover {
-          border-color: #fa2132;
-          transform: translateY(-2px);
-          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .strat-investment-item .strat-metric {
-          margin-bottom: 0.5rem;
+        background: transparent;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
         }
       `}</style>
       <Footer/>

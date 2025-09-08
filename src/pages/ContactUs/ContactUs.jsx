@@ -4,6 +4,7 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer/Footer';
 import Threads from '../../components/threads/threads';
 import './ContactUs.css';
+import { Linkedin, Twitter, Youtube, Github } from 'lucide-react';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -149,9 +150,21 @@ const ContactUs = () => {
               <div className="contact-cta">
                 <p>If precision, reliability, and foresight define your mission, let's begin the conversation.</p>
               </div>
+
+              <div className="contact-social" aria-label="FERZ social media links">
+                <a href="https://www.linkedin.com/company/ferz-ai" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="LinkedIn">
+                  <Linkedin size={18} />
+                </a>
+                <a href="https://twitter.com/ferz_ai" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="X (Twitter)">
+                  <Twitter size={18} />
+                </a>
+                <a href="https://github.com/ferz-ai" target="_blank" rel="noopener noreferrer" className="social-btn" aria-label="GitHub">
+                  <Github size={18} />
+                </a>
+              </div>
             </div>
 
-            <form className="contact-form" onSubmit={handleSubmit}>
+            <form className="contact-form-section" onSubmit={handleSubmit}>
               <div className="form-group">
                 <label htmlFor="name">Name</label>
                 <input
@@ -160,6 +173,7 @@ const ContactUs = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
+                  placeholder="Please enter your full name"
                   required
                 />
               </div>
@@ -171,6 +185,7 @@ const ContactUs = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
+                  placeholder="Please enter your email address"
                   required
                 />
               </div>

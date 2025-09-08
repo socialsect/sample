@@ -51,7 +51,7 @@
 }
 
 .homepage-hero-title {
-  font-size: clamp(3.5rem, 8vw, 6.5rem);
+  font-size: clamp(3rem, 5vw, 6.5rem);
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 32px;
@@ -120,11 +120,12 @@
   transition: all 0.3s ease;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
+  
 }
 
 .homepage-btn-secondary:hover {
   background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-1px);
+  border: 1px solid #fa2132;
 }
 
 /* Problem Section */
@@ -201,6 +202,7 @@
   line-height: 1.4;
   margin-bottom: 40px;
   background: linear-gradient(45deg, #ffffff, #fa2132);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -341,7 +343,9 @@
 .homepage-articles {
   padding: 80px 0;
   border-top: 1px solid #333;
-  background: #000;
+  
+  border-bottom: 1px solid #333;
+  background: radial-gradient(circle at 50% 0%,#000000e6,#0000 60%),radial-gradient(circle at 50% 100%,#000000e6,#0000 60%),linear-gradient(180deg,#000,#323232,#000)!important;
 }
 
 /* Narrow container helper */
@@ -455,7 +459,7 @@
 }
 
 .homepage-solutions-cta {
-  margin-top: 28px;
+  margin-top: 48px;
 }
 
 .homepage-solution-badges {

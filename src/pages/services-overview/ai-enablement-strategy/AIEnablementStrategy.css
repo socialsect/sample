@@ -1,4 +1,13 @@
 /* AI Enablement Strategy Page - Using AI Consulting Styles */
+.breadcrumb-spacer {
+  height: 54px;
+}
+
+/* Hero section spacing */
+.ai-hero {
+  margin-top: 40px;
+}
+
 /* Base Styles */
 .ai-consulting-page {
   font-family: 'Inter', sans-serif;
@@ -65,8 +74,12 @@
   right: 0;
   bottom: 0;
   background: radial-gradient(circle at 20% 80%, rgba(250, 33, 49, 0.1) 0%, transparent 50%),
-              radial-gradient(circle at 80% 20%, rgba(250, 33, 49, 0.1) 0%, transparent 50%);
+    radial-gradient(circle at 80% 20%, rgba(250, 33, 49, 0.1) 0%, transparent 50%);
   pointer-events: none;
+}
+
+.ai-wrap {
+  background: #000 !important;
 }
 
 .ai-hero .ai-consulting-container {
@@ -384,7 +397,7 @@
   justify-content: center;
   width: auto;
   height: 80px;
-  background: linear-gradient(135deg, #fa2132 0%, #dc2626 100%) ;
+  background: linear-gradient(135deg, #fa2132 0%, #dc2626 100%);
   border-radius: 16px;
   margin-bottom: 24px;
   color: #ffffff;
@@ -521,6 +534,67 @@
   font-size: 1rem;
 }
 
+/* AI Cards Grid */
+.ai-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.ai-card {
+  background: #000000;
+  border: 2px solid #fa2132;
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.ai-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #fa2132, #ff6b7a);
+}
+
+.ai-card:hover {
+  border-color: #ff6b7a;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(250, 33, 50, 0.2);
+}
+
+.ai-card h3 {
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  line-height: 1.3;
+}
+
+.ai-card p {
+  color: #e5e7eb;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.ai-metric {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fa2132;
+  margin-bottom: 1rem;
+  text-align: center;
+  background: linear-gradient(135deg, #fa2132, #ff6b7a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 /* CTA Section */
 .cta-section {
   padding: 80px 0;
@@ -557,7 +631,7 @@
   .hero-title {
     font-size: 3rem;
   }
-  
+
   .framework-grid,
   .lasof-grid,
   .outcomes-grid {
@@ -570,36 +644,46 @@
     padding: 60px 0;
     min-height: 50vh;
   }
-  
+
   .hero-title {
     font-size: 2.5rem;
   }
-  
+
   .hero-subtitle {
     font-size: 1.125rem;
   }
-  
+
   .section-header h2 {
     font-size: 2rem;
   }
-  
+
   .framework-grid,
   .lasof-grid,
-  .outcomes-grid {
+  .outcomes-grid,
+  .ai-cards-grid {
     grid-template-columns: 1fr;
     gap: 30px;
   }
-  
+
   .framework-card,
   .lasof-card,
-  .outcome-card {
+  .outcome-card,
+  .ai-card {
     padding: 30px 20px;
   }
-  
+
+  .ai-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .ai-metric {
+    font-size: 2rem;
+  }
+
   .cta-content h2 {
     font-size: 2rem;
   }
-  
+
   .hero-cta {
     flex-direction: column;
     align-items: center;
@@ -610,15 +694,15 @@
   .container {
     padding: 0 16px;
   }
-  
+
   .hero-title {
     font-size: 2rem;
   }
-  
+
   .section-header h2 {
     font-size: 1.75rem;
   }
-  
+
   .btn {
     width: 100%;
     max-width: 300px;

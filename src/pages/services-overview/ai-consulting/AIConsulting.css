@@ -1,4 +1,8 @@
 /* AI Consulting Page Styles */
+.breadcrumb-spacer { height: 54px; }
+
+/* Hero section spacing */
+.ai-hero { margin-top: 40px; }
 /* Card styles are in shared/CardStyles.css */
 
 /* Base Styles */
@@ -252,7 +256,7 @@
 
 .ai-btn-alt:hover {
   background: white;
-  color: #000;
+  color: white;
   transform: translateY(-2px);
 }
 

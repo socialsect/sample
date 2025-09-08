@@ -20,11 +20,6 @@ const EnvDebug = () => {
       maxWidth: '300px'
     }}>
       <h4>Environment Debug:</h4>
-      <p>import.meta.env.VITE_STAGING_PASSWORD: {import.meta.env.VITE_STAGING_PASSWORD || 'undefined'}</p>
-      <p>process.env.VITE_STAGING_PASSWORD: {process.env.VITE_STAGING_PASSWORD || 'undefined'}</p>
-      <p>window.VITE_STAGING_PASSWORD: {window.VITE_STAGING_PASSWORD || 'undefined'}</p>
-      <p>NODE_ENV: {process.env.NODE_ENV}</p>
-      <p>Hostname: {window.location.hostname}</p>
     </div>
   );
 };

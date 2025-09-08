@@ -1,7 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navbar from '../../../components/Navbar';
+import Footer from '../../../components/Footer/Footer';
+import Breadcrumb from '../../../components/Breadcrumb/Breadcrumb';
 import './CardStyles.css';
-
 const WithinParadigmImprovements = () => {
   // Structured Data for Within Paradigm Improvements
   const structuredData = {
@@ -43,6 +45,14 @@ const WithinParadigmImprovements = () => {
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
       
+      <Navbar />
+      <Breadcrumb items={[
+        { label: 'Home', path: '/' },
+        { label: 'Services', path: '/services-overview' },
+        { label: 'Within Paradigm Improvements', path: '/services-overview/within-paradigm-improvements' }
+      ]} />
+      <div className="breadcrumb-spacer" />
+      
       <style>{`
         .wpi-container {
           margin: 0;
@@ -57,9 +67,19 @@ const WithinParadigmImprovements = () => {
         .wpi-wrap {
           width: 100%;
           max-width: 1200px;
-          margin: 0 auto;
+          // margin: 0 auto;
           padding: 2.75rem 1.25rem;
+          text-align: center;
+          justify-content: center;
+          background: #000 !important;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
           box-sizing: border-box;
+        }
+
+        .wpi-wrap:first-of-type {
+          margin-top: 40px;
         }
         
         @media (min-width: 640px) {
@@ -564,6 +584,7 @@ const WithinParadigmImprovements = () => {
         <footer className="wpi-wrap" role="contentinfo">
           <p className="wpi-muted">© 2025 FERZ LLC • AI Optimization & Constitutional Preparation • Washington, D.C.</p>
         </footer>
+        <Footer/>
       </div>
     </>
   );

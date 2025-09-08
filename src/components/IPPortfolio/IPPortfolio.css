@@ -46,84 +46,7 @@ a:hover {
   width: 100%;
 }
 
-/* Top Navigation - Floating Style */
-.topbar {
-  position: fixed;
-  top: 1rem;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  display: flex;
-  justify-content: center;
-  padding: 0 2rem;
-}
-
-.topbar .wrap.inner {
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  padding: 0.5rem 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-width: 500px;
-  max-width: 700px;
-  width: 100%;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-
-.brand {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  font-weight: 700;
-  font-size: 0.9rem;
-  letter-spacing: 0.02em;
-}
-
-.brand .dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--primary-red);
-}
-
-.topbar .nav {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-}
-
-.topbar .nav a {
-  color: var(--text-secondary);
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 0.85rem;
-  transition: var(--transition);
-  padding: 0.4rem 0.8rem;
-  border-radius: 8px;
-  position: relative;
-}
-
-.topbar .nav a:hover {
-  color: var(--text-primary);
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.topbar .nav a.cta {
-  background: var(--primary-red);
-  color: #FFFFFF;
-  font-weight: 600;
-  font-size: 0.8rem;
-  padding: 0.5rem 1rem;
-}
-
-.topbar .nav a.cta:hover {
-  background: #d61e2a;
-  color: #FFFFFF;
-  transform: translateY(-1px);
-}
+/* Removed IP page custom topbar to avoid duplication with global Navbar */
 
 /* Hero Section - Full Height */
 .hero {
@@ -137,6 +60,7 @@ a:hover {
   position: relative;
   background: var(--dark-bg);
 }
+
 
 .hero .wrap {
   display: flex;
@@ -257,9 +181,9 @@ main.wrap {
 }
 
 .section .panel {
-  max-width: 1200px;
+  max-width: 90vw;
   margin: 0 auto;
-  padding: 0;
+  padding: 24px 30px;
   background: transparent;
   border: none;
   box-shadow: none;
@@ -838,6 +762,29 @@ footer {
   background: #fa2132;
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(65, 227, 156, 0.3);
+}
+
+/* Request briefing CTA - standout style */
+.request-briefing {
+  background: linear-gradient(135deg, #fa2132, #ff6b7a);
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.9rem 1.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  box-shadow: 0 12px 30px rgba(250, 33, 50, 0.25);
+}
+
+.request-briefing:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(250, 33, 50, 0.35);
+  background: linear-gradient(135deg, #ff3346, #ff8292);
+}
+
+.request-briefing:active {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(250, 33, 50, 0.3);
 }
 
 /* Center any CTA sections */

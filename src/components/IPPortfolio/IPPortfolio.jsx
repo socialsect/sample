@@ -1,10 +1,47 @@
-import React from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Lock } from 'lucide-react';
 import Footer from '../Footer/Footer';
+import Navbar from '../Navbar';
 import './IPPortfolio.css';
 
 const IPPortfolio = () => {
+  const [activeSection, setActiveSection] = useState('coverage');
+
+  const handleNavClick = useCallback((e, targetId) => {
+    e.preventDefault();
+    const el = document.getElementById(targetId);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, []);
+
+  useEffect(() => {
+    const sectionIds = ['coverage', 'families', 'assets', 'reg', 'contact'];
+    const elements = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
+
+    if (elements.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: '0px 0px -60% 0px',
+        threshold: 0.2,
+      }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
   // Structured Data for IP Portfolio
   const structuredData = {
     "@context": "https://schema.org",
@@ -35,6 +72,7 @@ const IPPortfolio = () => {
 
   return (
     <>
+      <Navbar />
       <Helmet>
         <title>FERZ IP Portfolio: Patent-Protected AI Innovation | FERZ</title>
         <meta name="description" content="Comprehensive IP portfolio controlling every pathway to deterministic AI governance. 5 patents filed, 4 defensive publications, 10+ SSRN papers. Patent runway to 2045." />
@@ -44,20 +82,6 @@ const IPPortfolio = () => {
       </Helmet>
       
       <div className="ip-portfolio">
-      <div className="topbar">
-        <div className="wrap inner">
-          <div className="brand">
-            <span className="dot"></span> FERZ • Explore Our IP
-          </div>
-          <nav className="nav">
-            <a href="#coverage">Coverage</a>
-            <a href="#families">Families</a>
-            <a href="#assets">Assets</a>
-            <a href="#reg">Regulation</a>
-            <a href="#contact" className="cta">Request Briefing</a>
-          </nav>
-        </div>
-      </div>
 
       <header className="hero">
         <div className="wrap">
@@ -123,7 +147,7 @@ const IPPortfolio = () => {
           </div>
         </section>
 
-        <section className="section">
+        <section id="timeline" className="section">
           <div className="row" style={{alignItems: 'baseline'}}>
             <h3>2025 Portfolio Timeline</h3>
             <span className="small">Foundation → Extension → Globalization → Orchestration → Lockouts</span>
@@ -217,7 +241,7 @@ const IPPortfolio = () => {
           </div>
         </section>
 
-        <section className="section">
+        <section id="contact" className="section">
           <div className="panel">
             <h3>Exclusivity Runway</h3>
             <p className="muted">Core utility filings in 2025 provide patent protection through <strong>2045</strong>. Defensive publications provide <strong>permanent</strong> prior-art coverage.</p>
@@ -260,7 +284,7 @@ const IPPortfolio = () => {
               <h3>Ready to license the infrastructure of compliant AI?</h3>
               <p className="muted">Portfolio licensing • Field-of-use exclusives • OEM embedding</p>
             </div>
-            <a className="btn" href="mailto:inquiries@ferz.ai?subject=FERZ%20IP%20Briefing%20Request">Request a briefing</a>
+            <a className="btn request-briefing" href="mailto:inquiries@ferz.ai?subject=FERZ%20IP%20Briefing%20Request">Request a briefing</a>
           </div>
         </section>
 
@@ -280,6 +304,7 @@ const IPPortfolio = () => {
           </details>
         </section>
       </main>
+
 
       <Footer />
       </div>

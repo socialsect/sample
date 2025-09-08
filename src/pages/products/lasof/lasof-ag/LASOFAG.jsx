@@ -106,24 +106,24 @@ const LASOFAG = () => {
 
       <Navbar />
       
-      <main className="lasofag-page">
+      <main className="lag-page">
         {/* Hero Section */}
-        <section className="hero-section">
-          <div className="container">
-            <div className="hero-content">
-              <div className="hero-text">
-                <h1 className="hero-title">
+        <section className="lag-hero-section">
+          <div className="lag-container">
+            <div className="lag-hero-content">
+              <div className="lag-hero-text">
+                <h1 className="lag-hero-title">
                   LASO(f)-AG: Deterministic Action Validation
                 </h1>
-                <p className="hero-subtitle">
+                <p className="lag-hero-subtitle">
                   AI doesn't just speak. It acts. LASO(f)-AG governs those actions—before they're executed.
                 </p>
-                <div className="hero-cta">
-                  <button className="btn btn-primary" onClick={() => window.open('/public/LASO-f_IP_Portfolio_Brief_2025-5.pdf', '_blank')}>
+                <div className="lag-hero-cta">
+                  <button className="lag-btn lag-btn-primary" onClick={() => window.open('/public/LASO-f_IP_Portfolio_Brief_2025-5.pdf', '_blank')}>
                     <Download size={20} />
                     Download White Paper
                   </button> 
-                  <a href="/products/lasof" className="btn btn-secondary">
+                  <a href="/products/lasof" className="lag-btn lag-btn-secondary">
                     <ArrowLeft size={20} />
                     Return to LASO(f) Overview
                   </a>
@@ -134,13 +134,13 @@ const LASOFAG = () => {
         </section>
 
         {/* Overview Section */}
-        <section className="overview-section">
-          <div className="container">
-            <div className="section-header">
+        <section className="lag-overview-section">
+          <div className="lag-container">
+            <div className="lag-section-header">
               <h2>Overview</h2>
             </div>
-            <div className="overview-content">
-              <div className="overview-text">
+            <div className="lag-overview-content">
+              <div className="lag-overview-text">
                 <p>
                   LASO(f)-AG extends the LASO(f) deterministic governance framework from language into actions, ensuring AI systems operate within strict, mathematically verifiable boundaries.
                 </p>
@@ -156,16 +156,16 @@ const LASOFAG = () => {
         </section>
 
         {/* Action Governance Tiers Section */}
-        <section className="tiers-section">
-          <div className="container">
-            <div className="section-header">
+        <section className="lag-tiers-section">
+          <div className="lag-container">
+            <div className="lag-section-header">
               <h2>The Nine Action Governance Tiers</h2>
             </div>
             
-            <div className="tiers-grid product-card-group">
+            <div className="lag-tiers-grid lag-product-card-group">
               {actionTiers.map((tier, index) => (
-                <div key={index} className="tier-card product-card">
-                  <div className="tier-number">{index + 1}</div>
+                <div key={index} className="lag-tier-card lag-product-card">
+                  <div className="lag-tier-number">{index + 1}</div>
                   <h4>{tier.name}</h4>
                   <p>{tier.description}</p>
                 </div>
@@ -175,41 +175,41 @@ const LASOFAG = () => {
         </section>
 
         {/* Integration Section */}
-        <section className="integration-section">
-          <div className="container">
-            <div className="section-header">
+        <section className="lag-integration-section">
+          <div className="lag-container">
+            <div className="lag-section-header">
               <h2>Integration with Linguistic and Semiotic Governance</h2>
               <p>
                 LASO(f)-AG works in concert with LASO(f)'s eight linguistic tiers and Semiotic-Aware Architecture (SAA):
               </p>
             </div>
             
-            <div className="integration-content">
-              <div className="integration-item">
-                <div className="integration-icon">
+            <div className="lag-integration-content">
+              <div className="lag-integration-item">
+                <div className="lag-integration-icon">
                   <FileText size={32} />
                 </div>
-                <div className="integration-text">
+                <div className="lag-integration-text">
                   <h3>Linguistic Governance</h3>
                   <p>ensures the instructions and rationale behind actions are precise, auditable, and compliant.</p>
                 </div>
               </div>
               
-              <div className="integration-item">
-                <div className="integration-icon">
+              <div className="lag-integration-item">
+                <div className="lag-integration-icon">
                   <Brain size={32} />
                 </div>
-                <div className="integration-text">
+                <div className="lag-integration-text">
                   <h3>Semiotic Governance</h3>
                   <p>evaluates the meaning and implications of those actions within specific cultural, legal, and operational contexts.</p>
                 </div>
               </div>
               
-              <div className="integration-item">
-                <div className="integration-icon">
+              <div className="lag-integration-item">
+                <div className="lag-integration-icon">
                   <Shield size={32} />
                 </div>
-                <div className="integration-text">
+                <div className="lag-integration-text">
                   <h3>Action Governance</h3>
                   <p>then validates whether the action itself is safe, authorized, and aligned with intended outcomes.</p>
                 </div>
@@ -219,15 +219,15 @@ const LASOFAG = () => {
         </section>
 
         {/* Key Features Section */}
-        <section className="features-section">
-          <div className="container">
-            <div className="section-header">
+        <section className="lag-features-section">
+          <div className="lag-container">
+            <div className="lag-section-header">
               <h2>Key Features</h2>
             </div>
             
-            <div className="lasofag-features-grid product-card-group">
+            <div className="lag-features-grid lag-product-card-group">
               {keyFeatures.map((feature, index) => (
-                <div key={index} className="feature-card product-card">
+                <div key={index} className="lag-feature-card lag-product-card">
                   <h3>{feature.feature}</h3>
                   <p>{feature.description}</p>
                 </div>
@@ -237,22 +237,22 @@ const LASOFAG = () => {
         </section>
 
         {/* Why It Matters Section */}
-        <section className="why-matters-section">
-          <div className="container">
-            <div className="section-header">
+        <section className="lag-why-matters-section">
+          <div className="lag-container">
+            <div className="lag-section-header">
               <h2>Why It Matters</h2>
               <p>In high-stakes domains, how an AI acts is as critical as what it says.</p>
             </div>
             
-            <div className="why-content">
+            <div className="lag-why-content">
               <p>
                 LASO(f)-AG ensures that AI-driven actions—whether triggered by language models, autonomous agents, or multimodal systems—are always controlled, compliant, and safe. This is essential for sectors like:
               </p>
               
-              <div className="applications-grid product-card-group">
+              <div className="lag-applications-grid lag-product-card-group">
                 {applications.map((app, index) => (
-                  <div key={index} className="application-card product-card">
-                    <div className="app-icon">
+                  <div key={index} className="lag-application-card lag-product-card">
+                    <div className="lag-app-icon">
                       <app.icon size={32} />
                     </div>
                     <h3>{app.domain}</h3>
@@ -265,28 +265,28 @@ const LASOFAG = () => {
         </section>
 
         {/* Standardized CTA */}
-        <section className="engine-cta">
-          <div className="container">
+        <section className="lag-engine-cta">
+          <div className="lag-container">
             <h2>Ready for AI That Responds to Reality?</h2>
-            <p className="engine-cta-subtitle">You're already paying for hesitation. Let's cut that cost.</p>
-            <a href="/ip-portfolio" className="engine-cta-button">
+            <p className="lag-engine-cta-subtitle">You're already paying for hesitation. Let's cut that cost.</p>
+            <a href="/ip-portfolio" className="lag-engine-cta-button">
               Explore the FERZ IP Portfolio
             </a>
           </div>
         </section>
 
         {/* Patent Section */}
-        <section className="patent-section">
-          <div className="container">
-            <div className="section-header">
+        <section className="lag-patent-section">
+          <div className="lag-container">
+            <div className="lag-section-header">
               <h2>Patent Protection</h2>
               <p>
                 LASO(f)/LASO(f)-AG are protected by comprehensive intellectual property coverage securing FERZ's market leadership in deterministic AI governance. Our strategic two-stage filing approach established early priority while building toward global protection.
               </p>
             </div>
             
-            <div className="patent-details">
-              <div className="patent-card product-card">
+            <div className="lag-patent-details">
+              <div className="lag-patent-card lag-product-card">
                 <h3>Primary Patent Coverage:</h3>
                 <ul>
                   <li>

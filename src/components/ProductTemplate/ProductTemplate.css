@@ -83,7 +83,7 @@
 
 .product-hero-tagline {
   font-size: 1.25rem;
-  color: #e2e8f0;
+  color: #fa2132;
   margin: 0 auto 40px;
   line-height: 1.6;
   max-width: 800px;
@@ -673,9 +673,23 @@
 .product-cta-buttons {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
   margin-top: 40px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+}
+
+/* Ensure the last CTA (Explore Partnership Opportunities) centers on its own line if wrapped */
+.product-cta-buttons a:last-child {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Prevent button text from breaking to keep one-row layout */
+.product-cta-buttons a { white-space: nowrap; }
+
+/* Allow wrapping on smaller screens to avoid overflow */
+@media (max-width: 1024px) {
+  .product-cta-buttons { flex-wrap: wrap; }
 }
 
 .product-btn-primary {

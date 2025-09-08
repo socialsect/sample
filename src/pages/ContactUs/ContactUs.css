@@ -77,6 +77,7 @@
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  text-align: center;
 }
 
 .contact-item::before {
@@ -143,6 +144,39 @@
 .contact-cta p:last-child {
   font-size: 1.3rem;
   font-weight: 600;
+}
+
+/* Social bar */
+.contact-social {
+  display: flex;
+  gap: 12px;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: rgba(250,33,50,0.15);
+  border: 1px solid rgba(250,33,50,0.45);
+  color: #fa2132;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.social-btn:hover {
+  transform: translateY(-2px);
+  background: #fa2132;
+  border-color: #fa2132;
+  color: #000000;
+}
+
+.social-btn svg {
+  width: 22px;
+  height: 22px;
 }
 
 /* Contact Form Section */

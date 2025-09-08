@@ -472,23 +472,38 @@
 
 /* Proprietary Protection */
 .capsule-proprietary-protection {
-  background: linear-gradient(135deg, #fa2132, #c81e2a);
+  background: #000000;
+  border: 2px solid #fa2132;
   color: white;
   padding: 50px;
   border-radius: 20px;
   margin: 50px 0;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.capsule-proprietary-protection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #fa2132, #ff6b7a);
 }
 
 .capsule-proprietary-title {
   font-size: 2em;
   margin-bottom: 20px;
+  color: #fa2132;
+  font-weight: 700;
 }
 
 .capsule-proprietary-subtitle {
   font-size: 1.1em;
   margin-bottom: 30px;
-  opacity: 0.9;
+  color: #9ca3af;
 }
 
 .capsule-proprietary-grid {
@@ -499,28 +514,39 @@
 }
 
 .capsule-proprietary-card {
-  background: rgba(255, 255, 255, 0.1);
+  background: #111827;
+  border: 1px solid #374151;
   padding: 25px;
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.capsule-proprietary-card:hover {
+  border-color: #fa2132;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(250, 33, 50, 0.2);
 }
 
 .capsule-proprietary-label {
   font-size: 1.2em;
   font-weight: bold;
-  color: #ffffff;
+  color: #fa2132;
   margin-bottom: 8px;
 }
 
 .capsule-proprietary-card p {
   font-size: 0.9em;
-  opacity: 0.8;
+  color: #e5e7eb;
 }
 
 .capsule-strategic-advantage {
   margin-top: 30px;
   font-size: 1.1em;
+  color: #e5e7eb;
+  background: #1f2937;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 4px solid #fa2132;
 }
 
 /* Performance Metrics */

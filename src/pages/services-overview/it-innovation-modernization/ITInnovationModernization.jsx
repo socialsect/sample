@@ -1,6 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Footer from '../../../components/Footer/Footer';
+import Navbar from '../../../components/Navbar';
+import Breadcrumb from '../../../components/Breadcrumb/Breadcrumb';
+import './ITInnovationModernization.css';
+
 const ITModernizationPage = () => {
   // Structured Data for IT Innovation & Modernization
   const structuredData = {
@@ -43,6 +47,13 @@ const ITModernizationPage = () => {
       </Helmet>
       
       <div className="modernization-page">
+        <Navbar />
+        <Breadcrumb items={[
+          { label: 'Home', path: '/' },
+          { label: 'Services', path: '/services-overview' },
+          { label: 'IT Innovation & Modernization', path: '/services-overview/it-innovation-modernization' }
+        ]} />
+        <div className="breadcrumb-spacer" />
       <style jsx>{`
         .modernization-page {
           font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
@@ -55,8 +66,13 @@ const ITModernizationPage = () => {
 
         .mod-wrap {
           max-width: 90%;
+          background: transparent;
           margin: 0 auto;
           padding: 2.75rem 1.25rem;
+        }
+
+        .mod-wrap:first-of-type {
+          margin-top: 40px;
         }
 
         .mod-eyebrow {
@@ -96,10 +112,13 @@ const ITModernizationPage = () => {
 
         .mod-muted {
           color: #9ca3af;
+          text-align: center;
         }
 
         .mod-cta {
           display: flex;
+          justify-content: center;
+          align-items: center;
           gap: 0.75rem;
           flex-wrap: wrap;
           margin-top: 1rem;
@@ -212,6 +231,7 @@ const ITModernizationPage = () => {
       `}</style>
 
       <header className="mod-wrap" role="banner">
+        <Navbar />
         <div className="mod-eyebrow">IT Modernization Service</div>
         <h1 className="mod-h1">IT Modernization: AI-Ready Infrastructure for Compliance</h1>
         <p className="mod-lead">

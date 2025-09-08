@@ -58,7 +58,6 @@ const MRCF = () => {
       <div className="mrcf-authority-badge">
         <div className="mrcf-container">
           <div className="mrcf-authority-badge-content">
-            <span className="mrcf-authority-icon">🔒</span>
             <span>Top Authority Methodology</span>
             <span className="mrcf-authority-tooltip">MRCF is a certified top-tier framework for cognitive enhancement and decision-making</span>
           </div>

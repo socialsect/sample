@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import Navbar from '../../../components/Navbar';
 import Footer from '../../../components/Footer/Footer';
+import Breadcrumb from '../../../components/Breadcrumb/Breadcrumb';
 import './AIEnablementStrategy.css';
 
 const AIEnablementStrategy = () => {
@@ -47,7 +48,12 @@ const AIEnablementStrategy = () => {
       </Helmet>
 
       <Navbar />
-
+      <Breadcrumb items={[
+        { label: 'Home', path: '/' },
+        { label: 'Services', path: '/services-overview' },
+        { label: 'AI Enablement Strategy', path: '/services-overview/ai-enablement-strategy' }
+      ]} />
+      <div className="breadcrumb-spacer" />
       <div className="ai-consulting-page">
         <header className="ai-hero">
           <div className="ai-consulting-container">
@@ -234,6 +240,7 @@ const AIEnablementStrategy = () => {
             <p className="ai-muted">© 2025 FERZ LLC • Constitutional AI Strategy for Enterprise Leadership • Washington, D.C.</p>
           </div>
         </footer>
+        <Footer/>
       </div>
     </>
   );

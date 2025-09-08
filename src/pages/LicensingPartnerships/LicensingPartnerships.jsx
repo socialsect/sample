@@ -501,6 +501,7 @@ const LapLicensing = () => {
           <p id="lap-footer-authority"><strong>Strategic Authority:</strong> FERZ partnership opportunities represent exclusive access to patent-protected deterministic AI governance capabilities. Market positioning advantages reflect comprehensive IP control and federal regulatory expertise unavailable through traditional technology partnerships.</p>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

@@ -39,10 +39,10 @@ box-sizing: border-box;
 }
 
 .hp-hero-title {
-font-size: 4.5rem;
+font-size: 4rem;
 font-weight: 500;
-line-height: 1.1;
-margin-bottom: 0;
+/* line-height: ; */
+margin-bottom: 0; 
 position: relative;
 z-index: 10;
 white-space: normal;
@@ -273,7 +273,7 @@ z-index: 1;
 }
 
 .hp-hero-title {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
 }
 
 .hp-carousel-container {
@@ -305,7 +305,7 @@ z-index: 1;
 }
 
 .hp-hero-title {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .hp-carousel-container {

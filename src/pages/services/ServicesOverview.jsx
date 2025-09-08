@@ -3,328 +3,284 @@ import { Helmet } from 'react-helmet-async';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer/Footer';
 import './ServicesOverview.css';
-import Threads from '../../components/threads/threads';
-import FAQ from '../../components/FAQ/FAQ';
+import { ShieldCheck, Scale, Wand2, Brain, Layers, Gauge, BookOpen, Target } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import Breadcrumb from '../../components/Breadcrumb/Breadcrumb';
 
 const ServicesOverview = () => {
-  const servicesFAQs = [
-    {
-      question: "What makes FERZ services different from traditional AI consulting?",
-      answer: "Traditional consulting tends to deliver general frameworks or point solutions. FERZ services go further: we provide governance-first strategy, modernization roadmaps, and executive advisory rooted in our patent-protected Technology Fortress. While traditional approaches emphasize model accuracy or post-hoc audits, our services prepare organizations to adopt deterministic AI governance when they are ready."
-    },
-    {
-      question: "Who are FERZ services designed for?",
-      answer: "We work with Fortune 500 companies, agencies, and institutional leaders that bring the technical depth, legal capacity, and organizational commitment needed for systemic AI governance."
-    },
-    {
-      question: "How do services integrate with our current AI infrastructure?",
-      answer: "Services are delivered as strategic and architectural overlays. We assess your existing systems, identify governance gaps, and design roadmaps for constitutional AI adoption. We do not replace your stack—we help you align it with future compliance and governance requirements."
-    },
-    {
-      question: "What regulatory challenges do you address?",
-      answer: "We help organizations align AI initiatives with major regulatory regimes—including the EU AI Act, FDA AI guidelines, SEC algorithmic governance, GDPR/CCPA, and U.S. federal contracting standards—by embedding governance practices and preparing for provable compliance through FERZ products."
-    },
-    {
-      question: "What are typical engagement timelines and investments?",
-      answer: "Programs range from 2–4 week assessments to multi-month modernization or governance initiatives. Investment typically spans $50K–$2M+, depending on scope and scale."
-    },
-    {
-      question: "Can you modernize legacy systems without disrupting operations?",
-      answer: "Yes. Our phased modernization approach strengthens infrastructure and embeds governance practices while maintaining operational continuity."
-    },
-    {
-      question: "Do you provide support beyond initial strategy?",
-      answer: "Absolutely. FERZ services include training, documentation, compliance monitoring, and ongoing advisory partnerships to ensure lasting governance readiness."
-    },
-    {
-      question: "How do your services complement FERZ products?",
-      answer: "FERZ services prepare the ground—aligning leadership, modernizing infrastructure, and embedding governance practices—so enterprises are ready to adopt FERZ's deterministic products when the time is right. Together, services and products form the Technology Fortress, a layered approach to regulatory-grade AI governance."
-    },
-    {
-      question: "Why not rely only on existing AI safety tools?",
-      answer: "Existing tools provide probabilistic monitoring and retrospective checks. FERZ services position you for the next step: deterministic, real-time governance through our product suite. We help you move beyond best-effort controls toward systemic assurance."
-    },
-    {
-      question: "How do you measure success?",
-      answer: "Success is defined by clear roadmaps, reduced compliance exposure, improved infrastructure readiness, and executive alignment—with measurable ROI tracked against baseline performance and regulatory requirements."
-    }
-  ];
-
-  // Structured Data for Services Overview - CollectionPage with hasPart
   const structuredData = {
     "@context": "https://schema.org",
-    "@graph": [
-      {
         "@type": "CollectionPage",
-        "@id": "https://ferzconsulting.com/services-overview#page",
         "url": "https://ferzconsulting.com/services-overview",
-        "name": "AI Governance Services: Constitutional Compliance",
-        "description": "Constitutional AI governance and deterministic compliance services for organizations deploying artificial intelligence in regulated and mission-critical environments.",
-        "publisher": {"@id": "https://ferzconsulting.com/#org"},
-        "hasPart": [
-          {"@id": "https://ferzconsulting.com/services-overview/ai-consulting#service"},
-          {"@id": "https://ferzconsulting.com/services-overview/strategic-advisory-services#service"},
-          {"@id": "https://ferzconsulting.com/services-overview/ai-enablement-strategy#service"},
-          {"@id": "https://ferzconsulting.com/services-overview/design-of-ai-governance-models#service"},
-          {"@id": "https://ferzconsulting.com/services-overview/it-innovation-modernization#service"},
-          {"@id": "https://ferzconsulting.com/services-overview/within-paradigm-improvements#service"}
-        ]
-      },
-      {
-    "@type": "Service",
-        "@id": "https://ferzconsulting.com/services-overview/ai-consulting#service",
-        "name": "AI Consulting",
-        "description": "Strategic analysis of your current AI governance posture and alignment with constitutional principles",
-        "provider": {"@id": "https://ferzconsulting.com/#org"},
-        "serviceType": "AI Governance Consulting",
-        "areaServed": ["US", "UK", "Europe"],
-        "offers": {
-          "@type": "Offer",
-          "url": "https://ferzconsulting.com/contact-us"
-        }
-      },
-      {
-        "@type": "Service",
-        "@id": "https://ferzconsulting.com/services-overview/strategic-advisory-services#service",
-        "name": "Strategic Advisory Services",
-        "description": "Collaborative sessions to build your organization's unique constitutional AI governance roadmap",
-        "provider": {"@id": "https://ferzconsulting.com/#org"},
-        "serviceType": "AI Governance Consulting",
-    "areaServed": ["US", "UK", "Europe"],
-        "offers": {
-          "@type": "Offer",
-          "url": "https://ferzconsulting.com/contact-us"
-        }
-      },
-      {
-        "@type": "Service",
-        "@id": "https://ferzconsulting.com/services-overview/ai-enablement-strategy#service",
-        "name": "AI Enablement Strategy",
-        "description": "Building roadmaps for constitutional AI integration in regulated industries",
-        "provider": {"@id": "https://ferzconsulting.com/#org"},
-    "serviceType": "AI Governance Consulting",
-        "areaServed": ["US", "UK", "Europe"],
-        "offers": {
-          "@type": "Offer",
-          "url": "https://ferzconsulting.com/contact-us"
-        }
-      },
-      {
-        "@type": "Service",
-        "@id": "https://ferzconsulting.com/services-overview/design-of-ai-governance-models#service",
-        "name": "AI Governance Model Design",
-        "description": "Designing constitutional AI governance with mathematical guarantees for compliance and trust",
-        "provider": {"@id": "https://ferzconsulting.com/#org"},
-        "serviceType": "AI Governance Consulting",
-        "areaServed": ["US", "UK", "Europe"],
-        "offers": {
-          "@type": "Offer",
-          "url": "https://ferzconsulting.com/contact-us"
-        }
-      },
-      {
-        "@type": "Service",
-        "@id": "https://ferzconsulting.com/services-overview/it-innovation-modernization#service",
-        "name": "IT Innovation & Modernization",
-        "description": "Building AI-native IT infrastructure for compliance and scalability",
-        "provider": {"@id": "https://ferzconsulting.com/#org"},
-        "serviceType": "AI Governance Consulting",
-        "areaServed": ["US", "UK", "Europe"],
-        "offers": {
-          "@type": "Offer",
-          "url": "https://ferzconsulting.com/contact-us"
-        }
-      },
-      {
-        "@type": "Service",
-        "@id": "https://ferzconsulting.com/services-overview/within-paradigm-improvements#service",
-        "name": "Within Paradigm Improvements",
-        "description": "Optimizing systems for constitutional AI readiness and efficiency",
-        "provider": {"@id": "https://ferzconsulting.com/#org"},
-        "serviceType": "AI Governance Consulting",
-        "areaServed": ["US", "UK", "Europe"],
-        "offers": {
-          "@type": "Offer",
-          "url": "https://ferzconsulting.com/contact-us"
-        }
-      }
-    ]
+    "name": "Deterministic AI Services | FERZ",
+    "description": "Deterministic AI services with mathematical certainty and constitutional compliance."
   };
 
   return (
     <>
       <Helmet>
-        <title>AI Governance Services: Constitutional Compliance | FERZ</title>
-        <meta name="description" content="Constitutional AI governance services for regulated industries. Deterministic compliance frameworks, audit-ready documentation, and federal-proven methodologies. Schedule assessment." />
-        <meta name="keywords" content="AI governance services, constitutional AI compliance, deterministic AI frameworks, regulatory AI readiness, federal AI advisory" />
+        <title>Deterministic AI Services | FERZ - Mathematical Certainty for Enterprise AI</title>
+        <meta name="description" content="FERZ transforms enterprise AI from probabilistic risk into mathematically guaranteed advantage. Deterministic services for compliance and transformation." />
         <link rel="canonical" href="https://ferzconsulting.com/services-overview" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
       
       <div className="app">
         <Navbar />
-      <main className="overview-main">
-        <div className="overview-container">
-        <section className="overview-hero-section">
-  <div className="threads-bg">
-    <Threads className="threads-canvas" amplitude={1.4}/>
+        <Breadcrumb items={[
+          { label: 'Home', path: '/' },
+          { label: 'Services Overview', path: '/services-overview' }
+        ]} />
+        <div className="breadcrumb-spacer" />
+        <main className="so-main">
+          <div className="so-authority-badge">
+            Patent-Protected AI Governance Authority | 5 Filed Patents + 5 Defensive Publications | Federal Policy Advisory Since 2013
   </div>
 
-  <div className="overview-hero-content">
-    <h1 className="overview-hero-title">Services</h1>
-    <p className="overview-hero-description">
-      AI governance and constitutional compliance services for organizations deploying artificial intelligence in regulated and mission-critical environments.
-    </p>
-    <p className="overview-hero-subtitle">
-      As AI systems approach and exceed human cognitive capabilities, the fundamental question shifts from optimizing performance to ensuring constitutional governance—the difference between AI that serves democratic societies and AI that supplants them.
-    </p>
+          {/* Hero Section */}
+          <section className="so-header">
+            <div className="so-container">
+              <div className="so-header-content">
+                <h1 className="so-services-title">Deterministic AI Services</h1>
+                <p className="so-authority-tagline">Mathematical Certainty | Enterprise Transformation | Regulatory Compliance</p>
+                <div className="so-philosophy-statement">
+                  <strong>FERZ transforms enterprise AI from probabilistic risk into mathematically guaranteed competitive advantage.</strong> Our IP-protected methodologies deliver deterministic certainty where traditional consulting provides statistical hope, ensuring your AI systems meet regulatory standards with formal verification guarantees.
+                </div>
+              </div>
   </div>
 </section>
 
+          {/* Services Philosophy */}
+          <section className="so-philosophy-section">
+            <div className="so-container">
+              <div className="so-philosophy-content">
+                <h2 className="so-philosophy-title">The FERZ Services Philosophy</h2>
+                <p className="so-philosophy-text">
+                  Traditional AI consulting offers frameworks and probabilistic improvements. FERZ delivers mathematical transformation through deterministic methodologies. Our services combine 20+ years of federal IT leadership, 5 filed patents in deterministic AI governance, and proven frameworks that convert AI compliance from operational burden into strategic advantage through formal verification and mathematical guarantees.
+                </p>
 
-
-          <section className="overview-service-portfolio-section">
-            <h2 className="overview-section-title">Our Service Portfolio</h2>
-            
-            <div className="overview-service-category">
-              <h3 className="overview-category-title">Constitutional AI Advisory</h3>
-              <div className="overview-service-grid">
-                <div className="overview-service-card">
-                  <h4 className="overview-service-title">AI Governance Readiness Assessment</h4>
-                  <p className="overview-service-description">
-                    Strategic analysis of your current AI governance posture and alignment with constitutional principles.
-                  </p>
-                </div>
-                <div className="overview-service-card">
-                  <h4 className="overview-service-title">Constitutional AI Strategy Workshops</h4>
-                  <p className="overview-service-description">
-                    Collaborative sessions to build your organization's unique constitutional AI governance roadmap.
-                  </p>
-                </div>
-                <div className="overview-service-card">
-                  <h4 className="overview-service-title">Policy and Standards Advisory</h4>
-                  <p className="overview-service-description">
-                    Guidance on aligning with and shaping emerging AI regulations and interpretive risk reviews.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="overview-service-category">
-              <h3 className="overview-category-title">Governance Blueprinting & Licensing Advisory</h3>
-              <div className="overview-service-grid">
-                <div className="overview-service-card">
-                  <h4 className="overview-service-title">Deterministic AI System Design</h4>
-                  <p className="overview-service-description">
-                    Architecting systems with proprietary frameworks for guaranteed compliance and auditable results.
-                  </p>
-                </div>
-                <div className="overview-service-card">
-                  <h4 className="overview-service-title">AI Governance Policy Development</h4>
-                  <p className="overview-service-description">
-                    Creating robust, enforceable policies for ethical and constitutionally-sound AI deployment.
-                  </p>
-                </div>
-                <div className="overview-service-card">
-                  <h4 className="overview-service-title">Linguistic Risk & Civil Liberties Audit</h4>
-                  <p className="overview-service-description">
-                    Analyzing and mitigating interpretive risks and civil liberties implications in your AI systems.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="overview-service-category">
-              <h3 className="overview-category-title">Specialized Services</h3>
-              <div className="overview-service-grid single-card">
-                <div className="overview-service-card">
-                  <h4 className="overview-service-title">Board & Federal Advisory</h4>
-                  <p className="overview-service-description">
-                    Strategic guidance for mission-critical startups and expert navigation of government AI procurement, ensuring constitutional compliance from inception through scale.
-                  </p>
+                <div className="so-philosophy-pillars">
+                  <div className="so-pillar-card">
+                    <ShieldCheck color="#fa2132" />
+                    <h4>Mathematical Foundation</h4>
+                    <p>Every engagement delivers measurable outcomes through formal verification and deterministic validation, not consulting theories.</p>
+                  </div>
+                  <div className="so-pillar-card">
+                    <Scale color="#fa2132" />
+                    <h4>Regulatory Authority</h4>
+                    <p>Federal policy advisory experience ensures methodologies align with enforcement realities before compliance deadlines.</p>
+                  </div>
+                  <div className="so-pillar-card">
+                    <Wand2 color="#fa2132" />
+                    <h4>Patent-Protected Methods</h4>
+                    <p>Proprietary frameworks competitors cannot replicate, delivering sustainable competitive advantages for client organizations.</p>
+                  </div>
                 </div>
               </div>
             </div>
           </section>
 
-          <section className="overview-strategic-value-section">
-            <h2 className="overview-section-title">The Strategic Value of FERZ</h2>
-            <div className="overview-value-grid">
-              <div className="overview-value-card">
-                <h3 className="overview-value-title">Regulatory Readiness</h3>
-                <p className="overview-value-description">
-                  Future-proof AI investments against emerging regulatory requirements with constitutional governance frameworks.
-                </p>
-              </div>
-              <div className="overview-value-card">
-                <h3 className="overview-value-title">Complete Auditability</h3>
-                <p className="overview-value-description">
-                  Transform opaque AI decision-making into transparent, traceable processes that stakeholders and regulators can trust.
-                </p>
-              </div>
-              <div className="overview-value-card">
-                <h3 className="overview-value-title">Constitutional Compliance</h3>
-                <p className="overview-value-description">
-                  Ensure AI systems respect civil liberties, privacy rights, and democratic principles while maintaining effectiveness.
-                </p>
-              </div>
-              <div className="overview-value-card">
-                <h3 className="overview-value-title">Competitive Positioning</h3>
-                <p className="overview-value-description">
-                  Establish thought leadership in constitutional AI while creating sustainable competitive advantages.
-                </p>
+          {/* Authority Foundation */}
+          <section className="so-section">
+            <div className="so-container">
+              <div className="so-authority-foundation">
+                <h2 className="so-section-title-alt">Why FERZ Authority Exceeds Traditional AI Consulting</h2>
+                <p className="so-section-subtitle-alt">Where others provide frameworks, FERZ delivers transformation through patent-protected methodologies and federal policy expertise</p>
+
+                <div className="so-authority-grid">
+                  <div className="so-authority-card"><span className="so-authority-number">5</span><p className="so-authority-metric">Filed Patents in<br/>AI Governance</p></div>
+                  <div className="so-authority-card"><span className="so-authority-number">5</span><p className="so-authority-metric">Defensive Publications<br/>Securing IP Territory</p></div>
+                  <div className="so-authority-card"><span className="so-authority-number">12+</span><p className="so-authority-metric">Years Developing<br/>Deterministic Methods</p></div>
+                  <div className="so-authority-card"><span className="so-authority-number">20+</span><p className="so-authority-metric">Years Federal IT<br/>Transformation Leadership</p></div>
+                </div>
+
+                <div className="so-authority-note">
+                  <h3>Proven Federal Leadership</h3>
+                  <p>Edward Meyman combines 20+ years of federal IT transformation leadership at U.S. Department of Labor and General Services Administration with federal policy advisory experience, ensuring FERZ methodologies align with regulatory enforcement realities before industry-wide compliance deadlines.</p>
+                </div>
               </div>
             </div>
           </section>
 
-          <section className="overview-why-ferz-section">
-            <h2 className="overview-section-title">Why Organizations Choose FERZ</h2>
-            <div className="overview-reasons-grid">
-              <div className="overview-reason-card">
-                <h3 className="overview-reason-title">Deterministic Governance</h3>
-                <p className="overview-reason-description">
-                  While others rely on training-based alignment methods that provide probabilistic outcomes, FERZ delivers deterministic constitutional governance. Our systems guarantee identical outputs for identical inputs under identical constraints.
-                </p>
+          {/* Services Portfolio */}
+          <section className="so-section so-section-alt">
+            <div className="so-container">
+              <h2 className="so-section-title">FERZ Deterministic AI Portfolio</h2>
+              <p className="so-section-subtitle">Comprehensive transformation through patent-protected deterministic methodologies</p>
+
+              <div className="so-services-grid">
+                <div className="so-service-card">
+                  <h3><Brain color="#fa2132" /> AI Consulting Services</h3>
+                  <div className="so-service-focus">Trustworthy AI for Regulated Industries</div>
+                  <div className="so-service-description">Transform your AI systems from probabilistic risk into regulatory-compliant competitive advantage. Our deterministic methodologies ensure AI outputs meet legal standards with mathematical guarantees, not statistical hope.</div>
+                  <div className="so-service-outcomes">
+                    <h4>Strategic Outcomes:</h4>
+                    <p>• Regulatory compliance with measurable certainty<br/>• Legal liability reduction through deterministic validation<br/>• Competitive advantage via patent-protected AI governance</p>
+                  </div>
+                  <Link to="/services-overview/ai-consulting" className="so-service-link">Explore AI Consulting Services →</Link>
+            </div>
+
+                <div className="so-service-card">
+                  <h3><Layers color="#fa2132" /> IT Modernization</h3>
+                  <div className="so-service-focus">AI-Ready Infrastructure Transformation</div>
+                  <div className="so-service-description">Modernize legacy systems for deterministic AI integration. Our federal IT leadership experience delivers infrastructure transformation that supports advanced AI governance while maintaining security and compliance.</div>
+                  <div className="so-service-outcomes">
+                    <h4>Strategic Outcomes:</h4>
+                    <p>• Infrastructure ready for advanced AI deployment<br/>• Security-first modernization with federal-grade standards<br/>• Scalable architecture supporting deterministic governance</p>
+                  </div>
+                  <Link to="/services-overview/it-innovation-modernization" className="so-service-link">Explore IT Modernization →</Link>
+                </div>
+
+                <div className="so-service-card">
+                  <h3><Target color="#fa2132" /> Strategic Advisory</h3>
+                  <div className="so-service-focus">Constitutional AI Leadership</div>
+                  <div className="so-service-description">Navigate the strategic implications of deterministic AI through constitutional governance frameworks. Our advisory services align AI strategy with organizational values while ensuring regulatory compliance and competitive positioning.</div>
+                  <div className="so-service-outcomes">
+                    <h4>Strategic Outcomes:</h4>
+                    <p>• AI strategy aligned with constitutional principles<br/>• Executive leadership prepared for AI governance challenges<br/>• Organizational readiness for regulatory enforcement</p>
+                  </div>
+                  <Link to="/services-overview/strategic-advisory-services" className="so-service-link">Explore Strategic Advisory →</Link>
+                </div>
+
+                <div className="so-service-card">
+                  <h3><BookOpen color="#fa2132" /> AI Enablement Strategy</h3>
+                  <div className="so-service-focus">Enterprise Compliance Transformation</div>
+                  <div className="so-service-description">Enable organization-wide AI adoption through compliance-first enablement strategies. Our methodologies ensure AI initiatives deliver business value while meeting regulatory requirements from deployment day one.</div>
+                  <div className="so-service-outcomes">
+                    <h4>Strategic Outcomes:</h4>
+                    <p>• Accelerated AI adoption with built-in compliance<br/>• Risk mitigation through deterministic validation<br/>• Scalable enablement across business units</p>
+                  </div>
+                  <Link to="/services-overview/ai-enablement-strategy" className="so-service-link">Explore AI Enablement Strategy →</Link>
+                </div>
+
+                <div className="so-service-card">
+                  <h3><Scale color="#fa2132" /> Constitutional AI Governance</h3>
+                  <div className="so-service-focus">Democratic AI Oversight Systems</div>
+                  <div className="so-service-description">Implement constitutional governance frameworks for AI systems requiring democratic oversight. Our patent-protected Constitutional Blockchain architecture ensures AI decisions align with organizational values and regulatory requirements.</div>
+                  <div className="so-service-outcomes">
+                    <h4>Strategic Outcomes:</h4>
+                    <p>• Democratic oversight of critical AI systems<br/>• Constitutional alignment with organizational values<br/>• Transparent governance for stakeholder confidence</p>
               </div>
-              <div className="overview-reason-card">
-                <h3 className="overview-reason-title">Universal AI Enhancement</h3>
-                <p className="overview-reason-description">
-                  Rather than requiring expensive system replacements, FERZ's governance frameworks enhance any existing AI deployment. Your LLMs and ML systems become constitutionally compliant without architectural changes.
-                </p>
-              </div>
-              <div className="overview-reason-card">
-                <h3 className="overview-reason-title">Regulatory Leadership</h3>
-                <p className="overview-reason-description">
-                  FERZ doesn't just help organizations comply with AI regulations—we help define what constitutional AI compliance means. Our frameworks establish the standards that regulators and industry bodies will require.
-                </p>
-              </div>
-              <div className="overview-reason-card">
-                <h3 className="overview-reason-title">AGI-Ready Infrastructure</h3>
-                <p className="overview-reason-description">
-                  As AI systems acquire autonomy, traditional oversight becomes inadequate. FERZ's recursive governance architecture scales from current AI deployments to future AGI systems requiring constitutional bounds.
-                </p>
+                  <Link to="/services-overview/design-of-ai-governance-models" className="so-service-link">Explore Constitutional AI Governance →</Link>
+            </div>
+
+                <div className="so-service-card">
+                  <h3><Gauge color="#fa2132" /> Systems Optimization</h3>
+                  <div className="so-service-focus">Deterministic Performance Enhancement</div>
+                  <div className="so-service-description">Optimize existing AI systems for deterministic performance through our behavioral adaptive methodologies. Transform unreliable AI outputs into mathematically validated business intelligence and decision support.</div>
+                  <div className="so-service-outcomes">
+                    <h4>Strategic Outcomes:</h4>
+                    <p>• Optimized AI performance with mathematical validation<br/>• Reduced operational risk through deterministic outputs<br/>• Enhanced decision quality via bias elimination</p>
+                  </div>
+                  <Link to="/services-overview/within-paradigm-improvements" className="so-service-link">Explore Systems Optimization →</Link>
+                </div>
               </div>
             </div>
           </section>
 
-          {/* FAQ Section */}
-          <FAQ title="Services FAQ" faqs={servicesFAQs} />
+          {/* Integrated Transformation Approach */}
+          <section className="so-section">
+            <div className="so-container">
+              <h2 className="so-section-title">Integrated Transformation Approach</h2>
+              <p className="so-section-subtitle">How FERZ services combine to deliver comprehensive AI governance transformation</p>
 
-          <section className="overview-cta-section">
-            <h2 className="overview-section-title">Begin Your Constitutional AI Journey</h2>
-            <p className="overview-cta-description">
-              Every AI system will require constitutional governance. The question is whether your organization leads this transformation or adapts to standards others define.
-            </p>
-            <div className="overview-cta-buttons">
-              <button className="overview-cta-button primary">Explore Constitutional AI Services</button>
-              <button className="overview-cta-button secondary">Contact Us</button>
+              <div className="so-approach-grid">
+                <div className="so-approach-step">
+                  <div className="so-approach-step-number">1</div>
+                  <h3>Strategic Foundation</h3>
+                  <p>Strategic Advisory establishes AI governance vision aligned with organizational values and regulatory requirements</p>
+                </div>
+                <div className="so-approach-step">
+                  <div className="so-approach-step-number">2</div>
+                  <h3>Infrastructure Readiness</h3>
+                  <p>IT Modernization creates the technical foundation capable of supporting deterministic AI governance systems</p>
+                </div>
+                <div className="so-approach-step">
+                  <div className="so-approach-step-number">3</div>
+                  <h3>AI Implementation</h3>
+                  <p>AI Consulting Services deploy deterministic governance systems with mathematical compliance guarantees</p>
+              </div>
+                <div className="so-approach-step">
+                  <div className="so-approach-step-number">4</div>
+                  <h3>Optimization & Scale</h3>
+                  <p>Systems Optimization and AI Enablement Strategy expand governance across the enterprise with sustained performance</p>
+              </div>
+              </div>
+
+              <div className="so-approach-note">
+                <h3>Constitutional AI Governance Integration</h3>
+                <p>Our Constitutional AI Governance service integrates across all phases, ensuring democratic oversight and value alignment throughout your AI transformation journey.</p>
+              </div>
             </div>
           </section>
-        </div>
+
+          {/* Client Engagement Framework */}
+          <section className="so-section so-section-alt">
+            <div className="so-container">
+              <h2 className="so-section-title">Client Engagement Framework</h2>
+              <p className="so-section-subtitle">Selective partnerships with organizations serious about AI governance transformation</p>
+
+              <div className="so-engagement-grid">
+                <div className="so-engagement-card so-border-blue">
+                  <h3>Strategic Assessment</h3>
+                  <p>Comprehensive evaluation of organizational readiness for deterministic AI governance transformation.</p>
+                  <p className="so-emphasis so-blue">• AI risk and compliance audit<br/>• Regulatory timeline analysis<br/>• Technical infrastructure assessment<br/>• Strategic transformation roadmap</p>
+                </div>
+
+                <div className="so-engagement-card so-border-green">
+                  <h3>Methodology Selection</h3>
+                  <p>Tailored combination of FERZ services based on organizational priorities and regulatory requirements.</p>
+                  <p className="so-emphasis so-green">• Service portfolio optimization<br/>• Engagement timeline planning<br/>• Resource allocation strategy<br/>• Success metrics definition</p>
+              </div>
+
+                <div className="so-engagement-card so-border-purple">
+                  <h3>Transformation Execution</h3>
+                  <p>Implementation of integrated services with mathematical validation and measurable outcomes.</p>
+                  <p className="so-emphasis so-purple">• Patent-protected methodology deployment<br/>• Real-time progress validation<br/>• Regulatory compliance verification<br/>• Sustained transformation support</p>
+              </div>
+              </div>
+
+              <div className="so-engagement-note">
+                <h3>Selective Engagement Criteria</h3>
+                <p>FERZ works exclusively with organizations that value systemic excellence and responsible innovation. We maintain selective engagement criteria to ensure mutual success and transformational outcomes.</p>
+              </div>
+            </div>
+          </section>
+
+          {/* Call to Action */}
+          <section className="so-cta-section">
+            <div className="so-container">
+              <div className="so-cta-content">
+                <h2>Transform Your AI with Mathematical Certainty</h2>
+                <p>Join enterprise leaders who choose deterministic transformation over probabilistic hope</p>
+                <div className="so-cta-buttons">
+                  <Link to="/contact-us" className="so-btn-primary">Schedule Strategic Assessment</Link>
+                  <a href="/DELIA-Executive-Brief-AI-Governance.pdf" className="so-btn-secondary" target="_blank" rel="noopener noreferrer">Download Services Overview</a>
+                  <Link to="/contact-us" className="so-btn-secondary">Request Methodology Portfolio</Link>
+                </div>
+
+                <div className="so-cta-badges">
+                  <div><div className="so-badge-title">Patent</div><div className="so-badge-sub">Protected Methods</div></div>
+                  <div><div className="so-badge-title">Federal</div><div className="so-badge-sub">Policy Expertise</div></div>
+                  <div><div className="so-badge-title">Mathematical</div><div className="so-badge-sub">Guarantees</div></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Inline Page Footer Note (keeps global Footer below) */}
+          <div className="so-page-footer-note">
+            <div className="so-container">
+              <p>© 2025 FERZ LLC. All rights reserved.</p>
+              <p>Strategic transformation outcomes based on patent-protected methodologies and federal leadership experience. Engagement success depends on organizational readiness and commitment to deterministic AI governance principles.</p>
+              <p><strong>Authority Foundation:</strong> FERZ methodologies represent proprietary approaches developed through 12+ years of deterministic AI governance research and 20+ years of federal IT transformation leadership. Results reflect mathematical validation, not statistical projections.</p>
+            </div>
+          </div>
       </main>
       <Footer />
       </div>
     </>
   );
 };
+
 export default ServicesOverview;
