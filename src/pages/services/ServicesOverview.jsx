@@ -71,7 +71,7 @@ const ServicesOverview = () => {
         ]
       },
       {
-        "@type": "Service",
+    "@type": "Service",
         "@id": "https://ferzconsulting.com/services-overview/ai-consulting#service",
         "name": "AI Consulting",
         "description": "Strategic analysis of your current AI governance posture and alignment with constitutional principles",
@@ -90,7 +90,7 @@ const ServicesOverview = () => {
         "description": "Collaborative sessions to build your organization's unique constitutional AI governance roadmap",
         "provider": {"@id": "https://ferzconsulting.com/#org"},
         "serviceType": "AI Governance Consulting",
-        "areaServed": ["US", "UK", "Europe"],
+    "areaServed": ["US", "UK", "Europe"],
         "offers": {
           "@type": "Offer",
           "url": "https://ferzconsulting.com/contact-us"
@@ -102,7 +102,7 @@ const ServicesOverview = () => {
         "name": "AI Enablement Strategy",
         "description": "Building roadmaps for constitutional AI integration in regulated industries",
         "provider": {"@id": "https://ferzconsulting.com/#org"},
-        "serviceType": "AI Governance Consulting",
+    "serviceType": "AI Governance Consulting",
         "areaServed": ["US", "UK", "Europe"],
         "offers": {
           "@type": "Offer",

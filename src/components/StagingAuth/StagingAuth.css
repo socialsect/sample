@@ -1,0 +1,210 @@
+/* Staging Authentication Styles */
+.staging-auth-loading {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #000000;
+  color: #ffffff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.staging-auth-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #333333;
+  border-top: 3px solid #fa2132;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.staging-auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #000000 0%, #111111 100%);
+  color: #ffffff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  padding: 2rem;
+}
+
+.staging-auth-card {
+  background: #111111;
+  border: 1px solid #333333;
+  border-radius: 12px;
+  padding: 3rem;
+  max-width: 450px;
+  width: 100%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.staging-auth-header h2 {
+  color: #fa2132;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.staging-auth-header p {
+  color: #cccccc;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.staging-auth-form {
+  margin-bottom: 2rem;
+}
+
+.staging-auth-input-group {
+  margin-bottom: 1.5rem;
+}
+
+.staging-auth-input {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  background: #222222;
+  border: 2px solid #333333;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.staging-auth-input:focus {
+  outline: none;
+  border-color: #fa2132;
+  background: #1a1a1a;
+  box-shadow: 0 0 0 3px rgba(250, 33, 50, 0.1);
+}
+
+.staging-auth-input::placeholder {
+  color: #666666;
+}
+
+.staging-auth-error {
+  color: #fa2132;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: left;
+}
+
+.staging-auth-button {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  background: #fa2132;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.staging-auth-button:hover {
+  background: #e01e2e;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(250, 33, 50, 0.3);
+}
+
+.staging-auth-button:active {
+  transform: translateY(0);
+}
+
+.staging-auth-footer {
+  border-top: 1px solid #333333;
+  padding-top: 1.5rem;
+}
+
+.staging-auth-footer p {
+  color: #888888;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+/* Staging Banner */
+.staging-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fa2132;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  z-index: 9999;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.staging-logout {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.staging-logout:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .staging-auth-container {
+    padding: 1rem;
+  }
+  
+  .staging-auth-card {
+    padding: 2rem;
+  }
+  
+  .staging-auth-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .staging-auth-header p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .staging-auth-card {
+    padding: 1.5rem;
+  }
+  
+  .staging-auth-header h2 {
+    font-size: 1.25rem;
+  }
+  
+  .staging-auth-input {
+    padding: 0.875rem 1rem;
+  }
+  
+  .staging-auth-button {
+    padding: 0.875rem 1rem;
+  }
+}

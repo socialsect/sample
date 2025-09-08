@@ -49,7 +49,7 @@ const FerzMethodologies = () => {
         "@id": "https://ferzconsulting.com/methodologies#page",
         "url": "https://ferzconsulting.com/methodologies",
         "name": "FERZ Methodologies: Deterministic AI Innovation",
-        "description": "Patent-protected methodologies for deterministic AI governance including SCM, AI Capsule, and MRCF frameworks. Mathematical validation and competitive protection.",
+    "description": "Patent-protected methodologies for deterministic AI governance including SCM, AI Capsule, and MRCF frameworks. Mathematical validation and competitive protection.",
         "publisher": {"@id": "https://ferzconsulting.com/#org"},
         "hasPart": [
           {"@id": "https://ferzconsulting.com/methodologies/scm#methodology"},

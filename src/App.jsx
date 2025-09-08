@@ -4,6 +4,7 @@ import { HelmetProvider } from 'react-helmet-async';
 
 import AppRoutes from './routes/routes';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+import StagingAuth from './components/StagingAuth/StagingAuth';
 // ============================================================================
 // STYLES 
 // ============================================================================
@@ -12,8 +13,10 @@ const App = () => {
   return (
     <HelmetProvider>
       <Router>
-        <ScrollToTop />
-        <AppRoutes />
+        <StagingAuth>
+          <ScrollToTop />
+          <AppRoutes />
+        </StagingAuth>
       </Router>
     </HelmetProvider>
   );

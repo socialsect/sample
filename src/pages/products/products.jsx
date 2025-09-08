@@ -243,7 +243,7 @@ const Products = () => {
         "@id": "https://ferzconsulting.com/products#page",
         "url": "https://ferzconsulting.com/products",
         "name": "FERZ Products: Mathematical AI Governance Solutions",
-        "description": "Comprehensive suite of AI governance products including DELIA, LASO(f), STRATA-G, Constitutional Blockchain, and FERZ Behavioral Engine for deterministic AI control.",
+    "description": "Comprehensive suite of AI governance products including DELIA, LASO(f), STRATA-G, Constitutional Blockchain, and FERZ Behavioral Engine for deterministic AI control.",
         "publisher": {"@id": "https://ferzconsulting.com/#org"},
         "hasPart": [
           {"@id": "https://ferzconsulting.com/products/delia#product"},
