@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Eye, EyeOff, Lock, X } from 'lucide-react';
 import './StagingAuth.css';
 
 const StagingAuth = ({ children }) => {
@@ -60,9 +61,10 @@ const StagingAuth = ({ children }) => {
       <>
         {isStaging && (
           <div className="staging-indicator">
+            <Lock size={14} />
             <span>Staging</span>
             <button onClick={handleLogout} className="staging-logout-btn">
-              ×
+              <X size={14} />
             </button>
           </div>
         )}
@@ -75,7 +77,10 @@ const StagingAuth = ({ children }) => {
     <div className="staging-auth-container">
       <div className="staging-auth-card">
         <div className="staging-auth-header">
-          <h2>🔒 Staging Access Required</h2>
+          <h2>
+            <Lock size={24} />
+            Staging Access Required
+          </h2>
           <p>This is a staging environment. Please enter the password to continue.</p>
         </div>
         
@@ -97,7 +102,7 @@ const StagingAuth = ({ children }) => {
                 className="staging-auth-toggle"
                 aria-label={showPassword ? "Hide password" : "Show password"}
               >
-                {showPassword ? "👁️" : "👁️‍🗨️"}
+                {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
               </button>
             </div>
             {error && (
