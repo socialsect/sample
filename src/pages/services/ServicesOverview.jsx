@@ -4,61 +4,151 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer/Footer';
 import './ServicesOverview.css';
 import Threads from '../../components/threads/threads';
+import FAQ from '../../components/FAQ/FAQ';
 
 const ServicesOverview = () => {
-  // Structured Data for Services Overview
+  const servicesFAQs = [
+    {
+      question: "What makes FERZ services different from traditional AI consulting?",
+      answer: "Traditional consulting tends to deliver general frameworks or point solutions. FERZ services go further: we provide governance-first strategy, modernization roadmaps, and executive advisory rooted in our patent-protected Technology Fortress. While traditional approaches emphasize model accuracy or post-hoc audits, our services prepare organizations to adopt deterministic AI governance when they are ready."
+    },
+    {
+      question: "Who are FERZ services designed for?",
+      answer: "We work with Fortune 500 companies, agencies, and institutional leaders that bring the technical depth, legal capacity, and organizational commitment needed for systemic AI governance."
+    },
+    {
+      question: "How do services integrate with our current AI infrastructure?",
+      answer: "Services are delivered as strategic and architectural overlays. We assess your existing systems, identify governance gaps, and design roadmaps for constitutional AI adoption. We do not replace your stack—we help you align it with future compliance and governance requirements."
+    },
+    {
+      question: "What regulatory challenges do you address?",
+      answer: "We help organizations align AI initiatives with major regulatory regimes—including the EU AI Act, FDA AI guidelines, SEC algorithmic governance, GDPR/CCPA, and U.S. federal contracting standards—by embedding governance practices and preparing for provable compliance through FERZ products."
+    },
+    {
+      question: "What are typical engagement timelines and investments?",
+      answer: "Programs range from 2–4 week assessments to multi-month modernization or governance initiatives. Investment typically spans $50K–$2M+, depending on scope and scale."
+    },
+    {
+      question: "Can you modernize legacy systems without disrupting operations?",
+      answer: "Yes. Our phased modernization approach strengthens infrastructure and embeds governance practices while maintaining operational continuity."
+    },
+    {
+      question: "Do you provide support beyond initial strategy?",
+      answer: "Absolutely. FERZ services include training, documentation, compliance monitoring, and ongoing advisory partnerships to ensure lasting governance readiness."
+    },
+    {
+      question: "How do your services complement FERZ products?",
+      answer: "FERZ services prepare the ground—aligning leadership, modernizing infrastructure, and embedding governance practices—so enterprises are ready to adopt FERZ's deterministic products when the time is right. Together, services and products form the Technology Fortress, a layered approach to regulatory-grade AI governance."
+    },
+    {
+      question: "Why not rely only on existing AI safety tools?",
+      answer: "Existing tools provide probabilistic monitoring and retrospective checks. FERZ services position you for the next step: deterministic, real-time governance through our product suite. We help you move beyond best-effort controls toward systemic assurance."
+    },
+    {
+      question: "How do you measure success?",
+      answer: "Success is defined by clear roadmaps, reduced compliance exposure, improved infrastructure readiness, and executive alignment—with measurable ROI tracked against baseline performance and regulatory requirements."
+    }
+  ];
+
+  // Structured Data for Services Overview - CollectionPage with hasPart
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "FERZ AI Governance Services",
-    "description": "Constitutional AI governance and deterministic compliance services for organizations deploying artificial intelligence in regulated and mission-critical environments.",
-    "url": "https://ferzconsulting.com/services-overview",
-    "provider": {
-      "@type": "Organization",
-      "name": "FERZ Consulting",
-      "url": "https://ferzconsulting.com/",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+1 212 380 6044",
-        "email": "contact@ferzconsulting.com"
-      }
-    },
-    "areaServed": ["US", "UK", "Europe"],
-    "serviceType": "AI Governance Consulting",
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Constitutional AI Services",
-      "itemListElement": [
-        {
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://ferzconsulting.com/services-overview#page",
+        "url": "https://ferzconsulting.com/services-overview",
+        "name": "AI Governance Services: Constitutional Compliance",
+        "description": "Constitutional AI governance and deterministic compliance services for organizations deploying artificial intelligence in regulated and mission-critical environments.",
+        "publisher": {"@id": "https://ferzconsulting.com/#org"},
+        "hasPart": [
+          {"@id": "https://ferzconsulting.com/services-overview/ai-consulting#service"},
+          {"@id": "https://ferzconsulting.com/services-overview/strategic-advisory-services#service"},
+          {"@id": "https://ferzconsulting.com/services-overview/ai-enablement-strategy#service"},
+          {"@id": "https://ferzconsulting.com/services-overview/design-of-ai-governance-models#service"},
+          {"@id": "https://ferzconsulting.com/services-overview/it-innovation-modernization#service"},
+          {"@id": "https://ferzconsulting.com/services-overview/within-paradigm-improvements#service"}
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://ferzconsulting.com/services-overview/ai-consulting#service",
+        "name": "AI Consulting",
+        "description": "Strategic analysis of your current AI governance posture and alignment with constitutional principles",
+        "provider": {"@id": "https://ferzconsulting.com/#org"},
+        "serviceType": "AI Governance Consulting",
+        "areaServed": ["US", "UK", "Europe"],
+        "offers": {
           "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "AI Governance Readiness Assessment"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Constitutional AI Strategy Workshops"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Deterministic AI System Design"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "AI Governance Policy Development"
-          }
+          "url": "https://ferzconsulting.com/contact-us"
         }
-      ]
-    }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://ferzconsulting.com/services-overview/strategic-advisory-services#service",
+        "name": "Strategic Advisory Services",
+        "description": "Collaborative sessions to build your organization's unique constitutional AI governance roadmap",
+        "provider": {"@id": "https://ferzconsulting.com/#org"},
+        "serviceType": "AI Governance Consulting",
+        "areaServed": ["US", "UK", "Europe"],
+        "offers": {
+          "@type": "Offer",
+          "url": "https://ferzconsulting.com/contact-us"
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://ferzconsulting.com/services-overview/ai-enablement-strategy#service",
+        "name": "AI Enablement Strategy",
+        "description": "Building roadmaps for constitutional AI integration in regulated industries",
+        "provider": {"@id": "https://ferzconsulting.com/#org"},
+        "serviceType": "AI Governance Consulting",
+        "areaServed": ["US", "UK", "Europe"],
+        "offers": {
+          "@type": "Offer",
+          "url": "https://ferzconsulting.com/contact-us"
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://ferzconsulting.com/services-overview/design-of-ai-governance-models#service",
+        "name": "AI Governance Model Design",
+        "description": "Designing constitutional AI governance with mathematical guarantees for compliance and trust",
+        "provider": {"@id": "https://ferzconsulting.com/#org"},
+        "serviceType": "AI Governance Consulting",
+        "areaServed": ["US", "UK", "Europe"],
+        "offers": {
+          "@type": "Offer",
+          "url": "https://ferzconsulting.com/contact-us"
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://ferzconsulting.com/services-overview/it-innovation-modernization#service",
+        "name": "IT Innovation & Modernization",
+        "description": "Building AI-native IT infrastructure for compliance and scalability",
+        "provider": {"@id": "https://ferzconsulting.com/#org"},
+        "serviceType": "AI Governance Consulting",
+        "areaServed": ["US", "UK", "Europe"],
+        "offers": {
+          "@type": "Offer",
+          "url": "https://ferzconsulting.com/contact-us"
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://ferzconsulting.com/services-overview/within-paradigm-improvements#service",
+        "name": "Within Paradigm Improvements",
+        "description": "Optimizing systems for constitutional AI readiness and efficiency",
+        "provider": {"@id": "https://ferzconsulting.com/#org"},
+        "serviceType": "AI Governance Consulting",
+        "areaServed": ["US", "UK", "Europe"],
+        "offers": {
+          "@type": "Offer",
+          "url": "https://ferzconsulting.com/contact-us"
+        }
+      }
+    ]
   };
 
   return (
@@ -216,6 +306,9 @@ const ServicesOverview = () => {
               </div>
             </div>
           </section>
+
+          {/* FAQ Section */}
+          <FAQ title="Services FAQ" faqs={servicesFAQs} />
 
           <section className="overview-cta-section">
             <h2 className="overview-section-title">Begin Your Constitutional AI Journey</h2>

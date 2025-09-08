@@ -9,19 +9,11 @@ const IPPortfolio = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebPage",
+    "@id": "https://ferzconsulting.com/ip-portfolio#page",
     "name": "FERZ IP Portfolio - Patent-Protected AI Innovation",
-    "description": "Comprehensive intellectual property portfolio controlling every legitimate pathway to deterministic AI governance. 5 patents filed, 4 defensive publications, 10+ SSRN papers.",
+    "description": "Comprehensive intellectual property portfolio controlling every legitimate pathway to deterministic AI governance. Patent-protected frameworks with mathematical validation.",
     "url": "https://ferzconsulting.com/ip-portfolio",
-    "mainEntity": {
-      "@type": "Organization",
-      "name": "FERZ Consulting",
-      "url": "https://ferzconsulting.com/",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+1 212 380 6044",
-        "email": "contact@ferzconsulting.com"
-      }
-    },
+    "publisher": {"@id": "https://ferzconsulting.com/#org"},
     "about": [
       {
         "@type": "Thing",

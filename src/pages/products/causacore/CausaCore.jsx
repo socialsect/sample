@@ -1,5 +1,6 @@
 import React from 'react';
 import ProductTemplate from '../../../components/ProductTemplate/ProductTemplate';
+import PDFLibrary from '../../../components/PDFLibrary/PDFLibrary';
 
 const CausaCore = () => {
   const causacoreData = {
@@ -195,7 +196,14 @@ const CausaCore = () => {
     ]
   };
 
-  return <ProductTemplate {...causacoreData} />;
+  return (
+    <div className="content-with-aside">
+      <div className="content">
+        <ProductTemplate {...causacoreData} />
+      </div>
+      <PDFLibrary />
+    </div>
+  );
 };
 
 export default CausaCore;

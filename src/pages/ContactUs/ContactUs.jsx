@@ -35,6 +35,7 @@ const ContactUs = () => {
     "description": "Contact FERZ for deterministic AI governance consultation. Patent-protected frameworks, federal-proven methodologies, and mathematical certainty for regulated industries.",
     "url": "https://ferzconsulting.com/contact-us",
     "mainEntity": {
+      "@id": "https://ferzconsulting.com/#org",
       "@type": "Organization",
       "name": "FERZ Consulting",
       "url": "https://ferzconsulting.com/",

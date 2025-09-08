@@ -5,6 +5,8 @@ import ReactMarkdown from 'react-markdown';
 import { Helmet } from 'react-helmet-async';
 import { loadArticles, loadArticleContent } from '../../utils/articleLoader';
 import './ArticleDetail.css';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer/Footer';
 
 const ArticleDetail = () => {
   const { slug } = useParams();
@@ -101,6 +103,7 @@ const ArticleDetail = () => {
       
       <main className="article-detail-page" role="main" aria-labelledby="article-title">
         {/* Hero Section */}
+        <Navbar />
         <section className="article-hero">
           <div className="article-hero-background">
             <img 
@@ -206,6 +209,7 @@ const ArticleDetail = () => {
           </div>
         </section>
       </main>
+      <Footer />
     </>
   );
 };

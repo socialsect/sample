@@ -1,0 +1,16 @@
+.content-with-aside {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.content-with-aside .content {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 1024px) {
+  .content-with-aside { display: block; }
+}
+
+

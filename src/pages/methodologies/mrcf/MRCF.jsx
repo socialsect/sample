@@ -13,8 +13,8 @@ const MRCF = () => {
     "headline": "MRCF: Meta-Recursive Cognitive Framework",
     "description": "Proprietary FERZ methodology for structured human-AI cognitive enhancement through mathematical recursive dialogue patterns and meta-validation protocols.",
     "url": "https://ferzconsulting.com/methodologies/mrcf",
-    "datePublished": "2025-01-05",
-    "dateModified": "2025-01-05",
+    "datePublished": "2015-06-15",
+    "dateModified": "2024-12-01",
     "author": {
       "@type": "Organization",
       "name": "FERZ Consulting",

@@ -6,6 +6,36 @@ import Footer from '../../../components/Footer/Footer';
 import './AIEnablementStrategy.css';
 
 const AIEnablementStrategy = () => {
+  // Structured Data for AI Enablement Strategy Service
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "AI Enablement Strategy",
+    "description": "Transform enterprise AI adoption with FERZ's deterministic enablement strategy. Constitutional AI roadmaps, regulatory readiness.",
+    "url": "https://ferzconsulting.com/services-overview/ai-enablement-strategy",
+    "provider": {
+      "@id": "https://ferzconsulting.com/#org",
+      "@type": "Organization",
+      "name": "FERZ Consulting",
+      "url": "https://ferzconsulting.com/",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1 212 380 6044",
+        "email": "contact@ferzconsulting.com",
+        "contactType": "Customer Service"
+      }
+    },
+    "publisher": {
+      "@id": "https://ferzconsulting.com/#org",
+      "@type": "Organization",
+      "name": "FERZ Consulting",
+      "url": "https://ferzconsulting.com/",
+      "logo": "https://ferzconsulting.com/logo.png"
+    },
+    "areaServed": ["US", "UK", "Europe"],
+    "serviceType": "AI Strategy Consulting"
+  };
+
   return (
     <>
       <Helmet>
@@ -13,6 +43,7 @@ const AIEnablementStrategy = () => {
         <meta name="description" content="Transform enterprise AI adoption with FERZ's deterministic enablement strategy. Constitutional AI roadmaps, regulatory readiness, and mathematical certainty. Schedule assessment." />
         <meta name="keywords" content="AI enablement strategy, deterministic AI roadmaps, constitutional AI integration, enterprise AI adoption, regulatory AI readiness, federal AI strategy" />
         <meta name="canonical" content="https://ferzconsulting.com/services-overview/ai-enablement-strategy/" />
+        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
       <Navbar />

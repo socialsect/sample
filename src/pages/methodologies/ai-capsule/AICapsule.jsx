@@ -9,42 +9,20 @@ const AICapsule = () => {
   // Structured Data for AI Capsule Methodology
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "AI Capsule™: Constitutional Methodology for Machine-Readable System Reconstruction",
+    "@type": "CreativeWork",
+    "@id": "https://ferzconsulting.com/methodologies/ai-capsule#methodology",
+    "name": "AI Capsule™: Constitutional Methodology for Machine-Readable System Reconstruction",
     "description": "Proprietary FERZ methodology for encoding complete organizational knowledge into machine-readable constitutional artifacts enabling autonomous AI understanding and system orchestration.",
     "url": "https://ferzconsulting.com/methodologies/ai-capsule",
-    "datePublished": "2025-01-05",
-    "dateModified": "2025-01-05",
-    "author": {
-      "@type": "Organization",
-      "name": "FERZ Consulting",
-      "url": "https://ferzconsulting.com/"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "FERZ Consulting",
-      "url": "https://ferzconsulting.com/",
-      "logo": "https://ferzconsulting.com/logo.png"
-    },
+    "genre": "Methodology",
+    "creator": {"@id": "https://ferzconsulting.com/#org"},
+    "publisher": {"@id": "https://ferzconsulting.com/#org"},
+    "keywords": "constitutional AI, machine-readable artifacts, knowledge representation, autonomous AI understanding",
     "about": {
       "@type": "Thing",
       "name": "Constitutional AI Methodology",
       "description": "Proprietary methodology for machine-readable knowledge representation"
-    },
-    "mentions": [
-      {
-        "@type": "Thing",
-        "name": "Constitutional Knowledge Representation"
-      },
-      {
-        "@type": "Thing",
-        "name": "Machine-Readable Artifacts"
-      },
-      {
-        "@type": "Thing",
-        "name": "Autonomous AI Understanding"
-      }
-    ]
+    }
   };
 
   return (

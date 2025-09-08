@@ -4,6 +4,8 @@ import { Clock, User, Tag, Search, Filter } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { loadArticles } from '../../utils/articleLoader';
 import './Articles.css';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer/Footer';
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
@@ -59,17 +61,8 @@ const Articles = () => {
     "name": "FERZ AI Governance Articles & Insights",
     "description": "Latest insights on deterministic AI governance, mathematical certainty, and regulatory compliance for enterprise leaders and technical decision makers.",
     "url": "https://ferzconsulting.com/articles",
-    "publisher": {
-      "@type": "Organization",
-      "name": "FERZ Consulting",
-      "url": "https://ferzconsulting.com/",
-      "logo": "https://ferzconsulting.com/logo.png",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+1 212 380 6044",
-        "email": "contact@ferzconsulting.com"
-      }
-    },
+    "publisher": {"@id": "https://ferzconsulting.com/#org"},
+    "inLanguage": "en",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://ferzconsulting.com/articles"
@@ -101,6 +94,7 @@ const Articles = () => {
       </Helmet>
       
       <main className="articles-page" role="main" aria-labelledby="articles-title">
+        <Navbar />
         <div className="articles-header">
           <div className="container">
             <h1 className="articles-title" id="articles-title" style={{ fontFamily: 'Georgia, serif' }}>
@@ -223,6 +217,7 @@ const Articles = () => {
           </div>
         </div>
       </main>
+      <Footer />
     </>
   );
 };

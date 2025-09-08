@@ -7,6 +7,36 @@ import './AIConsulting.css';
 import '../../../styles/shared/CardStyles.css';
 
 const AIConsulting = () => {
+  // Structured Data for AI Consulting Service
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "AI Consulting: Deterministic Governance for Regulated Industries",
+    "description": "Transform enterprise AI from probabilistic risk to regulation-ready systems through FERZ's constitutional governance frameworks.",
+    "url": "https://ferzconsulting.com/services-overview/ai-consulting",
+    "provider": {
+      "@id": "https://ferzconsulting.com/#org",
+      "@type": "Organization",
+      "name": "FERZ Consulting",
+      "url": "https://ferzconsulting.com/",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1 212 380 6044",
+        "email": "contact@ferzconsulting.com",
+        "contactType": "Customer Service"
+      }
+    },
+    "publisher": {
+      "@id": "https://ferzconsulting.com/#org",
+      "@type": "Organization",
+      "name": "FERZ Consulting",
+      "url": "https://ferzconsulting.com/",
+      "logo": "https://ferzconsulting.com/logo.png"
+    },
+    "areaServed": ["US", "UK", "Europe"],
+    "serviceType": "AI Consulting"
+  };
+
   return (
     <>
       <Helmet>
@@ -14,6 +44,7 @@ const AIConsulting = () => {
         <meta name="description" content="Transform enterprise AI from probabilistic risk to regulation-ready systems through FERZ's constitutional governance frameworks. Mathematical certainty. Schedule assessment." />
         <meta name="keywords" content="AI consulting regulated industries, constitutional AI governance, mathematical AI compliance, federal AI transformation, deterministic AI consulting" />
         <meta name="canonical" content="https://ferzconsulting.com/services-overview/ai-consulting/" />
+        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </Helmet>
 
       <Navbar />

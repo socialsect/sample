@@ -76,10 +76,16 @@ const Navbar = () => {
   const getFilteredItems = () => {
     if (!searchQuery.trim()) return null;
 
+    const companyPages = sitemapData?.companyPages || [];
+    const mainCategories = sitemapData?.mainCategories || [];
+
     const allItems = [
-      ...sitemapData.companyPages,
-      ...sitemapData.mainCategories,
-      ...sitemapData.mainCategories.flatMap(cat => cat.subcategories)
+      ...companyPages,
+      ...mainCategories,
+      ...mainCategories.flatMap(cat => cat.subcategories || []),
+      ...mainCategories.flatMap(cat =>
+        (cat.subcategories || []).flatMap(subcat => subcat.subcategories || [])
+      )
     ];
 
     return allItems.filter(item =>
@@ -184,7 +190,7 @@ const Navbar = () => {
           <div className="menu-content">
             <div className="sidebar">
               <div className="sidebar-content">
-                <h2 className="sidebar-title">Services</h2>
+                <h2 className="sidebar-title">Company </h2>
                 <nav className="nav-section" aria-label="Services navigation">
                   {sitemapData.mainCategories.map((category) => (
                     <button
@@ -200,20 +206,6 @@ const Navbar = () => {
                   ))}
                 </nav>
 
-                <h2 className="sidebar-title sidebar-title-secondary">Company</h2>
-                <nav className="nav-section" aria-label="Company pages navigation">
-                  {sitemapData.companyPages.filter(page => page.id !== 'home').map((page) => (
-                    <Link
-                      key={page.id}
-                      to={page.path}
-                      className="nav-link"
-                      onClick={closeMenu}
-                      aria-label={`Go to ${page.title} page`}
-                    >
-                      {page.title}
-                    </Link>
-                  ))}
-                </nav>
               </div>
             </div>
             <div className="content-area">
@@ -254,20 +246,43 @@ const Navbar = () => {
                     <p className="category-description">{selectedCategory.description}</p>
                   </div>             
                   <div className="subcategories-grid" role="list" aria-label={`${selectedCategory.title} subcategories`}>
-                    {selectedCategory.subcategories.map((subcategory) => (
+                    {selectedCategory.subcategories?.map((subcategory) => (
                       <div key={subcategory.id} className="subcategory-card" role="listitem">
-                        <Link 
-                          to={subcategory.path}
-                          className="subcategory-link"
-                          onClick={closeMenu}
-                          aria-label={`Go to ${subcategory.title} page`}
-                        >
-                          <h3 className="subcategory-title">{subcategory.title}</h3>
-                          <p className="subcategory-description">{subcategory.description}</p>
-                          <div className="visit-page-button" aria-hidden="true">
-                            Visit Page
+                        {subcategory.subcategories ? (
+                          // This subcategory has its own subcategories (like Products Portfolio)
+                          <div className="subcategory-with-nested">
+                            <h3 className="subcategory-title">{subcategory.title}</h3>
+                            <p className="subcategory-description">{subcategory.description}</p>
+                            <div className="nested-subcategories">
+                              {subcategory.subcategories.map((nestedSub) => (
+                                <Link 
+                                  key={nestedSub.id}
+                                  to={nestedSub.path}
+                                  className="nested-subcategory-link"
+                                  onClick={closeMenu}
+                                  aria-label={`Go to ${nestedSub.title} page`}
+                                >
+                                  <span className="nested-subcategory-title">{nestedSub.title}</span>
+                                  <span className="nested-subcategory-description">{nestedSub.description}</span>
+                                </Link>
+                              ))}
+                            </div>
                           </div>
-                        </Link>
+                        ) : (
+                          // Regular subcategory with direct link
+                          <Link 
+                            to={subcategory.path}
+                            className="subcategory-link"
+                            onClick={closeMenu}
+                            aria-label={`Go to ${subcategory.title} page`}
+                          >
+                            <h3 className="subcategory-title">{subcategory.title}</h3>
+                            <p className="subcategory-description">{subcategory.description}</p>
+                            <div className="visit-page-button" aria-hidden="true">
+                              Visit Page
+                            </div>
+                          </Link>
+                        )}
                       </div>
                     ))}
                   </div>

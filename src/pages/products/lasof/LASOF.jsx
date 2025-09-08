@@ -1,5 +1,6 @@
 import React from 'react';
 import ProductTemplate from '../../../components/ProductTemplate/ProductTemplate';
+import PDFLibrary from '../../../components/PDFLibrary/PDFLibrary';
 
 const LASOF = () => {
   const lasofData = {
@@ -195,7 +196,14 @@ const LASOF = () => {
     ]
   };
 
-  return <ProductTemplate {...lasofData} />;
+  return (
+    <div className="content-with-aside">
+      <div className="content">
+        <ProductTemplate {...lasofData} />
+      </div>
+      <PDFLibrary />
+    </div>
+  );
 };
 
 export default LASOF;

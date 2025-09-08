@@ -28,18 +28,26 @@ const ConstitutionalAIGovernance = () => {
     "description": "Constitutional AI governance design services delivering deterministic frameworks and mathematical guarantees for enterprise compliance.",
     "url": "https://ferzconsulting.com/services-overview/design-of-ai-governance-models",
     "provider": {
+      "@id": "https://ferzconsulting.com/#org",
       "@type": "Organization",
-      "name": "FERZ",
-    
-      "logo": "https://ferzconsulting.com/wp-content/uploads/2025/04/las-banner-logo.png"
+      "name": "FERZ Consulting",
+      "url": "https://ferzconsulting.com/",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1 212 380 6044",
+        "email": "contact@ferzconsulting.com",
+        "contactType": "Customer Service"
+      }
     },
-    "url": "https://ferzconsulting.com/services-overview/design-of-ai-governance-models/",
-    "serviceType": "AI Governance Design",
-    "areaServed": "Worldwide",
-    "availableChannel": {
-      "@type": "ServiceChannel",
-      "serviceUrl": "https://ferzconsulting.com/contact-us/"
-    }
+    "publisher": {
+      "@id": "https://ferzconsulting.com/#org",
+      "@type": "Organization",
+      "name": "FERZ Consulting",
+      "url": "https://ferzconsulting.com/",
+      "logo": "https://ferzconsulting.com/logo.png"
+    },
+    "areaServed": ["US", "UK", "Europe"],
+    "serviceType": "AI Governance Design Consulting"
   };
 
   return (

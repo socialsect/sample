@@ -12,8 +12,8 @@ const SCM = () => {
     "headline": "SCM: Semantic Condensation Methodology",
     "description": "Proprietary FERZ methodology for deterministic document compression in AI systems achieving 94-97% compression while preserving 100% structured data and 90%+ semantic content.",
     "url": "https://ferzconsulting.com/methodologies/scm",
-    "datePublished": "2025-01-05",
-    "dateModified": "2025-01-05",
+    "datePublished": "2018-03-20",
+    "dateModified": "2024-12-01",
     "author": {
       "@type": "Organization",
       "name": "FERZ Consulting",

@@ -57,6 +57,27 @@ const ProductTemplate = ({
   // CTA Section
   ctaMetrics
 }) => {
+  // Generate structured data for individual product pages
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": ["Product", "SoftwareApplication"],
+    "@id": `https://ferzconsulting.com/products/${productName.toLowerCase().replace(/[^a-z0-9]/g, '-')}#product`,
+    "name": productName,
+    "description": productDefinition,
+    "applicationCategory": "AI Governance Software",
+    "operatingSystem": "Model-agnostic",
+    "brand": {"@id": "https://ferzconsulting.com/#org"},
+    "keywords": seo?.keywords || "AI governance, deterministic AI, mathematical AI frameworks",
+    "additionalProperty": keyInnovations?.map(innovation => ({
+      "@type": "PropertyValue",
+      "name": "Key Innovation",
+      "value": innovation
+    })) || [],
+    "offers": {
+      "@type": "Offer",
+      "url": "https://ferzconsulting.com/contact-us"
+    }
+  };
   return (
     <>
       <Helmet>
@@ -64,6 +85,7 @@ const ProductTemplate = ({
         <meta name="description" content={seo?.description || `${keyDifferentiators} | ${primaryBenefit} | ${mathematicalTechnicalFoundation}`} />
         {seo?.keywords && <meta name="keywords" content={seo.keywords} />}
         {seo?.canonical && <link rel="canonical" href={seo.canonical} />}
+        <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
        </Helmet>
       <Navbar />
       

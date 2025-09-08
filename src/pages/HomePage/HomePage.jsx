@@ -7,49 +7,43 @@ import ArticlesCarousel from '../../components/reusables/ArticleCarousel/Article
 import './homePage.css';
 
 const HomePage = () => {
-  // Structured Data for Homepage
+  // Structured Data for Homepage - Global Organization + WebSite with @id anchors
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "FERZ Consulting - Mathematical AI Governance Authority",
-    "url": "https://ferzconsulting.com/",
-    "description": "Patent-protected deterministic AI governance frameworks delivering mathematical certainty for regulated industries. Federal-proven solutions for EU AI Act compliance.",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://ferzconsulting.com/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "FERZ Consulting",
-      "url": "https://ferzconsulting.com/",
-      "logo": "https://ferzconsulting.com/logo.png",
-      "description": "Mathematical AI governance authority specializing in deterministic frameworks for regulated industries",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Washington",
-        "addressRegion": "DC",
-        "addressCountry": "US"
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://ferzconsulting.com/#org",
+        "name": "FERZ Consulting",
+        "url": "https://ferzconsulting.com/",
+        "logo": "https://ferzconsulting.com/Logo.svg",
+        "description": "Mathematical AI governance authority specializing in deterministic frameworks for regulated industries",
+        "foundingDate": "2013",
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "contactType": "Customer Service",
+            "email": "contact@ferzconsulting.com",
+            "telephone": "+1-212-380-6044",
+            "areaServed": ["US", "UK", "Europe"],
+            "availableLanguage": ["en"]
+          }
+        ]
       },
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "telephone": "+1 212 380 6044",
-          "contactType": "customer service",
-          "areaServed": ["US", "UK", "Europe"],
-          "availableLanguage": "English"
-        },
-        {
-          "@type": "ContactPoint",
-          "email": "contact@ferzconsulting.com",
-          "contactType": "customer service",
-          "areaServed": "Worldwide"
+      {
+        "@type": "WebSite",
+        "@id": "https://ferzconsulting.com/#website",
+        "url": "https://ferzconsulting.com/",
+        "name": "FERZ Consulting - Mathematical AI Governance Authority",
+        "description": "Patent-protected deterministic AI governance frameworks delivering mathematical certainty for regulated industries. Federal-proven solutions for EU AI Act compliance.",
+        "publisher": {"@id": "https://ferzconsulting.com/#org"},
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://ferzconsulting.com/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
         }
-      ],
-      "foundingDate": "2013",
-      "numberOfEmployees": "10-50",
-      "areaServed": ["US", "UK", "Europe"]
-    }
+      }
+    ]
   };
 
   return(

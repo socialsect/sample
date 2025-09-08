@@ -10,14 +10,23 @@ const StrategicAdvisoryPage = () => {
     "description": "Federal-proven strategic advisory services delivering deterministic AI governance and constitutional compliance frameworks for enterprise leadership.",
     "url": "https://ferzconsulting.com/services-overview/strategic-advisory-services",
     "provider": {
+      "@id": "https://ferzconsulting.com/#org",
       "@type": "Organization",
       "name": "FERZ Consulting",
       "url": "https://ferzconsulting.com/",
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+1 212 380 6044",
-        "email": "contact@ferzconsulting.com"
+        "email": "contact@ferzconsulting.com",
+        "contactType": "Customer Service"
       }
+    },
+    "publisher": {
+      "@id": "https://ferzconsulting.com/#org",
+      "@type": "Organization",
+      "name": "FERZ Consulting",
+      "url": "https://ferzconsulting.com/",
+      "logo": "https://ferzconsulting.com/logo.png"
     },
     "areaServed": ["US", "UK", "Europe"],
     "serviceType": "Strategic Advisory Consulting"

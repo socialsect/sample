@@ -12,6 +12,7 @@ const FerzAbout = () => {
     "description": "FERZ Consulting specializes in deterministic AI governance for regulated industries. Patent-protected frameworks delivering mathematical certainty since 2013.",
     "url": "https://ferzconsulting.com/about-us",
     "mainEntity": {
+      "@id": "https://ferzconsulting.com/#org",
       "@type": "Organization",
       "name": "FERZ Consulting",
       "url": "https://ferzconsulting.com/",

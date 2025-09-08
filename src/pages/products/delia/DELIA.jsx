@@ -1,5 +1,6 @@
 import React from 'react';
 import ProductTemplate from '../../../components/ProductTemplate/ProductTemplate';
+import PDFLibrary from '../../../components/PDFLibrary/PDFLibrary';
 
 const DELIA = () => {
   const deliaData = {
@@ -189,7 +190,14 @@ const DELIA = () => {
     ]
   };
 
-  return <ProductTemplate {...deliaData} />;
+  return (
+    <div className="content-with-aside">
+      <div className="content">
+        <ProductTemplate {...deliaData} />
+      </div>
+      <PDFLibrary />
+    </div>
+  );
 };
 
 export default DELIA;

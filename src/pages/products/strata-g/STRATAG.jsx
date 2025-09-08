@@ -1,5 +1,6 @@
 import React from 'react';
 import ProductTemplate from '../../../components/ProductTemplate/ProductTemplate';
+import PDFLibrary from '../../../components/PDFLibrary/PDFLibrary';
 
 const STRATAG = () => {
   const strataGData = {
@@ -193,7 +194,14 @@ const STRATAG = () => {
     ]
   };
 
-  return <ProductTemplate {...strataGData} />;
+  return (
+    <div className="content-with-aside">
+      <div className="content">
+        <ProductTemplate {...strataGData} />
+      </div>
+      <PDFLibrary />
+    </div>
+  );
 };
 
 export default STRATAG;

@@ -3,39 +3,86 @@ import { Helmet } from 'react-helmet-async';
 import './methodologies.css';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer/Footer';
+import FAQ from '../../components/FAQ/FAQ';
 const FerzMethodologies = () => {
-  // Structured Data for Methodologies Overview
+  const methodologiesFAQs = [
+    {
+      question: "What are FERZ Methodologies?",
+      answer: "FERZ Methodologies are proprietary, patent-protected frameworks that encode rules, knowledge, and reasoning into deterministic, machine-readable formats. They form the intellectual foundation for FERZ products, ensuring that AI systems can be governed with mathematical precision and reproducibility."
+    },
+    {
+      question: "How are methodologies different from products and services?",
+      answer: "• Methodologies: The mathematical blueprints—such as Formula of Fate, AI Capsule™, MRCF, and Semantic Condensation Methodology—that define how deterministic governance is possible.\n• Products: Technical implementations that enforce these methodologies at runtime.\n• Services: Advisory and modernization programs that prepare organizations to adopt deterministic governance."
+    },
+    {
+      question: "Do methodologies themselves provide compliance guarantees?",
+      answer: "Methodologies establish the formal structures and algorithms for deterministic governance, but the actual runtime guarantees are delivered by FERZ products that implement these methods."
+    },
+    {
+      question: "What is AI Capsule™?",
+      answer: "AI Capsule™ is a methodology for encoding entire organizational knowledge into machine-readable constitutional artifacts. Capsules allow AI systems to autonomously interpret, validate, and orchestrate complex logic across systems while preserving traceability and compliance transparency."
+    },
+    {
+      question: "What is the Meta-Recursive Cognitive Framework (MRCF)?",
+      answer: "MRCF is a methodology for structured, recursive human-AI dialogue. It applies ten mathematical principles of recursive cognition and meta-validation, ensuring that AI amplifies human reasoning without eroding intellectual sovereignty."
+    },
+    {
+      question: "What is the Semantic Condensation Methodology (SCM)?",
+      answer: "SCM addresses AI's token-limit problem by deterministically compressing large documents. It reduces size by up to 94–97% while preserving all structured data and ~90% of narrative meaning, validated through semantic similarity thresholds and cryptographic checks."
+    },
+    {
+      question: "How are these methodologies applied?",
+      answer: "Each methodology serves a distinct role in the FERZ Technology Fortress:\n• FoF provides the formal backbone for all deterministic governance.\n• AI Capsule™ structures enterprise knowledge for AI comprehension.\n• MRCF ensures safe, recursive cognitive amplification with humans in control.\n• SCM enables regulatory-grade document compression for large-scale AI processing."
+    },
+    {
+      question: "Why are methodologies critical for regulated industries?",
+      answer: "Regulations such as the EU AI Act, FDA guidelines, and SEC requirements demand provable compliance. FERZ methodologies define the deterministic mechanisms—like formal validation, semantic preservation, and cryptographic auditability—that products implement to meet these standards."
+    }
+  ];
+
+  // Structured Data for Methodologies Overview - CollectionPage with hasPart
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "FERZ Methodologies - Deterministic AI Innovation",
-    "description": "Patent-protected methodologies for deterministic AI governance including SCM, AI Capsule, and MRCF frameworks. Mathematical validation and competitive protection.",
-    "url": "https://ferzconsulting.com/methodologies",
-    "mainEntity": {
-      "@type": "Organization",
-      "name": "FERZ Consulting",
-      "url": "https://ferzconsulting.com/",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+1 212 380 6044",
-        "email": "contact@ferzconsulting.com"
-      }
-    },
-    "about": [
+    "@graph": [
       {
-        "@type": "Thing",
-        "name": "Semantic Condensation Methodology",
-        "description": "Deterministic document compression for AI systems"
+        "@type": "CollectionPage",
+        "@id": "https://ferzconsulting.com/methodologies#page",
+        "url": "https://ferzconsulting.com/methodologies",
+        "name": "FERZ Methodologies: Deterministic AI Innovation",
+        "description": "Patent-protected methodologies for deterministic AI governance including SCM, AI Capsule, and MRCF frameworks. Mathematical validation and competitive protection.",
+        "publisher": {"@id": "https://ferzconsulting.com/#org"},
+        "hasPart": [
+          {"@id": "https://ferzconsulting.com/methodologies/scm#methodology"},
+          {"@id": "https://ferzconsulting.com/methodologies/ai-capsule#methodology"},
+          {"@id": "https://ferzconsulting.com/methodologies/mrcf#methodology"}
+        ]
       },
       {
-        "@type": "Thing",
+        "@type": "CreativeWork",
+        "@id": "https://ferzconsulting.com/methodologies/scm#methodology",
+        "name": "Semantic Condensation Methodology (SCM)",
+        "description": "Deterministic document compression for AI systems with up to 97% size reduction",
+        "genre": "Methodology",
+        "creator": {"@id": "https://ferzconsulting.com/#org"},
+        "keywords": "document compression, AI optimization, deterministic methodology"
+      },
+      {
+        "@type": "CreativeWork",
+        "@id": "https://ferzconsulting.com/methodologies/ai-capsule#methodology",
         "name": "AI Capsule",
-        "description": "Constitutional methodology for machine-readable system reconstruction"
+        "description": "Constitutional methodology for machine-readable system reconstruction",
+        "genre": "Methodology",
+        "creator": {"@id": "https://ferzconsulting.com/#org"},
+        "keywords": "constitutional AI, system reconstruction, machine-readable"
       },
       {
-        "@type": "Thing",
-        "name": "Meta-Recursive Cognitive Framework",
-        "description": "Structured human-AI cognitive enhancement"
+        "@type": "CreativeWork",
+        "@id": "https://ferzconsulting.com/methodologies/mrcf#methodology",
+        "name": "Meta-Recursive Cognitive Framework (MRCF)",
+        "description": "Structured human-AI cognitive enhancement and reasoning acceleration",
+        "genre": "Methodology",
+        "creator": {"@id": "https://ferzconsulting.com/#org"},
+        "keywords": "cognitive enhancement, reasoning acceleration, human-AI interaction"
       }
     ]
   };
@@ -323,6 +370,9 @@ const FerzMethodologies = () => {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQ title="Methodologies FAQ" faqs={methodologiesFAQs} />
 
       {/* Call to Action */}
       <section className="meth-cta-section">

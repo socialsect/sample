@@ -1,5 +1,6 @@
 import React from 'react';
 import ProductTemplate from '../../../components/ProductTemplate/ProductTemplate';
+import PDFLibrary from '../../../components/PDFLibrary/PDFLibrary';
 
 const FERZBehavioralEngine = () => {
   const behavioralEngineData = {
@@ -181,7 +182,14 @@ const FERZBehavioralEngine = () => {
     ]
   };
 
-  return <ProductTemplate {...behavioralEngineData} />;
+  return (
+    <div className="content-with-aside">
+      <div className="content">
+        <ProductTemplate {...behavioralEngineData} />
+      </div>
+      <PDFLibrary />
+    </div>
+  );
 };
 
 export default FERZBehavioralEngine;

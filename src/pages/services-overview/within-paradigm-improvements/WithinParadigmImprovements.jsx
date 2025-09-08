@@ -11,14 +11,23 @@ const WithinParadigmImprovements = () => {
     "description": "Systematic AI improvement services delivering deterministic governance and constitutional compliance frameworks for existing enterprise systems.",
     "url": "https://ferzconsulting.com/services-overview/within-paradigm-improvements",
     "provider": {
+      "@id": "https://ferzconsulting.com/#org",
       "@type": "Organization",
       "name": "FERZ Consulting",
       "url": "https://ferzconsulting.com/",
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+1 212 380 6044",
-        "email": "contact@ferzconsulting.com"
+        "email": "contact@ferzconsulting.com",
+        "contactType": "Customer Service"
       }
+    },
+    "publisher": {
+      "@id": "https://ferzconsulting.com/#org",
+      "@type": "Organization",
+      "name": "FERZ Consulting",
+      "url": "https://ferzconsulting.com/",
+      "logo": "https://ferzconsulting.com/logo.png"
     },
     "areaServed": ["US", "UK", "Europe"],
     "serviceType": "AI Improvement Consulting"
