@@ -6,6 +6,7 @@ const StagingAuth = ({ children }) => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(true);
+  const [showPassword, setShowPassword] = useState(false);
 
   // Check if we're in staging environment
   const isStaging = process.env.NODE_ENV === 'development' || 
@@ -20,6 +21,8 @@ const StagingAuth = ({ children }) => {
     }
     setIsLoading(false);
   }, [isStaging]);
+
+  // No need for body class adjustment with bottom indicator
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -56,10 +59,10 @@ const StagingAuth = ({ children }) => {
     return (
       <>
         {isStaging && (
-          <div className="staging-banner">
-            <span>🔒 Staging Environment</span>
-            <button onClick={handleLogout} className="staging-logout">
-              Logout
+          <div className="staging-indicator">
+            <span>Staging</span>
+            <button onClick={handleLogout} className="staging-logout-btn">
+              ×
             </button>
           </div>
         )}
@@ -78,15 +81,25 @@ const StagingAuth = ({ children }) => {
         
         <form onSubmit={handleSubmit} className="staging-auth-form">
           <div className="staging-auth-input-group">
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder="Enter staging password"
-              className="staging-auth-input"
-              required
-              autoFocus
-            />
+            <div className="staging-auth-input-wrapper">
+              <input
+                type={showPassword ? "text" : "password"}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Enter staging password"
+                className="staging-auth-input"
+                required
+                autoFocus
+              />
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="staging-auth-toggle"
+                aria-label={showPassword ? "Hide password" : "Show password"}
+              >
+                {showPassword ? "👁️" : "👁️‍🗨️"}
+              </button>
+            </div>
             {error && (
               <p className="staging-auth-error">{error}</p>
             )}
