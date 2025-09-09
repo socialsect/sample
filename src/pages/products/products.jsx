@@ -446,11 +446,11 @@ const Products = () => {
                 <div className="prod-stat-number">7</div>
                 <div className="prod-stat-label">Integrated Products</div>
               </div>
-              <div className="prod-stat-item">
+              <div className="prod-stat-item" >
                 <div className="prod-stat-number">12+</div>
                 <div className="prod-stat-label">Patent Applications</div>
               </div>
-              <div className="prod-stat-item">
+              <div className="prod-stat-item" id="below-1">
                 <div className="prod-stat-number">Mathematical</div>
                 <div className="prod-stat-label">Precision Framework</div>
                 <br />
