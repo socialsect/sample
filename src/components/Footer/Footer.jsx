@@ -39,12 +39,12 @@ const Footer = () => {
           <div className="footer-section">
             <h3 className="footer-title">Our Services</h3>
             <ul className="footer-links" aria-label="Services footer menu">
-              <li><a href="/services/ai-consulting" className="footer-link">AI Consulting</a></li>
-              <li><a href="/services/ai-enablement-strategy" className="footer-link">AI-Enablement Strategy</a></li>
-              <li><a href="/services/design-of-ai-governance-models" className="footer-link">Design of AI Governance Models</a></li>
-              <li><a href="/services/it-innovation-modernization" className="footer-link">IT Innovation and Modernization</a></li>
-              <li><a href="/services/strategic-advisory-services" className="footer-link">Strategic Advisory services</a></li>
-              <li><a href="/services/within-paradigm-improvements" className="footer-link">Within-Paradigm Improvements</a></li>
+              <li><a href="/services-overview/ai-consulting" className="footer-link">AI Consulting</a></li>
+              <li><a href="/services-overview/ai-enablement-strategy" className="footer-link">AI-Enablement Strategy</a></li>
+              <li><a href="/services-overview/design-of-ai-governance-models" className="footer-link">Design of AI Governance Models</a></li>
+              <li><a href="/services-overview/it-innovation-modernization" className="footer-link">IT Innovation and Modernization</a></li>
+              <li><a href="/services-overview/strategic-advisory-services" className="footer-link">Strategic Advisory services</a></li>
+              <li><a href="/services-overview/within-paradigm-improvements" className="footer-link">Within-Paradigm Improvements</a></li>
             </ul>
           </div>
 
