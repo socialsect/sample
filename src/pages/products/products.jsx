@@ -451,7 +451,7 @@ const Products = () => {
                 <div className="prod-stat-label">Patent Applications</div>
               </div>
               <div className="prod-stat-item">
-                <div className="prod-stat-number">Mathematical   </div>
+                <div className="prod-stat-number">Mathematical</div>
                 <div className="prod-stat-label">Precision Framework</div>
                 <br />
               </div>
