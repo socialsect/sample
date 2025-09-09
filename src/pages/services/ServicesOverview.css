@@ -7,7 +7,7 @@
 .so-authority-badge { background:#111; color:#fff; text-align:center; padding:12px 0; font-size:.95rem; font-weight:600; border-bottom:1px solid rgba(255,255,255,.08); }
 
 /* Header */
-.so-header { position:relative; padding:100px 0; margin-top:40px; background:linear-gradient(135deg,#050505 0%,#0a0a0a 50%,#111 100%); }
+.so-header { position:relative; padding:100px 0;  background:linear-gradient(135deg,#050505 0%,#0a0a0a 50%,#111 100%); }
 .so-header::before { content:""; position:absolute; inset:0; background:
   radial-gradient(circle at 20% 80%, rgba(250,33,50,.18) 0%, transparent 50%),
   radial-gradient(circle at 80% 20%, rgba(255,255,255,.06) 0%, transparent 50%);
