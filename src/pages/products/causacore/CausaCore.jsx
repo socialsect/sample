@@ -6,7 +6,7 @@ const CausaCore = () => {
   const causacoreData = {
     // SEO & Meta
     seo: {
-      title: "CausaCore: Multi-Engine Causal Analysis | 90% Precision",
+      title: "CausaCore: Causal Modeling Framework | FERZ",
       description: "Achieve 30-40% research acceleration with CausaCore's multi-engine causal framework. 4-engine orchestration, >90% cross-scale precision, multi-LLM convergence. Patent-protected.",
       keywords: "CausaCore, multi-engine causal analysis, cross-scale causal modeling, 4-engine orchestration, multi-LLM convergence, hierarchical causal validation",
       canonical: "https://ferzconsulting.com/products/causacore",

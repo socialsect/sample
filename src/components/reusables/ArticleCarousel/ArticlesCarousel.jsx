@@ -91,6 +91,7 @@ const ArticlesCarousel = ({
                 effect={"coverflow"}
                 grabCursor={true}
                 centeredSlides={true}
+                centeredSlidesBounds={true}
                 loop={articles.length > 1}
                 slidesPerView={"auto"}
                 coverflowEffect={{

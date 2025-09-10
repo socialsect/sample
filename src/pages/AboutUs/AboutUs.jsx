@@ -49,7 +49,7 @@ const FerzAbout = () => {
   return (
     <>
       <Helmet>
-        <title>About FERZ: Mathematical AI Governance Authority | FERZ</title>
+        <title>About FERZ | Deterministic AI Governance Authority</title>
         <meta name="description" content="FERZ Consulting: Patent-protected deterministic AI governance authority since 2013. Federal-proven frameworks for regulated industries. Mathematical certainty over statistical hope." />
         <meta name="keywords" content="FERZ consulting, mathematical AI governance, deterministic AI authority, patent-protected AI, federal AI expertise, Edward Meyman" />
         <link rel="canonical" href="https://ferzconsulting.com/about-us" />

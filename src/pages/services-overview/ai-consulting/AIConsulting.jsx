@@ -41,7 +41,7 @@ const AIConsulting = () => {
   return (
     <>
       <Helmet>
-        <title>AI Consulting: Deterministic Governance for Regulated Industries</title>
+        <title>AI Consulting for Regulated Industries | FERZ</title>
         <meta name="description" content="Transform enterprise AI from probabilistic risk to regulation-ready systems through FERZ's constitutional governance frameworks. Mathematical certainty. Schedule assessment." />
         <meta name="keywords" content="AI consulting regulated industries, constitutional AI governance, mathematical AI compliance, federal AI transformation, deterministic AI consulting" />
         <meta name="canonical" content="https://ferzconsulting.com/services-overview/ai-consulting/" />

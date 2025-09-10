@@ -19,7 +19,7 @@ const ServicesOverview = () => {
   return (
     <>
       <Helmet>
-        <title>Deterministic AI Services | FERZ - Mathematical Certainty for Enterprise AI</title>
+        <title>AI Governance Services | FERZ</title>
         <meta name="description" content="FERZ transforms enterprise AI from probabilistic risk into mathematically guaranteed advantage. Deterministic services for compliance and transformation." />
         <link rel="canonical" href="https://ferzconsulting.com/services-overview" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>

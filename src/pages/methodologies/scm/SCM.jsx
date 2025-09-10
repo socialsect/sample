@@ -35,7 +35,7 @@ const SCM = () => {
   return (
     <>
       <Helmet>
-        <title>SCM: Semantic Condensation Methodology | FERZ</title>
+        <title>Semantic Condensation Methodology | FERZ</title>
         <meta name="description" content="Proprietary SCM methodology for deterministic document compression. 94-97% compression with 100% structured data preservation, 90%+ semantic content. Patent-protected framework." />
         <meta name="keywords" content="SCM methodology, semantic condensation, deterministic document compression, AI token limits, structured data preservation, mathematical compression" />
         <link rel="canonical" href="https://ferzconsulting.com/methodologies/scm" />

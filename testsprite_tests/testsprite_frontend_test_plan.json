@@ -1,0 +1,453 @@
+[
+  {
+    "id": "TC001",
+    "title": "Homepage Load and Content Verification",
+    "description": "Verify that the homepage loads successfully, displays hero content, key product and service highlights, and navigation elements correctly.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the homepage URL"
+      },
+      {
+        "type": "assertion",
+        "description": "Check that hero section is visible with correct headline and call to action"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify presence of featured products and services highlights"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify main navigation menu, including vertical mega-menu, is visible and functional"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify page title and SEO metadata are present and correct"
+      },
+      {
+        "type": "assertion",
+        "description": "Check page load time is under 2 seconds on 4G network simulation"
+      }
+    ]
+  },
+  {
+    "id": "TC002",
+    "title": "Navigation Accessibility and Responsiveness",
+    "description": "Verify the main navigation system is fully accessible with keyboard and screen readers and responsive across desktop, tablet, and mobile devices.",
+    "category": "accessibility",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the homepage"
+      },
+      {
+        "type": "action",
+        "description": "Use keyboard (Tab, Shift+Tab, Arrow keys) to navigate through the main menu including the vertical mega-menu"
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure all menu items receive focus and submenus can be expanded/collapsed via keyboard"
+      },
+      {
+        "type": "assertion",
+        "description": "Validate all menu items have proper ARIA roles and labels for screen readers"
+      },
+      {
+        "type": "action",
+        "description": "Resize viewport to simulate tablet and mobile devices"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm navigation adapts visually and remains fully functional across all tested viewport sizes"
+      }
+    ]
+  },
+  {
+    "id": "TC003",
+    "title": "Product Pages Content and SEO Metadata Validation",
+    "description": "Verify each product page loads correctly, displays all required technical details, intellectual property information, and that SEO metadata including JSON-LD structured data is correct.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to each individual product page URL (e.g., DELIA, BiasGuard, LASOF, etc.)"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify product description, use cases, and mathematical guarantees content is present and correctly formatted"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify presence of intellectual property and technology explanations"
+      },
+      {
+        "type": "assertion",
+        "description": "Check SEO title, description, canonical tags, OpenGraph and Twitter card metadata correctness"
+      },
+      {
+        "type": "assertion",
+        "description": "Validate JSON-LD structured data for product is present and passes Google Rich Results test"
+      },
+      {
+        "type": "assertion",
+        "description": "Check page load performance and accessibility scores meet threshold"
+      }
+    ]
+  },
+  {
+    "id": "TC004",
+    "title": "Service Pages Navigation and Content Check",
+    "description": "Confirm that the services overview and individual service pages load correctly with descriptive content and proper navigation.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the services overview page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify list of services is displayed with brief summaries"
+      },
+      {
+        "type": "action",
+        "description": "Click each service link to open the corresponding detailed service page"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm detailed descriptions and technical info are present and formatted correctly"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify navigation allows easy return to overview and other pages"
+      }
+    ]
+  },
+  {
+    "id": "TC005",
+    "title": "Methodology Pages Technical Content and SEO Verification",
+    "description": "Validate that methodology overview and specific methodology pages (SCM, AI Capsule, MRCF) correctly display deep technical insights and have valid SEO structured data.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the methodologies overview page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify list and summaries of methodologies are present"
+      },
+      {
+        "type": "action",
+        "description": "Open each individual methodology page"
+      },
+      {
+        "type": "assertion",
+        "description": "Check for detailed technical content specific to each methodology"
+      },
+      {
+        "type": "assertion",
+        "description": "Validate presence and correctness of SEO metadata and JSON-LD schema"
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure load times and accessibility standards are met"
+      }
+    ]
+  },
+  {
+    "id": "TC006",
+    "title": "Article System Functionality and SEO Metadata Generation",
+    "description": "Verify that the dynamic articles system loads articles correctly with markdown rendering, images, and auto-generated SEO metadata including OpenGraph and Twitter cards.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the articles listing page"
+      },
+      {
+        "type": "assertion",
+        "description": "Check that articles list is visible with titles and summaries"
+      },
+      {
+        "type": "action",
+        "description": "Select and open an individual article"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify markdown content is rendered correctly, including embedded images"
+      },
+      {
+        "type": "assertion",
+        "description": "Check SEO metadata tags, OpenGraph, Twitter cards, and structured data are generated and valid"
+      }
+    ]
+  },
+  {
+    "id": "TC007",
+    "title": "Secure Contact Forms Submission and Confirmation",
+    "description": "Test multiple secure contact forms across the site to confirm data submission via Resend API, show user confirmation, and ensure email is received by FERZ team, handling staging and production environments.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to each contact form available across site pages"
+      },
+      {
+        "type": "action",
+        "description": "Fill out contact form fields with valid, valid edge case, and invalid inputs"
+      },
+      {
+        "type": "action",
+        "description": "Submit the form"
+      },
+      {
+        "type": "assertion",
+        "description": "Validate form submission triggers and user sees submission confirmation message"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify email was sent successfully to configured FERZ team email via Resend API in both staging and production (mock or monitor email deliveries)"
+      },
+      {
+        "type": "assertion",
+        "description": "Check form handles invalid inputs gracefully with appropriate error messages"
+      }
+    ]
+  },
+  {
+    "id": "TC008",
+    "title": "PDF Library Resource Download Functionality",
+    "description": "Validate that PDF documents in the resource library can be downloaded correctly and links are functional and accessible.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the PDF library section/page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify list of PDF resources is displayed, showing titles and descriptions"
+      },
+      {
+        "type": "action",
+        "description": "Click on each PDF download link"
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure the respective PDF file downloads successfully without corruption"
+      },
+      {
+        "type": "assertion",
+        "description": "Check accessibility of download links (keyboard focusable, screen reader friendly)"
+      }
+    ]
+  },
+  {
+    "id": "TC009",
+    "title": "Legal Pages Presence and Compliance",
+    "description": "Verify that all required legal pages (Privacy Policy, Disclaimer, Terms) are present, accessible, contain FERZ compliant content, and pass accessibility standards.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to Privacy Policy page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify content is complete and compliant with specifications"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to Disclaimer page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify content correctness and completeness"
+      },
+      {
+        "type": "action",
+        "description": "Check presence and content of Terms page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify all legal pages are accessible and meet WCAG standards"
+      }
+    ]
+  },
+  {
+    "id": "TC010",
+    "title": "SEO Structured Data and Rich Results Validation Across Site",
+    "description": "Test that key pages output valid JSON-LD structured data, titles, descriptions and canonical URLs, and pass Google Rich Results Test to maximize online visibility.",
+    "category": "seo",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Load homepage and key pages including product, services, methodologies, article detail, and legal pages"
+      },
+      {
+        "type": "assertion",
+        "description": "Extract SEO metadata tags and JSON-LD scripts"
+      },
+      {
+        "type": "assertion",
+        "description": "Validate metadata correctness for title, meta description, canonical URL, OpenGraph, Twitter cards"
+      },
+      {
+        "type": "assertion",
+        "description": "Run Google Rich Results test on JSON-LD structured data for each page and confirm no errors or warnings"
+      }
+    ]
+  },
+  {
+    "id": "TC011",
+    "title": "Accessibility Compliance Validation Across Site",
+    "description": "Verify that the entire website meets WCAG accessibility standards, including semantic HTML structure, keyboard navigation, ARIA labeling, color contrast, and screen reader compatibility.",
+    "category": "accessibility",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate through site pages using keyboard only"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm all interactive elements receive keyboard focus in a logical order"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify all images and media have appropriate alt text or labels"
+      },
+      {
+        "type": "assertion",
+        "description": "Check ARIA labels and roles presence for dynamic components such as menus, forms, and accordions"
+      },
+      {
+        "type": "assertion",
+        "description": "Use color contrast analyzer to check contrast ratios meet WCAG AA or better standards"
+      },
+      {
+        "type": "assertion",
+        "description": "Test screen reader announcements for navigational and form components"
+      }
+    ]
+  },
+  {
+    "id": "TC012",
+    "title": "Site Performance and Lighthouse Audit",
+    "description": "Confirm that all audited pages achieve Lighthouse scores of 90+ in Performance, Accessibility, Best Practices, and SEO with optimizations like lazy loading, optimized fonts, and tree shaking.",
+    "category": "performance",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Perform Lighthouse audits on homepage, product pages, services, methodologies, article detail, and contact pages"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify Performance score is 90 or above"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify Accessibility score is 90 or above"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify Best Practices score is 90 or above"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify SEO score is 90 or above"
+      },
+      {
+        "type": "assertion",
+        "description": "Observe that images use lazy loading and fonts are optimized with minimal blocking"
+      }
+    ]
+  },
+  {
+    "id": "TC013",
+    "title": "Staging Authentication System Verification",
+    "description": "Test the staging environment authentication system to ensure non-production environments are protected and properly display authentication UI as intended.",
+    "category": "security",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Access staging environment of the website"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm authentication prompt or mechanism appears to restrict access"
+      },
+      {
+        "type": "action",
+        "description": "Attempt access with valid and invalid credentials (if applicable)"
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure authentication success grants access and failures deny access with appropriate messages"
+      },
+      {
+        "type": "assertion",
+        "description": "Check authentication UI is accessible and responsive"
+      }
+    ]
+  },
+  {
+    "id": "TC014",
+    "title": "404 Not Found Page Functionality and Styling",
+    "description": "Verify that accessing unknown routes shows the custom 404 error page with correct message, navigation options back to known pages, and styling consistent with site branding.",
+    "category": "error handling",
+    "priority": "Low",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to a non-existent URL path on the site"
+      },
+      {
+        "type": "assertion",
+        "description": "Check that custom 404 page loads with appropriate error message"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify that user is offered navigation back to homepage or key pages"
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm page styling and layout match site branding"
+      }
+    ]
+  },
+  {
+    "id": "TC015",
+    "title": "ESLint Compliance and Code Quality Validation",
+    "description": "Run ESLint on all source code files to confirm absence of critical or high-severity issues and verify adherence to defined coding standards and rules.",
+    "category": "code quality",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Execute ESLint across the entire codebase"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify zero critical or high-severity linting errors"
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure consistent formatting and adherence to style rules"
+      }
+    ]
+  }
+]

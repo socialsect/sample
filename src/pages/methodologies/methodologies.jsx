@@ -90,7 +90,7 @@ const FerzMethodologies = () => {
   return (
     <>
       <Helmet>
-        <title>FERZ Methodologies: Deterministic AI Innovation | FERZ</title>
+        <title>AI Governance Methodologies | FERZ</title>
         <meta name="description" content="Patent-protected methodologies for deterministic AI governance. SCM, AI Capsule, and MRCF frameworks with mathematical validation. Research authority since 2013." />
         <meta name="keywords" content="FERZ methodologies, deterministic AI innovation, patent-protected AI frameworks, SCM methodology, AI Capsule, MRCF framework, research authority" />
         <link rel="canonical" href="https://ferzconsulting.com/methodologies" />

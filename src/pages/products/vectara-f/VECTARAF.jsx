@@ -1,3 +1,4 @@
+
 import React from 'react';
 import ProductTemplate from '../../../components/ProductTemplate/ProductTemplate';
 import PDFLibrary from '../../../components/PDFLibrary/PDFLibrary';
@@ -6,7 +7,7 @@ const VECTARAF = () => {
   const vectaraData = {
     // SEO & Meta
     seo: {
-      title: "VECTARA(f): Comprehensive Multi-Domain AGI Governance Framework | FERZ",
+      title: "VECTARA(f): AGI Governance Framework | FERZ",
       description: "Achieve unified multi-domain AGI governance with VECTARA(f). Cross-domain emergency coordination in <15 minutes, cultural integration >85% success, quantum-resistant democracy. Patent-protected framework.",
       keywords: "multi-domain AGI governance, cross-domain emergency coordination, cultural knowledge integration, quantum-resistant democracy, comprehensive AGI oversight, federated consensus protocols",
       canonical: "https://ferzconsulting.com/products/vectara-f",

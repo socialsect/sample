@@ -6,7 +6,7 @@ const DELIA = () => {
   const deliaData = {
     // SEO & Meta
     seo: {
-      title: "DELIA: Deterministic AI Governance | 98% Constraint Precision",
+      title: "DELIA: AI Alignment Layer | FERZ",
       description: "CIOs achieve 98% constraint precision with DELIA's deterministic AI governance. Universal compatibility, cryptographic audit trails. Patent-protected. Request demo.",
       keywords: "deterministic AI alignment, AI constraint validation, universal AI compatibility, cryptographic AI audit, mathematical AI proof",
       canonical: "https://ferzconsulting.com/products/delia",

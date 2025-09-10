@@ -7,7 +7,7 @@ const STRATAG = () => {
     // SEO Data
     seo: {
 
-      title: "STRATA-G: Recursive AGI Governance | 85% Complexity Reduction",
+      title: "STRATA-G: AGI Governance Architecture | FERZ",
       description: "Achieve 85-95% complexity reduction with STRATA-G's recursive AGI governance. O(n) scalability, real-time performance, cultural integration. Patent-protected architecture.",
       keywords: "STRATA-G, recursive AGI governance, AGI complexity reduction, real-time AI governance, strategic AI architecture, O(n) scalability",
       canonical: "https://ferzconsulting.com/products/strata-g",

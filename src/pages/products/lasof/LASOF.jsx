@@ -6,7 +6,7 @@ const LASOF = () => {
   const lasofData = {
     // SEO & Meta
     seo: {
-      title: "LASO(f): Deterministic AI Governance | 98% Error Reduction",
+      title: "LASO(f): AI Governance Layer | FERZ",
       description: "Achieve 98%+ error reduction with LASO(f)'s deterministic AI governance. Z3 SMT verified, sub-200ms processing, universal AI compatibility. Patent-protected framework.",
       keywords: "LASO methodology, deterministic AI governance, mathematical AI validation, linguistic AI governance, constitutional AI framework, Z3 SMT verification",
       canonical: "https://ferzconsulting.com/products/lasof",

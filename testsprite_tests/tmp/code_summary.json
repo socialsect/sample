@@ -1,0 +1,296 @@
+{
+  "tech_stack": [
+    "JavaScript",
+    "React",
+    "Vite",
+    "React Router",
+    "CSS3",
+    "HTML5",
+    "ESLint",
+    "PostCSS",
+    "Terser"
+  ],
+  "features": [
+    {
+      "name": "HomePage",
+      "description": "Main landing page with hero section, features, and company overview",
+      "files": ["src/pages/HomePage/HomePage.jsx", "src/pages/HomePage/homePage.css"]
+    },
+    {
+      "name": "Navigation System",
+      "description": "Main navigation component with responsive menu and sitemap data",
+      "files": ["src/components/Navbar.jsx", "src/components/Navbar.css", "src/components/sitemapData.js"]
+    },
+    {
+      "name": "Product Pages",
+      "description": "Individual product pages for AI governance solutions with detailed information",
+      "files": [
+        "src/pages/products/products.jsx",
+        "src/pages/products/products.css",
+        "src/pages/products/delia/DELIA.jsx",
+        "src/pages/products/biasguard/BiasGuard.jsx",
+        "src/pages/products/lasof/LASOF.jsx",
+        "src/pages/products/lasof/lasof-ag/LASOFAG.jsx",
+        "src/pages/products/causacore/CausaCore.jsx",
+        "src/pages/products/strata-g/STRATAG.jsx",
+        "src/pages/products/vectara-f/VECTARAF.jsx",
+        "src/pages/products/ferz-behavioral-engine/FERZBehavioralEngine.jsx",
+        "src/pages/products/constitutional-blockchain-architecture/ConstitutionalBlockchainArchitecture.jsx"
+      ]
+    },
+    {
+      "name": "Service Pages",
+      "description": "Service overview and individual service pages for AI consulting services",
+      "files": [
+        "src/pages/services/ServicesOverview.jsx",
+        "src/pages/services/ServicesOverview.css",
+        "src/pages/services-overview/ai-consulting/AIConsulting.jsx",
+        "src/pages/services-overview/ai-enablement-strategy/AIEnablementStrategy.jsx",
+        "src/pages/services-overview/within-paradigm-improvements/WithinParadigmImprovements.jsx",
+        "src/pages/services-overview/it-innovation-modernization/ITInnovationModernization.jsx",
+        "src/pages/services-overview/strategic-advisory-services/StrategicAdvisoryServices.jsx",
+        "src/pages/services-overview/design-of-ai-governance-models/ConstitutionalAIGovernance.jsx"
+      ]
+    },
+    {
+      "name": "Methodology Pages",
+      "description": "Methodology overview and individual methodology pages for AI governance frameworks",
+      "files": [
+        "src/pages/methodologies/methodologies.jsx",
+        "src/pages/methodologies/methodologies.css",
+        "src/pages/methodologies/ai-capsule/AICapsule.jsx",
+        "src/pages/methodologies/mrcf/MRCF.jsx",
+        "src/pages/methodologies/scm/SCM.jsx"
+      ]
+    },
+    {
+      "name": "Article System",
+      "description": "Article listing and detail pages with markdown content support",
+      "files": [
+        "src/pages/Articles/Articles.jsx",
+        "src/pages/Articles/Articles.css",
+        "src/pages/ArticleDetail/ArticleDetail.jsx",
+        "src/pages/ArticleDetail/ArticleDetail.css",
+        "src/utils/articleLoader.js"
+      ]
+    },
+    {
+      "name": "Contact System",
+      "description": "Contact form and contact information display",
+      "files": [
+        "src/pages/ContactUs/ContactUs.jsx",
+        "src/pages/ContactUs/ContactUs.css",
+        "src/components/Contact/Contact.jsx",
+        "src/components/Contact/Contact.css"
+      ]
+    },
+    {
+      "name": "About Page",
+      "description": "Company information and team details",
+      "files": [
+        "src/pages/AboutUs/AboutUs.jsx",
+        "src/pages/AboutUs/AboutUs.css",
+        "src/components/About/About.jsx",
+        "src/components/About/About.css"
+      ]
+    },
+    {
+      "name": "PDF Library",
+      "description": "PDF download system for product documentation and resources",
+      "files": [
+        "src/components/PDFLibrary/PDFLibrary.jsx",
+        "src/components/PDFLibrary/PDFLibrary.css",
+        "src/components/PDFLibrary/registry.js"
+      ]
+    },
+    {
+      "name": "FAQ System",
+      "description": "Frequently asked questions component with expandable answers",
+      "files": [
+        "src/components/FAQ/FAQ.jsx",
+        "src/components/FAQ/FAQ.css"
+      ]
+    },
+    {
+      "name": "Footer Component",
+      "description": "Site footer with links and company information",
+      "files": [
+        "src/components/Footer/Footer.jsx",
+        "src/components/Footer/Footer.css"
+      ]
+    },
+    {
+      "name": "SEO System",
+      "description": "SEO metadata and structured data for all pages using react-helmet-async",
+      "files": [
+        "src/pages/HomePage/HomePage.jsx",
+        "src/pages/AboutUs/AboutUs.jsx",
+        "src/pages/ContactUs/ContactUs.jsx",
+        "src/pages/PrivacyPolicy/PrivacyPolicy.jsx",
+        "src/pages/WorkWithFerz/WorkWithFerz.jsx",
+        "src/pages/Disclaimer/Disclaimer.jsx",
+        "src/pages/NotFound/NotFound.jsx",
+        "src/pages/Articles/Articles.jsx",
+        "src/pages/ArticleDetail/ArticleDetail.jsx",
+        "src/pages/AIIntegrity/AIIntegrity.jsx",
+        "src/pages/services/ServicesOverview.jsx",
+        "src/pages/products/products.jsx",
+        "src/pages/methodologies/methodologies.jsx",
+        "src/components/IPPortfolio/IPPortfolio.jsx",
+        "src/pages/LicensingPartnerships/LicensingPartnerships.jsx"
+      ]
+    },
+    {
+      "name": "Routing System",
+      "description": "React Router configuration for all site routes",
+      "files": [
+        "src/routes/routes.jsx"
+      ]
+    },
+    {
+      "name": "Legal Pages",
+      "description": "Legal pages including privacy policy, disclaimer, and terms",
+      "files": [
+        "src/pages/PrivacyPolicy/PrivacyPolicy.jsx",
+        "src/pages/PrivacyPolicy/PrivacyPolicy.css",
+        "src/pages/Disclaimer/Disclaimer.jsx",
+        "src/pages/Disclaimer/Disclaimer.css"
+      ]
+    },
+    {
+      "name": "Career Page",
+      "description": "Work with FERZ career opportunities page",
+      "files": [
+        "src/pages/WorkWithFerz/WorkWithFerz.jsx",
+        "src/pages/WorkWithFerz/WorkWithFerz.css"
+      ]
+    },
+    {
+      "name": "IP Portfolio",
+      "description": "Intellectual property portfolio showcase",
+      "files": [
+        "src/components/IPPortfolio/IPPortfolio.jsx",
+        "src/components/IPPortfolio/IPPortfolio.css"
+      ]
+    },
+    {
+      "name": "Licensing Partnerships",
+      "description": "Licensing and partnerships information page",
+      "files": [
+        "src/pages/LicensingPartnerships/LicensingPartnerships.jsx",
+        "src/pages/LicensingPartnerships/LicensingPartnerships.css"
+      ]
+    },
+    {
+      "name": "AI Integrity Statement",
+      "description": "AI integrity and ethics statement page",
+      "files": [
+        "src/pages/AIIntegrity/AIIntegrity.jsx",
+        "src/pages/AIIntegrity/AIIntegrity.css"
+      ]
+    },
+    {
+      "name": "Product Templates",
+      "description": "Reusable templates for product and service pages",
+      "files": [
+        "src/components/ProductPageTemplate/ProductPageTemplate.jsx",
+        "src/components/ProductPageTemplate/ProductPageTemplate.css",
+        "src/components/ProductTemplate/ProductTemplate.jsx",
+        "src/components/ProductTemplate/ProductTemplate.css",
+        "src/components/ServiceTemplate/ServiceTemplate.jsx",
+        "src/components/ServiceTemplate/ServiceTemplate.css"
+      ]
+    },
+    {
+      "name": "UI Components",
+      "description": "Reusable UI components including hero sections, testimonials, and interactive elements",
+      "files": [
+        "src/components/Hero/Hero.jsx",
+        "src/components/Hero/Hero.css",
+        "src/components/Features/Features.jsx",
+        "src/components/Features/Features.css",
+        "src/components/Testimonials/Testimonials.jsx",
+        "src/components/Testimonials/Testimonials.css",
+        "src/components/ProductHero/ProductHero.jsx",
+        "src/components/ProductHero/ProductHero.css",
+        "src/components/Services/Services.jsx",
+        "src/components/Services/Services.css",
+        "src/components/Breadcrumb/Breadcrumb.jsx",
+        "src/components/Breadcrumb/Breadcrumb.css",
+        "src/components/ScrollToTop/ScrollToTop.jsx",
+        "src/components/ScrollStack/ScrollStack.jsx",
+        "src/components/ScrollStack/ScrollStack.css"
+      ]
+    },
+    {
+      "name": "Background Effects",
+      "description": "Animated background components and visual effects",
+      "files": [
+        "src/components/NetBackground/NetBackground.jsx",
+        "src/components/ui/NetBackground.jsx",
+        "src/components/ui/NetBackground.css",
+        "src/components/waves/waves.jsx",
+        "src/components/waves/waves.css",
+        "src/components/threads/threads.jsx",
+        "src/components/threads/threads.css",
+        "src/components/DarkVeil/darkveil.jsx",
+        "src/components/DarkVeil/darkveil.css"
+      ]
+    },
+    {
+      "name": "Content Management",
+      "description": "Scripts and utilities for content management and article creation",
+      "files": [
+        "scripts/create-article.js",
+        "scripts/fix-article-markdown.js",
+        "scripts/mark-featured-articles.js",
+        "scripts/migrate-articles.js",
+        "scripts/update-media-references.js"
+      ]
+    },
+    {
+      "name": "Utilities",
+      "description": "Utility functions for downloads, scroll animations, and other helpers",
+      "files": [
+        "src/utils/downloadUtils.js",
+        "src/utils/scrollAnimations.js"
+      ]
+    },
+    {
+      "name": "Styling System",
+      "description": "CSS styling system with shared styles and component-specific styles",
+      "files": [
+        "src/index.css",
+        "src/App.css",
+        "src/styles/shared/",
+        "postcss.config.js"
+      ]
+    },
+    {
+      "name": "Build Configuration",
+      "description": "Vite build configuration with optimizations and plugins",
+      "files": [
+        "vite.config.js",
+        "package.json",
+        "eslint.config.js"
+      ]
+    },
+    {
+      "name": "404 Error Handling",
+      "description": "Custom 404 not found page",
+      "files": [
+        "src/pages/NotFound/NotFound.jsx",
+        "src/pages/NotFound/NotFound.css"
+      ]
+    },
+    {
+      "name": "Staging Authentication",
+      "description": "Staging environment authentication system",
+      "files": [
+        "src/components/StagingAuth/StagingAuth.jsx",
+        "src/components/StagingAuth/StagingAuth.css",
+        "src/components/StagingAuth/EnvDebug.jsx"
+      ]
+    }
+  ]
+}

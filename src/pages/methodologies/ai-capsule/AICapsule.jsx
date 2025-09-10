@@ -28,7 +28,7 @@ const AICapsule = () => {
   return (
     <>
       <Helmet>
-        <title>AI Capsule™: Constitutional Knowledge Representation | FERZ</title>
+        <title>AI Capsule™ Methodology | FERZ</title>
         <meta name="description" content="Proprietary AI Capsule™ methodology transforms enterprise knowledge into machine-readable constitutional artifacts. Exclusive FERZ consulting. Schedule assessment." />
         <meta name="keywords" content="constitutional AI methodology, machine-readable knowledge, proprietary AI frameworks, enterprise knowledge capture, FERZ consulting methodology" />
         <link rel="canonical" href="https://ferzconsulting.com/methodologies/ai-capsule" />

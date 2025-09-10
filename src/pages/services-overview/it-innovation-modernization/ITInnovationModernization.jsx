@@ -39,7 +39,7 @@ const ITModernizationPage = () => {
   return (
     <>
       <Helmet>
-        <title>IT Innovation & Modernization: Federal-Proven AI Governance | FERZ</title>
+        <title>AI-Ready IT Modernization | FERZ</title>
         <meta name="description" content="Federal-proven IT transformation services with deterministic AI governance. Constitutional compliance frameworks, audit-ready modernization, and mathematical certainty. Schedule assessment." />
         <meta name="keywords" content="IT innovation modernization, federal IT transformation, deterministic AI governance, constitutional compliance, audit-ready modernization, federal AI authority" />
         <link rel="canonical" href="https://ferzconsulting.com/services-overview/it-innovation-modernization" />

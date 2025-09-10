@@ -38,7 +38,7 @@ const WithinParadigmImprovements = () => {
   return (
     <>
       <Helmet>
-        <title>Within Paradigm Improvements: Systematic AI Enhancement | FERZ</title>
+        <title>Within-Paradigm AI Improvements | FERZ</title>
         <meta name="description" content="Systematic AI improvement services with deterministic governance. Constitutional compliance frameworks, systematic enhancement, and mathematical certainty. Schedule assessment." />
         <meta name="keywords" content="within paradigm improvements, systematic AI enhancement, deterministic AI governance, constitutional compliance, AI system improvement, federal AI optimization" />
         <link rel="canonical" href="https://ferzconsulting.com/services-overview/within-paradigm-improvements" />

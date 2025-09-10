@@ -6,7 +6,7 @@ const FERZBehavioralEngine = () => {
   const behavioralEngineData = {
     // SEO & Meta
     seo: {
-      title: "FERZ Behavioral Engine: Mathematical AI Adaptation | FERZ",
+      title: "Behavioral Engine™: Adaptive AI | FERZ",
       description: "Achieve 67% user retention with FERZ's behavioral adaptive AI. Mathematical grounding, cross-domain constraints, universal LLM compatibility. Patent-protected framework.",
       keywords: "behavioral adaptive AI, mathematical AI grounding, cross-domain AI constraints, contextual AI intelligence, universal LLM compatibility",
       canonical: "https://ferzconsulting.com/products/ferz-behavioral-engine",

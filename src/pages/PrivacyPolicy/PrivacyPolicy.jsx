@@ -2,10 +2,86 @@ import React from 'react';
 import './PrivacyPolicy.css';
 import Navbar from '../../components/Navbar';
 import Footer from "../../components/Footer/Footer";
+import { Helmet } from 'react-helmet-async';
 
 const PrivacyPolicy = () => {
   return (
-    <div className="privacy-policy">
+    <>
+      <Helmet>
+        <title>Privacy Policy | FERZ</title>
+        <meta name="description" content="FERZ LLC Privacy Policy - Learn how we protect your personal information and maintain data privacy standards in compliance with GDPR, CCPA, and other privacy regulations." />
+        <meta name="keywords" content="privacy policy, data protection, GDPR compliance, CCPA, AI governance, FERZ LLC, data privacy, personal information protection" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="FERZ LLC" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content=" Privacy Policy | FERZ" />
+        <meta property="og:description" content="FERZ LLC Privacy Policy - Learn how we protect your personal information and maintain data privacy standards in compliance with GDPR, CCPA, and other privacy regulations." />
+        <meta property="og:url" content="https://ferzconsulting.com/privacy-policy" />
+        <meta property="og:site_name" content="FERZ LLC" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Privacy Policy | FERZ LLC - AI Governance Consulting" />
+        <meta name="twitter:description" content="FERZ LLC Privacy Policy - Learn how we protect your personal information and maintain data privacy standards in compliance with GDPR, CCPA, and other privacy regulations." />
+        
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://ferzconsulting.com/privacy-policy" />
+        
+        {/* Additional SEO meta tags */}
+        <meta name="theme-color" content="#fa2132" />
+        <meta name="msapplication-TileColor" content="#000000" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        {/* Structured Data for Legal Document */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Privacy Policy",
+            "description": "FERZ LLC Privacy Policy - Learn how we protect your personal information and maintain data privacy standards in compliance with GDPR, CCPA, and other privacy regulations.",
+            "url": "https://ferzconsulting.com/privacy-policy",
+            "mainEntity": {
+              "@type": "LegalDocument",
+              "name": "Privacy Policy",
+              "description": "Privacy policy for FERZ LLC AI governance consulting services",
+              "datePublished": "2025-09-01",
+              "dateModified": "2025-09-01",
+              "publisher": {
+                "@type": "Organization",
+                "name": "FERZ LLC",
+                "url": "https://ferzconsulting.com",
+                "contactPoint": {
+                  "@type": "ContactPoint",
+                  "email": "privacy@ferzconsulting.com",
+                  "contactType": "privacy"
+                }
+              }
+            },
+            "breadcrumb": {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://ferzconsulting.com"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Privacy Policy",
+                  "item": "https://ferzconsulting.com/privacy-policy"
+                }
+              ]
+            }
+          })}
+        </script>
+      </Helmet>
+
+      <div className="privacy-policy">
+      
       <Navbar />
       <div className="privacy-container">
         <header className="privacy-header">
@@ -121,7 +197,8 @@ const PrivacyPolicy = () => {
         </footer>
       </div>
       <Footer />
-    </div>
+      </div>
+    </>
   );
 };
 

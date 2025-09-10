@@ -36,7 +36,7 @@ const MRCF = () => {
   return (
     <>
       <Helmet>
-        <title>MRCF: Meta-Recursive Cognitive Framework | FERZ</title>
+        <title>MRCF: Meta-Recursive Cognition Framework | FERZ</title>
         <meta name="description" content="Proprietary MRCF methodology for structured human-AI cognitive enhancement. Mathematical recursive dialogue, meta-validation protocols, and authority retention. Schedule assessment." />
         <meta name="keywords" content="MRCF methodology, meta-recursive cognitive framework, structured AI collaboration, cognitive enhancement, mathematical recursive dialogue, human-AI authority" />
         <link rel="canonical" href="https://ferzconsulting.com/methodologies/mrcf" />

@@ -6,7 +6,7 @@ const BiasGuard = () => {
   const biasGuardData = {
     // SEO & Meta
     seo: {
-      title: "BiasGuard: Real-Time AI Bias Detection & Mitigation | FERZ",
+      title: "BiasGuard: AI Bias Detection | FERZ",
       description: "Achieve 92% bias detection precision with BiasGuard's Formula of Fate™ framework. Real-time cognitive bias analysis across four domains with Objectivity Index™ scoring. Patent-protected innovation.",
       keywords: "AI bias detection, real-time bias mitigation, cognitive bias analysis, Formula of Fate, Objectivity Index, algorithmic bias prevention, AI fairness, bias detection software",
       canonical: "https://ferzconsulting.com/products/biasguard",

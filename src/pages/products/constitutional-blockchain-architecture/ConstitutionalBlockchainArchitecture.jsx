@@ -6,7 +6,7 @@ const ConstitutionalBlockchainArchitecture = () => {
   const constitutionalBlockchainData = {
     // SEO & Meta
     seo: {
-      title: "Constitutional Blockchain: Democratic AGI Governance | FERZ",
+      title: "Constitutional Blockchain Architecture | FERZ",
       description: "Achieve 75-90% regulatory risk reduction with Constitutional Blockchain's democratic AGI governance. Tripartite oversight, Byzantine fault tolerant, emergency protocols. Patent-protected.",
       keywords: "constitutional blockchain, democratic AGI governance, tripartite AI oversight, Byzantine fault tolerant AI, AGI accountability framework, emergency AI protocols",
       canonical: "https://ferzconsulting.com/products/constitutional-blockchain-architecture",

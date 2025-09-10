@@ -2,11 +2,114 @@ import React from 'react';
 import './WorkWithFerz.css';
 import Navbar from '../../components/Navbar';
 import Footer from "../../components/Footer/Footer";
+import { Helmet } from 'react-helmet-async';
 
 const WorkWithFerz = () => {
   return (
-    <div className="work-with-ferz">
-      <Navbar />
+    <>
+      <Helmet>
+        <title>AI Governance Careers | FERZ</title>
+        <meta name="description" content="Join FERZ LLC's professional network for deterministic AI governance careers. We're building mathematical foundations that transform AI from probabilistic chaos into deterministic reliability. Express your interest in AI governance jobs, compliance roles, and mathematical AI positions." />
+        <meta name="keywords" content="work with FERZ, AI governance jobs, deterministic AI careers, AI compliance jobs, mathematical AI roles, AI governance consulting, formal verification, regulatory compliance, enterprise AI, AI safety careers" />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="FERZ LLC" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Work with FERZ | Join the Deterministic AI Revolution" />
+        <meta property="og:description" content="Join FERZ LLC's professional network for deterministic AI governance careers. We're building mathematical foundations that transform AI from probabilistic chaos into deterministic reliability." />
+        <meta property="og:url" content="https://ferzconsulting.com/work-with-ferz" />
+        <meta property="og:site_name" content="FERZ LLC" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Work with FERZ | Join the Deterministic AI Revolution" />
+        <meta name="twitter:description" content="Join FERZ LLC's professional network for deterministic AI governance careers. We're building mathematical foundations that transform AI from probabilistic chaos into deterministic reliability." />
+        
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://ferzconsulting.com/work-with-ferz" />
+        
+        {/* Additional SEO meta tags */}
+        <meta name="theme-color" content="#fa2132" />
+        <meta name="msapplication-TileColor" content="#000000" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        {/* Structured Data for Career/Job Page */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Work with FERZ",
+            "description": "Join FERZ LLC's professional network for deterministic AI governance careers. We're building mathematical foundations that transform AI from probabilistic chaos into deterministic reliability.",
+            "url": "https://ferzconsulting.com/work-with-ferz",
+            "mainEntity": {
+              "@type": "Organization",
+              "name": "FERZ LLC",
+              "url": "https://ferzconsulting.com",
+              "description": "AI governance consulting firm specializing in deterministic AI solutions",
+              "foundingDate": "2024",
+              "founder": {
+                "@type": "Person",
+                "name": "Edward Meyman",
+                "jobTitle": "Founder & CEO"
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "McLean",
+                "addressRegion": "Virginia",
+                "addressCountry": "USA"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "email": "contact@ferzconsulting.com",
+                "contactType": "careers"
+              },
+              "hasCredential": [
+                {
+                  "@type": "EducationalOccupationalCredential",
+                  "name": "5 Patents Filed",
+                  "description": "Deterministic AI Governance"
+                },
+                {
+                  "@type": "EducationalOccupationalCredential", 
+                  "name": "4 Publications",
+                  "description": "Defensive IP Strategy"
+                },
+                {
+                  "@type": "EducationalOccupationalCredential",
+                  "name": "10+ Papers",
+                  "description": "Academic Research"
+                }
+              ]
+            },
+            "breadcrumb": {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://ferzconsulting.com"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Work with FERZ",
+                  "item": "https://ferzconsulting.com/work-with-ferz"
+                }
+              ]
+            },
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://ferzconsulting.com/work-with-ferz?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          })}
+        </script>
+      </Helmet>
+
+      <div className="work-with-ferz">
+        <Navbar />
       <div className="authority-badge">
         Join the Deterministic AI Revolution | Patent-Protected Innovation | Mathematical Certainty Over Statistical Hope
       </div>
@@ -187,7 +290,8 @@ const WorkWithFerz = () => {
       </section>
 
       <Footer />
-    </div>
+      </div>
+    </>
   );
 };
 

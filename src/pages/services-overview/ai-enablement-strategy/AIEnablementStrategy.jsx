@@ -40,7 +40,7 @@ const AIEnablementStrategy = () => {
   return (
     <>
       <Helmet>
-        <title>AI Enablement Strategy: Deterministic AI Roadmaps | FERZ</title>
+        <title>AI Enablement Strategy | FERZ</title>
         <meta name="description" content="Transform enterprise AI adoption with FERZ's deterministic enablement strategy. Constitutional AI roadmaps, regulatory readiness, and mathematical certainty. Schedule assessment." />
         <meta name="keywords" content="AI enablement strategy, deterministic AI roadmaps, constitutional AI integration, enterprise AI adoption, regulatory AI readiness, federal AI strategy" />
         <meta name="canonical" content="https://ferzconsulting.com/services-overview/ai-enablement-strategy/" />

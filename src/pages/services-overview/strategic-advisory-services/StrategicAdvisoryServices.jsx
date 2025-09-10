@@ -37,7 +37,7 @@ const StrategicAdvisoryPage = () => {
   return (
     <>
       <Helmet>
-        <title>Strategic Advisory Services: Federal-Proven AI Leadership | FERZ</title>
+        <title>Strategic AI Advisory | FERZ</title>
         <meta name="description" content="Federal-proven strategic advisory services with deterministic AI governance. Constitutional compliance frameworks, executive AI strategy, and mathematical certainty. Schedule assessment." />
         <meta name="keywords" content="strategic advisory services, federal AI advisory, executive AI strategy, deterministic AI governance, constitutional compliance, AI leadership consulting" />
         <link rel="canonical" href="https://ferzconsulting.com/services-overview/strategic-advisory-services" />

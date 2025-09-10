@@ -1,0 +1,16 @@
+{
+  "status": "commited",
+  "type": "frontend",
+  "scope": "codebase",
+  "localEndpoint": "http://localhost:5176",
+  "executionArgs": {
+    "projectName": "sample",
+    "projectPath": "C:\\Users\\LENOVO\\OneDrive\\Desktop\\FERZ new Website\\sample",
+    "testIds": [],
+    "additionalInstruction": "Test the FERZ AI governance consulting website thoroughly, focusing on all product pages, service pages, methodology pages, and core functionality. Pay special attention to SEO metadata, navigation, responsive design, and content accessibility.",
+    "envs": {
+      "API_KEY": "sk-user-UaouhHdAd9j5jUS5jgTND5HIrm95Qyu8ZQ-UNrfU5N2TjLIu5jLMlW6giCabkcRBhRe8S6Q4BugCrT0-7ZUqqH72wEkXeWBPr6VlUmztaddx9U1v6X738ixjfJHFuhJVdQ4"
+    }
+  },
+  "proxy": "http://b345b635-0e4a-4a9a-8df6-2e6da2ddedc4:E8nt1sy7e2OPcGYpfj75GIjOA2uyBHeq@tun.testsprite.com:8080"
+}

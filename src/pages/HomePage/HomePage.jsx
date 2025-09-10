@@ -49,7 +49,7 @@ const HomePage = () => {
   return(
     <>
       <Helmet>
-        <title>FERZ: Mathematical AI Governance | Deterministic Certainty</title>
+        <title>FERZ | AI Precision Meets Mathematical Certainty</title>
         <meta name="description" content="CIOs facing €35M AI Act fines achieve mathematical certainty through FERZ's patent-protected deterministic governance. Federal-proven frameworks. Schedule assessment." />
         <meta name="keywords" content="deterministic AI governance, mathematical AI certainty, EU AI Act compliance, patent-protected AI frameworks, federal AI authority" />
         <link rel="canonical" href="https://ferzconsulting.com/" />

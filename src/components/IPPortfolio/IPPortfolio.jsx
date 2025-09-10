@@ -74,7 +74,7 @@ const IPPortfolio = () => {
     <>
       <Navbar />
       <Helmet>
-        <title>FERZ IP Portfolio: Patent-Protected AI Innovation | FERZ</title>
+        <title>AI Governance IP Portfolio | FERZ</title>
         <meta name="description" content="Comprehensive IP portfolio controlling every pathway to deterministic AI governance. 5 patents filed, 4 defensive publications, 10+ SSRN papers. Patent runway to 2045." />
         <meta name="keywords" content="FERZ IP portfolio, patent-protected AI, deterministic AI patents, defensive publications, AI research authority, intellectual property" />
         <link rel="canonical" href="https://ferzconsulting.com/ip-portfolio" />

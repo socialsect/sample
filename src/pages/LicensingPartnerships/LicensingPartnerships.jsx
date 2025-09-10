@@ -3,10 +3,16 @@ import { Zap, Lock, Building, BarChart3, Brain, BookOpen, Shield, TrendingUp, Ch
 import "./LicensingPartnerships.css"
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer/Footer';
+import { Helmet } from 'react-helmet-async';
 const LapLicensing = () => {
   return (
-    <div className="lap-container">
-      <Navbar/>
+    <>
+      <Helmet>
+        <title>AI Licensing & Partnerships | FERZ</title>
+      </Helmet>
+      
+      <div className="lap-container">
+        <Navbar/>
       {/* Authority Badge */}
       <div id="lap-authority-badge">
         Complete Deterministic AI Architecture Control | 20-Year Patent Runway | Federal Policy Authority
@@ -502,7 +508,8 @@ const LapLicensing = () => {
         </div>
       </div>
       <Footer />
-    </div>
+      </div>
+    </>
   );
 };
 
