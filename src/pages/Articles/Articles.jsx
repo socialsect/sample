@@ -166,7 +166,7 @@ const Articles = () => {
                       )}
                     </div>
                     
-                    <div className="article-content">
+                    <div className="a-article-content">
                       <div className="article-meta">
                         <span className="article-category" style={{ fontFamily: 'Georgia, serif' }}>
                           {article.category}

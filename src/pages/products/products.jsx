@@ -16,6 +16,8 @@ const Products = () => {
     'Constitutional Blockchain': '/products/constitutional-blockchain-architecture',
     'FERZ Behavioral Engine™': '/products/ferz-behavioral-engine',
     'CausaCore': '/products/causacore',
+    'VECTARA(f)': '/products/vectara-f',
+    'BiasGuard': '/products/biasguard',
   };
 
   const getProductPath = (name) => productRoutes[name] || '/products';
@@ -83,21 +85,21 @@ const Products = () => {
     }
   ];
   const products = [
-    // {
-    //   name: "BiasGuard",
-    //   title: "Real-Time AI Bias Detection & Mitigation",
-    //   description: "Automatically detects and prevents biased AI decisions in real-time. Stops discriminatory hiring, lending, and healthcare recommendations before they reach customers, protecting your organization from regulatory fines and litigation.",
-    //   highlights: [
-    //     "Four-domain cognitive analysis: confirmation bias, groupthink, factual distortion, cultural bias",
-    //     "Objectivity Index™ scoring with transparent source attribution",
-    //     "Intelligent modifier system providing contextual reasoning nudges"
-    //   ],
-    //   metrics: [
-    //     { number: "92%", label: "Detection Precision" },
-    //     { number: "37%", label: "Bias Reduction" },
-    //     { number: "Patent", label: "Protected" }
-    //   ]
-    // },
+    {
+      name: "BiasGuard",
+      title: "Real-Time AI Bias Detection & Mitigation",
+      description: "Automatically detects and prevents biased AI decisions in real-time. Stops discriminatory hiring, lending, and healthcare recommendations before they reach customers, protecting your organization from regulatory fines and litigation.",
+      highlights: [
+        "Four-domain cognitive analysis: confirmation bias, groupthink, factual distortion, cultural bias",
+        "Objectivity Index™ scoring with transparent source attribution",
+        "Intelligent modifier system providing contextual reasoning nudges"
+      ],
+      metrics: [
+        { number: "92%", label: "Detection Precision" },
+        { number: "37%", label: "Bias Reduction" },
+        { number: "Patent", label: "Protected" }
+      ]
+    },
     {
       name: "CausaCore",
       title: "Multi-Engine Multi-Tier Causal Framework",
@@ -188,21 +190,21 @@ const Products = () => {
         { number: "Recursive", label: "Architecture" }
       ]
     },
-    // {
-    //   name: "VECTARA(f)",
-    //   title: "Comprehensive Multi-Domain AGI Governance",
-    //   description: "Coordinates AGI governance across multiple business domains like healthcare, finance, and operations. Provides unified oversight when AGI systems need to make decisions that affect different parts of your organization simultaneously.",
-    //   highlights: [
-    //     "Cross-domain emergency coordination in <15 minutes",
-    //     "Cultural integration achieving ≥80% authenticity across communities",
-    //     "Quantum-resistant democracy with 52% computational overhead reduction"
-    //   ],
-    //   metrics: [
-    //     { number: "≥80%", label: "Cultural Integration" },
-    //     { number: "Federated", label: "Consensus Ready" },
-    //     { number: "Quantum", label: "Resistant" }
-    //   ]
-    // }
+    {
+      name: "VECTARA(f)",
+      title: "Comprehensive Multi-Domain AGI Governance",
+      description: "Coordinates AGI governance across multiple business domains like healthcare, finance, and operations. Provides unified oversight when AGI systems need to make decisions that affect different parts of your organization simultaneously.",
+      highlights: [
+        "Cross-domain emergency coordination in <15 minutes",
+        "Cultural integration achieving ≥80% authenticity across communities",
+        "Quantum-resistant democracy with 52% computational overhead reduction"
+      ],
+      metrics: [
+        { number: "≥80%", label: "Cultural Integration" },
+        { number: "Federated", label: "Consensus Ready" },
+        { number: "Quantum", label: "Resistant" }
+      ]
+    }
   ];
 
   const categories = [
@@ -243,7 +245,7 @@ const Products = () => {
         "@id": "https://ferzconsulting.com/products#page",
         "url": "https://ferzconsulting.com/products",
         "name": "FERZ Products: Mathematical AI Governance Solutions",
-    "description": "Comprehensive suite of AI governance products including DELIA, LASO(f), STRATA-G, Constitutional Blockchain, and FERZ Behavioral Engine for deterministic AI control.",
+    "description": "Comprehensive suite of AI governance products including DELIA, LASO(f), STRATA-G, Constitutional Blockchain, FERZ Behavioral Engine, CausaCore, VECTARA(f), and BiasGuard for deterministic AI control.",
         "publisher": {"@id": "https://ferzconsulting.com/#org"},
         "hasPart": [
           {"@id": "https://ferzconsulting.com/products/delia#product"},
@@ -251,7 +253,9 @@ const Products = () => {
           {"@id": "https://ferzconsulting.com/products/strata-g#product"},
           {"@id": "https://ferzconsulting.com/products/constitutional-blockchain-architecture#product"},
           {"@id": "https://ferzconsulting.com/products/ferz-behavioral-engine#product"},
-          {"@id": "https://ferzconsulting.com/products/causacore#product"}
+          {"@id": "https://ferzconsulting.com/products/causacore#product"},
+          {"@id": "https://ferzconsulting.com/products/vectara-f#product"},
+          {"@id": "https://ferzconsulting.com/products/biasguard#product"}
         ]
       },
       {
@@ -331,6 +335,32 @@ const Products = () => {
           "@type": "Offer",
           "url": "https://ferzconsulting.com/contact-us"
         }
+      },
+      {
+        "@type": ["Product", "SoftwareApplication"],
+        "@id": "https://ferzconsulting.com/products/vectara-f#product",
+        "name": "VECTARA(f)",
+        "description": "Comprehensive Multi-Domain AGI Governance Framework - Coordinates AGI governance across multiple business domains with cross-domain emergency coordination and cultural knowledge integration",
+        "applicationCategory": "AI Governance Software",
+        "operatingSystem": "Model-agnostic",
+        "brand": {"@id": "https://ferzconsulting.com/#org"},
+        "offers": {
+          "@type": "Offer",
+          "url": "https://ferzconsulting.com/contact-us"
+        }
+      },
+      {
+        "@type": ["Product", "SoftwareApplication"],
+        "@id": "https://ferzconsulting.com/products/biasguard#product",
+        "name": "BiasGuard",
+        "description": "Real-Time AI Bias Detection & Mitigation - Automatically detects and prevents biased AI decisions with Formula of Fate™ framework and Objectivity Index™ scoring",
+        "applicationCategory": "AI Governance Software",
+        "operatingSystem": "Model-agnostic",
+        "brand": {"@id": "https://ferzconsulting.com/#org"},
+        "offers": {
+          "@type": "Offer",
+          "url": "https://ferzconsulting.com/contact-us"
+        }
       }
     ]
   };
@@ -361,11 +391,11 @@ const Products = () => {
                 <strong>Comprehensive AI Governance Portfolio</strong>
               </div>
               <div className="prod-summary-description">
-                FERZ delivers the world's first mathematically-grounded AI governance framework through seven integrated products spanning bias detection, causal modeling, behavioral adaptation, and oversight systems. Each solution provides enterprise-grade control over AI systems, ensuring they follow organizational rules, make transparent decisions, and operate with accountability.
+                FERZ delivers the world's first mathematically-grounded AI governance framework through nine integrated products spanning bias detection, causal modeling, behavioral adaptation, and oversight systems. Each solution provides enterprise-grade control over AI systems, ensuring they follow organizational rules, make transparent decisions, and operate with accountability.
               </div>
               
               <div className="prod-summary-tagline">
-                <strong>Seven Products. One Mathematical Foundation. Complete AI Governance.</strong>
+                <strong>Nine Products. One Mathematical Foundation. Complete AI Governance.</strong>
               </div>
             </div>
           </div>
@@ -397,7 +427,7 @@ const Products = () => {
         <section className="prod-section">
           <div className="prod-container">
             <h2 className="prod-section-title">Complete Product Portfolio</h2>
-            <p className="prod-section-subtitle">Seven mathematically-grounded solutions addressing every dimension of enterprise AI governance</p>
+            <p className="prod-section-subtitle">Nine mathematically-grounded solutions addressing every dimension of enterprise AI governance</p>
             
             <div className="prod-products-grid">
               {products.map((product, index) => (
@@ -443,7 +473,7 @@ const Products = () => {
             
             <div className="prod-stats-grid">
               <div className="prod-stat-item">
-                <div className="prod-stat-number">7</div>
+                <div className="prod-stat-number">9</div>
                 <div className="prod-stat-label">Integrated Products</div>
               </div>
               <div className="prod-stat-item" >

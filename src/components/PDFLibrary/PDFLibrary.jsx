@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import { Download } from 'lucide-react';
 import './PDFLibrary.css';
 import { downloadsRegistry } from './registry';
 
@@ -111,22 +112,58 @@ const PDFLibrary = ({ title = 'Library', items, related }) => {
       {libItems.length > 0 && (
         <div className="pdf-library__section">
           <div className="pdf-library__section-title">Documents</div>
+          
           <ul className="pdf-library__list">
             {libItems.map((doc) => (
               <li key={doc.url} className="pdf-library__item">
-                <a href={doc.url} className="pdf-library__link" download target="_blank" rel="noopener noreferrer">
-                  <span className="pdf-library__icon" aria-hidden="true">
-                    {doc.type === 'pdf' ? '📄' : doc.type === 'doc' ? '📝' : '📎'}
-                  </span>
-                  <span className="pdf-library__meta">
-                    <span className="pdf-library__name">{doc.title}</span>
-                    <span className="pdf-library__details">
-                      {doc.type ? doc.type.toUpperCase() : 'FILE'}
-                      {doc.size ? ` • ${formatSize(doc.size)}` : ''}
-                      {doc.date ? ` • ${doc.date}` : ''}
+                <div className="pdf-library__item-content">
+                  <a 
+                    href={doc.url} 
+                    className="pdf-library__link" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    onClick={(e) => {
+                      // For PDFs, open in new tab instead of downloading
+                      if (doc.type === 'pdf') {
+                        e.preventDefault();
+                        window.open(doc.url, '_blank', 'noopener,noreferrer');
+                      }
+                    }}
+                  >
+                    <span className="pdf-library__icon" aria-hidden="true">
+                      {doc.type === 'pdf' ? '📄' : doc.type === 'doc' ? '📝' : '📎'}
                     </span>
-                  </span>
-                </a>
+                    <span className="pdf-library__meta">
+                      <span className="pdf-library__name">{doc.title}</span>
+                      <span className="pdf-library__details">
+                        {doc.type ? doc.type.toUpperCase() : 'FILE'}
+                        {doc.size ? ` • ${formatSize(doc.size)}` : ''}
+                        {doc.date ? ` • ${doc.date}` : ''}
+                      </span>
+                    </span>
+                  </a>
+                  
+                  {/* Download button for each PDF */}
+                  {doc.type === 'pdf' && (
+                    <button
+                      className="pdf-library__download-icon-btn"
+                      onClick={() => {
+                        const link = document.createElement('a');
+                        link.href = doc.url;
+                        link.download = doc.title.replace(/[^a-z0-9]/gi, '_').toLowerCase() + '.pdf';
+                        link.target = '_blank';
+                        link.rel = 'noopener noreferrer';
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
+                      }}
+                      aria-label={`Download ${doc.title}`}
+                      title={`Download ${doc.title}`}
+                    >
+                      <Download size={16} />
+                    </button>
+                  )}
+                </div>
               </li>
             ))}
           </ul>

@@ -153,7 +153,7 @@ const ArticlesCarousel = ({
                         </div>
                       </div>
                       
-                      <div className="article-content">
+                      <div className="c-article-content">
                         <h3 className="article-title" style={{ fontFamily: 'Georgia, serif' }}>
                           {article.title}
                         </h3>

@@ -87,12 +87,18 @@ export const sitemapData = {
               path: '/products/strata-g',
               description: 'Strategic governance platform for enterprise management.'
             },
-            // {
-            //   id: 'vectara-f',
-            //   title: 'VECTARA(f)',
-            //   path: '/products/vectara-f',
-            //   description: 'Advanced vector analysis and retrieval framework.'
-            // }
+            {
+              id: 'vectara-f',
+              title: 'VECTARA(f)',
+              path: '/products/vectara-f',
+              description: 'Comprehensive Multi-Domain AGI Governance Framework.'
+            },
+            {
+              id: 'biasguard',
+              title: 'BiasGuard',
+              path: '/products/biasguard',
+              description: 'Real-Time AI Bias Detection & Mitigation with Formula of Fate™ Framework.'
+            }
           ]
         },
         {
@@ -171,33 +177,7 @@ export const sitemapData = {
       id: 'intellectual-property',
       title: 'INTELLECTUAL PROPERTY',
       path: '/ip-portfolio',
-      description: 'Explore our intellectual property portfolio and research.',
-      subcategories: [
-        {
-          id: 'ip-portfolio-overview',
-          title: 'IP Portfolio Overview',
-          path: '/ip-portfolio',
-          description: 'Comprehensive overview of our intellectual property portfolio.'
-        },
-        {
-          id: 'patent-applications',
-          title: 'Patent Applications',
-          path: '/ip-portfolio/patent-applications',
-          description: 'Our patent applications and intellectual property filings.'
-        },
-        {
-          id: 'defensive-publications',
-          title: 'Defensive Publications',
-          path: '/ip-portfolio/defensive-publications',
-          description: 'Defensive publications and prior art documentation.'
-        },
-        {
-          id: 'research-papers',
-          title: 'Research Papers',
-          path: '/ip-portfolio/research-papers',
-          description: 'Academic research papers and technical publications.'
-        }
-      ]
+      description: 'Explore our intellectual property portfolio and research.'
     },
     {
       id: 'resources',

@@ -3,19 +3,34 @@
 
 export const loadArticles = async () => {
   try {
-    // In a real implementation, this would dynamically scan the public/articles folder
-    // For now, we'll simulate dynamic loading by defining the article structure
-    const articleIds = ['article-1', 'article-2', 'article-3', 'article-4', 'article-5'];
+    // Try to fetch the articles index file
+    const indexResponse = await fetch('/articles/index.json');
+    if (!indexResponse.ok) {
+      throw new Error('Articles index not found');
+    }
+    
+    const indexData = await indexResponse.json();
+    const articleIds = indexData.articles || [];
+    
+    if (articleIds.length === 0) {
+      throw new Error('No articles found in index');
+    }
+
     const articles = [];
 
     for (const articleId of articleIds) {
       try {
-        // Simulate fetching metadata from public/articles/{articleId}/metadata.json
+        // Fetch metadata from public/articles/{articleId}/metadata.json
         const metadata = await fetch(`/articles/${articleId}/metadata.json`);
         if (metadata.ok) {
           const articleData = await metadata.json();
-          // Add the image path
-          articleData.image = `/articles/${articleId}/${articleData.image}`;
+          // Add the image path - use WordPress URLs directly
+          // If it's already a full URL, use it; otherwise construct wp-media path
+          if (articleData.image.startsWith('http')) {
+            // Keep the full WordPress URL as is
+          } else {
+            articleData.image = `/wp-media/${articleData.image}`;
+          }
           articles.push(articleData);
         }
       } catch (error) {
@@ -23,13 +38,15 @@ export const loadArticles = async () => {
       }
     }
 
-    // Fallback to static data if dynamic loading fails
-    if (articles.length === 0) {
-      console.warn('Dynamic loading failed, using fallback data');
-      return getFallbackArticles();
+    // If we found articles, return them
+    if (articles.length > 0) {
+      console.log(`Loaded ${articles.length} articles`);
+      return articles;
     }
 
-    return articles;
+    // Fallback to static data if dynamic loading fails
+    console.warn('Dynamic loading failed, using fallback data');
+    return getFallbackArticles();
   } catch (error) {
     console.error('Error loading articles:', error);
     return getFallbackArticles();

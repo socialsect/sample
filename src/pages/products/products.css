@@ -47,10 +47,6 @@
   font-size: 4em;
   font-weight: 700;
   margin-bottom: 20px;
-  background: linear-gradient(45deg, #fff, #fa2132, #fff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
   line-height: 1.2;
   text-align: center;
 }

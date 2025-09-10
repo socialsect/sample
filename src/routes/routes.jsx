@@ -24,6 +24,8 @@ import DELIA from '../pages/products/delia/DELIA';
 import LASOF from '../pages/products/lasof/LASOF';
 import LASOFAG from '../pages/products/lasof/lasof-ag/LASOFAG';
 import CausaCore from '../pages/products/causacore/CausaCore';
+import VECTARAF from '../pages/products/vectara-f/VECTARAF';
+import BiasGuard from '../pages/products/biasguard/BiasGuard';
 
 // ============================================================================
 // SERVICE PAGES
@@ -77,6 +79,8 @@ const AppRoutes = () => {
       <Route path="/products/lasof" element={<LASOF />} />
       <Route path="/products/lasof/lasof-ag" element={<LASOFAG />} />
       <Route path="/products/causacore" element={<CausaCore />} />
+      <Route path="/products/vectara-f" element={<VECTARAF />} />
+      <Route path="/products/biasguard" element={<BiasGuard />} />
 
       {/* =================================================================
        * SERVICE PAGES

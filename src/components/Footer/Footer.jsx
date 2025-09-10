@@ -27,18 +27,21 @@ const Footer = () => {
             <ul className="footer-links">
               <li><a href="/" className="footer-link">Home</a></li>
               <li><a href="/about-us" className="footer-link">About Us</a></li>
-              <li><a href="/services-overview" className="footer-link">Services</a></li>
-              <li><a href="/products" className="footer-link">Products</a></li>
-              <li><a href="/methodologies" className="footer-link">Methodologies</a></li>
               <li><a href="/articles" className="footer-link">Articles</a></li>
+              <li><a href="/ip-portfolio" className="footer-link">Intellectual Property</a></li>
               <li><a href="/contact-us" className="footer-link">Contact Us</a></li>
+              {/* <li><a href="/ai-integrity-statement" className="footer-link">AI Integrity Statement</a></li> */}
+              <li><a href="/work-with-ferz" className="footer-link">Work With FERZ</a></li>
+              <li><a href="/licensing-and-partnerships" className="footer-link">Licensing & Partnerships</a></li>
+
             </ul>
           </div>
 
           {/* Our Services */}
           <div className="footer-section">
-            <h3 className="footer-title">Our Services</h3>
+            <h3 className="footer-title">Services</h3>
             <ul className="footer-links" aria-label="Services footer menu">
+              <li><a href="/services-overview" className="footer-link">Services Overview</a></li>
               <li><a href="/services-overview/ai-consulting" className="footer-link">AI Consulting</a></li>
               <li><a href="/services-overview/ai-enablement-strategy" className="footer-link">AI-Enablement Strategy</a></li>
               <li><a href="/services-overview/design-of-ai-governance-models" className="footer-link">Design of AI Governance Models</a></li>
@@ -52,12 +55,15 @@ const Footer = () => {
           <div className="footer-section">
             <h3 className="footer-title">Products</h3>
             <ul className="footer-links">
+              <li><a href="/products" className="footer-link">Products Overview</a></li>
               <li><a href="/products/lasof" className="footer-link">LASO(f)</a></li>
               <li><a href="/products/delia" className="footer-link">DELIA</a></li>
               <li><a href="/products/constitutional-blockchain-architecture" className="footer-link">Blockchain Architecture</a></li>
               <li><a href="/products/strata-g" className="footer-link">Strata-G</a></li>
               <li><a href="/products/ferz-behavioral-engine" className="footer-link">Ferz Behavioral Engine</a></li>
               <li><a href="/products/causacore" className="footer-link">Causa Core</a></li>
+              <li><a href="/products/vectara-f" className="footer-link">VECTARA(f)</a></li>
+              <li><a href="/products/biasguard" className="footer-link">BiasGuard</a></li>
             </ul>
           </div>
 
@@ -104,8 +110,6 @@ const Footer = () => {
               <a href="/disclaimer" className="legal-link">Disclaimer</a>
               <a href="/privacy-policy" className="legal-link">Privacy Policy</a>
               <a href="/ai-integrity-statement" className="legal-link">AI Integrity Statement</a>
-              <a href="/work-with-ferz" className="legal-link">Work With FERZ</a>
-              <a href="/licensing-and-partnerships" className="legal-link">Licensing & Partnerships</a>
             </div>
             <div className="footer-legal">
               <p>FERZ — Formalizing Emergent Reasoning Zones © {currentYear} FERZ LLC</p>

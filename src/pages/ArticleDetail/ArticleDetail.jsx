@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, Clock, User, Calendar, Tag } from 'lucide-react';
+import { ArrowLeft, Clock, User, Calendar, Tag, Download, FileText } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import { Helmet } from 'react-helmet-async';
 import { loadArticles, loadArticleContent } from '../../utils/articleLoader';
+import { downloadPDF, downloadExecutiveSummary } from '../../utils/downloadUtils';
 import './ArticleDetail.css';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer/Footer';
@@ -87,6 +88,19 @@ const ArticleDetail = () => {
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": `https://ferzconsulting.com/articles/${article.slug}`
+    }
+  };
+
+  // Download handlers
+  const handleDownloadPDF = () => {
+    if (content && article) {
+      downloadPDF(article, content);
+    }
+  };
+
+  const handleDownloadSummary = () => {
+    if (article) {
+      downloadExecutiveSummary(article);
     }
   };
 
@@ -182,26 +196,67 @@ const ArticleDetail = () => {
               {/* Sidebar */}
               <aside className="article-sidebar">
                 <div className="sidebar-section">
-                  <h3 style={{ fontFamily: 'Georgia, serif' }}>Article Info</h3>
-                  <div className="sidebar-item">
-                    <strong>Category:</strong> {article.category}
+                  <h3 style={{ fontFamily: 'Georgia, serif' }}>Article Info & Documents</h3>
+                  
+                  {/* Article Info */}
+                  <div className="article-info-section">
+                    <div className="sidebar-item">
+                      <strong>Category:</strong> {article.category}
+                    </div>
+                    <div className="sidebar-item">
+                      <strong>Read Time:</strong> {article.readTime}
+                    </div>
+                    <div className="sidebar-item">
+                      <strong>Published:</strong> {new Date(article.date).toLocaleDateString()}
+                    </div>
                   </div>
-                  <div className="sidebar-item">
-                    <strong>Read Time:</strong> {article.readTime}
+                  
+                  {/* Tags */}
+                  <div className="tags-section">
+                    <h4 style={{ fontFamily: 'Georgia, serif', marginBottom: '10px', color: '#000000' }}>Tags</h4>
+                    <div className="sidebar-tags">
+                      {article.tags.map((tag, index) => (
+                        <span key={index} className="sidebar-tag" style={{ fontFamily: 'Georgia, serif' }}>
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                  <div className="sidebar-item">
-                    <strong>Published:</strong> {new Date(article.date).toLocaleDateString()}
-                  </div>
-                </div>
-                
-                <div className="sidebar-section">
-                  <h3 style={{ fontFamily: 'Georgia, serif' }}>Tags</h3>
-                  <div className="sidebar-tags">
-                    {article.tags.map((tag, index) => (
-                      <span key={index} className="sidebar-tag" style={{ fontFamily: 'Georgia, serif' }}>
-                        {tag}
-                      </span>
-                    ))}
+                  
+                  {/* Related Documents */}
+                  <div className="related-documents-section">
+                    <h4 style={{ fontFamily: 'Georgia, serif', marginBottom: '15px', color: '#000000' }}>Related Documents</h4>
+                    <div className="related-documents">
+                      <div className="document-item">
+                        <div className="document-icon">
+                          <FileText size={16} />
+                        </div>
+                        <div className="document-info">
+                          <span className="document-title">Article PDF</span>
+                          <span className="document-description">Downloadable version with logo</span>
+                        </div>
+                        <div className="document-actions">
+                          <button className="action-btn download-btn" title="Download PDF" onClick={handleDownloadPDF}>
+                            <Download size={14} />
+                          </button>
+                        </div>
+                      </div>
+                      
+                      <div className="document-item">
+                        <div className="document-icon">
+                          <FileText size={16} />
+                        </div>
+                        <div className="document-info">
+                          <span className="document-title">Executive Summary</span>
+                          <span className="document-description">Key insights PDF</span>
+                        </div>
+                        <div className="document-actions">
+                          <button className="action-btn download-btn" title="Download Summary" onClick={handleDownloadSummary}>
+                            <Download size={14} />
+                          </button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </aside>

@@ -61,29 +61,89 @@
   margin-bottom: 8px;
 }
 
+
+.pdf-library__download-section {
+  margin-bottom: 12px;
+}
+
+.pdf-library__download-btn {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 12px;
+  background: #fa2132;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  text-align: left;
+}
+
+.pdf-library__download-btn:hover {
+  background: #e01e2e;
+  transform: translateY(-1px);
+}
+
+.pdf-library__download-icon {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.pdf-library__download-text {
+  flex: 1;
+}
+
 .pdf-library__list, .pdf-library__related { list-style: none; padding: 0; margin: 0; }
 .pdf-library__item + .pdf-library__item { margin-top: 8px; }
 
-.pdf-library__link {
+.pdf-library__item-content {
   display: flex;
-  text-decoration: none;
-  padding: 10px 12px;
+  align-items: center;
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: 6px;
-  color: #ffffff;
-  transition: border .2s, background .2s, transform .1s;
   background: rgba(255,255,255,0.02);
+  transition: border .2s, background .2s, transform .1s;
 }
 
-.pdf-library__link:hover {
+.pdf-library__item-content:hover {
   border-color: rgba(255,255,255,0.2);
   background: rgba(255,255,255,0.05);
   transform: translateY(-1px);
 }
 
+.pdf-library__link {
+  display: flex;
+  text-decoration: none;
+  padding: 10px 12px;
+  color: #ffffff;
+  flex: 1;
+}
+
 .pdf-library__icon { margin-right: 10px; font-size: 18px; }
 .pdf-library__name { display: block; font-weight: 600; }
 .pdf-library__details { display: block; font-size: 12px; color: #bbbbbb; }
+
+.pdf-library__download-icon-btn {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  padding: 8px;
+  margin-right: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pdf-library__download-icon-btn:hover {
+  background: rgba(255,255,255,0.1);
+  color: #fa2132;
+}
 
 .pdf-library__related-item + .pdf-library__related-item { margin-top: 6px; }
 .pdf-library__related-link { color: #9ad; text-decoration: none; }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Search } from 'lucide-react';
+import { Menu, X, Search, Package, Briefcase, BookOpen, ArrowRight } from 'lucide-react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { sitemapData } from './sitemapData';
 import './Navbar.css';
@@ -55,6 +55,12 @@ const Navbar = () => {
     return () => document.removeEventListener('keydown', handleEscape);
   }, [isMenuOpen]);
   const handleCategoryClick = (category) => {
+    // If it's the Intellectual Property category, navigate directly to /ip-portfolio
+    if (category.id === 'intellectual-property') {
+      navigate('/ip-portfolio');
+      closeMenu();
+      return;
+    }
     setSelectedCategory(category);
   };
   const handleSearchChange = (e) => {
@@ -75,6 +81,20 @@ const Navbar = () => {
       navigate(path);
     }
     closeMenu();
+  };
+
+  // Helper function to get the appropriate icon for overview buttons
+  const getOverviewIcon = (subcategoryId) => {
+    switch (subcategoryId) {
+      case 'products-portfolio':
+        return <Package size={16} />;
+      case 'services-portfolio':
+        return <Briefcase size={16} />;
+      case 'methodologies':
+        return <BookOpen size={16} />;
+      default:
+        return <ArrowRight size={16} />;
+    }
   };
 
   const getFilteredItems = () => {
@@ -131,9 +151,9 @@ const Navbar = () => {
             <button 
               className="contact-button"
               onClick={(e) => handleLinkClick('/contact-us', e)}
-              aria-label={isIPPortfolioPage ? "Access a briefing" : "Contact us"}
+              aria-label={isIPPortfolioPage ? "Request a briefing" : "Contact FERZ"}
             >
-             {isIPPortfolioPage ? 'Access a briefing' : 'Contact Us'}
+             {isIPPortfolioPage ? 'Request a briefing' : 'Contact FERZ'}
             </button>
           </div>
         </div>
@@ -194,7 +214,7 @@ const Navbar = () => {
           <div className="menu-content">
             <div className="sidebar">
               <div className="sidebar-content">
-                <h2 className="sidebar-title">Company </h2>
+                <h2 className="sidebar-title">FERZ Consulting </h2>
                 <nav className="nav-section" aria-label="Services navigation">
                   {sitemapData.mainCategories.map((category) => (
                     <button
@@ -257,6 +277,22 @@ const Navbar = () => {
                           <div className="subcategory-with-nested">
                             <h3 className="subcategory-title">{subcategory.title}</h3>
                             <p className="subcategory-description">{subcategory.description}</p>
+                            
+                            {/* Overview Button */}
+                            <div className="overview-button-container">
+                              <Link 
+                                to={subcategory.path}
+                                className="overview-button"
+                                onClick={closeMenu}
+                                aria-label={`Go to ${subcategory.title} overview page`}
+                              >
+                                <span className="overview-button-icon">
+                                  {getOverviewIcon(subcategory.id)}
+                                </span>
+                                <span className="overview-button-text">Overview</span>
+                              </Link>
+                            </div>
+
                             <div className="nested-subcategories">
                               {subcategory.subcategories.map((nestedSub) => (
                                 <Link 
