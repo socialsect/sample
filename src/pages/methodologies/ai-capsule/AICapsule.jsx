@@ -300,9 +300,9 @@ const AICapsule = () => {
             <p className="capsule-cta-subtitle">Access FERZ's proprietary constitutional methodology through exclusive consulting engagement</p>
             
             <div className="capsule-cta-buttons">
-              <a href="#" className="capsule-btn-primary">Schedule Consulting Assessment</a>
-              <a href="#" className="capsule-btn-secondary">Explore Implementation Scope</a>
-              <a href="#" className="capsule-btn-secondary">Request Capability Demonstration</a>
+              <a href="/contact-us" className="capsule-btn-primary">Schedule Consulting Assessment</a>
+              <a href="#" className="capsule-btn-secondary btn-disabled-9298" aria-disabled="true" tabIndex="-1" onClick={(e) => e.preventDefault()}>Explore Implementation Scope (Coming soon)</a>
+              <a href="/contact-us" className="capsule-btn-secondary">Request Capability Demonstration</a>
             </div>
             
             <div className="capsule-cta-features">

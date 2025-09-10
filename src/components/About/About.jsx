@@ -265,8 +265,8 @@ const About = () => {
           </div>
           
           <div className="resources-button-container">
-            <a href="#" className="view-all-resources">
-              View All Resources
+            <a href="#" className="view-all-resources btn-disabled-9298" aria-disabled="true" tabIndex="-1" onClick={(e) => e.preventDefault()}>
+              View All Resources (Coming soon)
               <ArrowRight size={16} className="arrow-icon" />
             </a>
           </div>

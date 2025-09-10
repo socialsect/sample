@@ -67,8 +67,8 @@ const AIEnablementStrategy = () => {
               <span className="ai-pill">Value Realization</span>
             </div>
             <div className="ai-cta" aria-label="Primary actions">
-              <Link className="ai-btn" to="/contact">Start AI Strategy Session</Link>
-              <a className="ai-btn ai-btn-alt" href="/downloads/ai-enablement-brief.pdf">Download Strategy Kit</a>
+              <Link className="ai-btn" to="/contact-us">Start AI Strategy Session</Link>
+              <a className="ai-btn ai-btn-alt btn-disabled-9298" href="#" aria-disabled="true" tabIndex="-1" onClick={(e) => e.preventDefault()}>Download Strategy Kit (Coming soon)</a>
             </div>
           </div>
         </header>
@@ -228,8 +228,8 @@ const AIEnablementStrategy = () => {
               <h2 id="cta">Lead Your Industry Through Constitutional AI Strategy</h2>
               <p className="ai-muted">The next era of enterprise AI will be defined by organizations that integrate constitutional governance across all business functions, not those that retrofit compliance after deployment. FERZ AI Enablement Strategy creates comprehensive roadmaps that transform fragmented AI adoption into industry-leading competitive advantage through governance-first principles.</p>
               <div className="ai-cta">
-                <a className="ai-btn" href="/contact">Schedule Enterprise AI Strategy Assessment</a>
-                <a className="ai-btn ai-btn-alt" href="/downloads/ai-enablement-strategy-brief.pdf">Download Constitutional AI Leadership Framework</a>
+                <a className="ai-btn" href="/contact-us">Schedule Enterprise AI Strategy Assessment</a>
+                <a className="ai-btn ai-btn-alt btn-disabled-9298" href="#" aria-disabled="true" tabIndex="-1" onClick={(e) => e.preventDefault()}>Download Constitutional AI Leadership Framework (Coming soon)</a>
               </div>
             </div>
           </section>

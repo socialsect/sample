@@ -473,8 +473,8 @@ const LapLicensing = () => {
             <p id="lap-cta-subtitle">Partner with FERZ before competitors recognize the strategic imperative</p>
             
             <div id="lap-cta-buttons">
-              <a href="#" className="lap-btn-primary">Schedule Partnership Assessment</a>
-              <a href="#" className="lap-btn-secondary">Download Partnership Overview</a>
+              <a href="/contact-us" className="lap-btn-primary">Schedule Partnership Assessment</a>
+              <a href="#" className="lap-btn-secondary btn-disabled-9298" aria-disabled="true" tabIndex="-1" onClick={(e) => e.preventDefault()}>Download Partnership Overview (Coming soon)</a>
             </div>
             
             <div id="lap-cta-stats">

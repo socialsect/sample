@@ -173,7 +173,9 @@ const ExampleProduct = () => {
         <ul className="product-patent-list">
           <li><strong>Patent Application 123456</strong> - "Revolutionary AI Technology" (Filed 2025)</li>
         </ul>
-        <p className="product-ip-link"><a href="#" className="product-patent-link">Learn More →</a></p>
+        <p className="product-ip-link">
+          <a href="#" className="product-patent-link btn-disabled-9298" aria-disabled="true" tabIndex="-1" onClick={(e) => e.preventDefault()}>Learn More → (Coming soon)</a>
+        </p>
       </>
     ),
     

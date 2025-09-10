@@ -362,8 +362,8 @@ const FerzAbout = () => {
             <p className="about-cta-text">Discover how FERZ transforms AI governance from statistical approximation to mathematical certainty</p>
             
             <div className="about-cta-buttons">
-              <a href="#" className="about-btn-primary">Explore Our Solutions</a>
-              <a href="#" className="about-btn-secondary">Schedule Strategic Discussion</a>
+              <a href="#" className="about-btn-primary btn-disabled-9298" aria-disabled="true" tabIndex="-1" onClick={(e) => e.preventDefault()}>Explore Our Solutions (Coming soon)</a>
+              <a href="/contact-us" className="about-btn-secondary">Schedule Strategic Discussion</a>
             </div>
             
             <div className="about-cta-stats">

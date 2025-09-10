@@ -404,11 +404,11 @@ const WithinParadigmImprovements = () => {
             </span>
           </div>
           <div className="wpi-cta" aria-label="Primary actions">
-            <a className="wpi-btn" href="/contact">
+            <a className="wpi-btn" href="/contact-us">
               Schedule Optimization Assessment
             </a>
-            <a className="wpi-btn wpi-btn-alt" href="/downloads/within-paradigm-improvements-brief.pdf">
-              Download Optimization Framework
+            <a className="wpi-btn wpi-btn-alt btn-disabled-9298" href="#" aria-disabled="true" tabIndex="-1" onClick={(e) => e.preventDefault()}>
+              Download Optimization Framework (Coming soon)
             </a>
           </div>
         </header>
@@ -571,11 +571,11 @@ const WithinParadigmImprovements = () => {
             <h2 id="cta" className="wpi-h2">Optimize Now, Transform Later</h2>
             <p className="wpi-muted">Organizations don't need to choose between immediate AI improvements and future constitutional governance. FERZ Within-Paradigm Improvements maximizes current system value while building the strategic foundation for constitutional AI leadership—ensuring every optimization step advances your transformation journey.</p>
             <div className="wpi-cta">
-              <a className="wpi-btn" href="/contact">
+              <a className="wpi-btn" href="/contact-us">
                 Schedule AI Optimization Assessment
               </a>
-              <a className="wpi-btn wpi-btn-alt" href="/downloads/within-paradigm-improvements-brief.pdf">
-                Download MRCF™ Optimization Framework
+              <a className="wpi-btn wpi-btn-alt btn-disabled-9298" href="#" aria-disabled="true" tabIndex="-1" onClick={(e) => e.preventDefault()}>
+                Download MRCF™ Optimization Framework (Coming soon)
               </a>
             </div>
           </section>

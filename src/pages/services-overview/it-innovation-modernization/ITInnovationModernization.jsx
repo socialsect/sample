@@ -239,8 +239,8 @@ const ITModernizationPage = () => {
           <strong>AI-native, compliance-ready infrastructure</strong> with constitutional governance from the ground up—so you can scale safely across cloud, hybrid, and on-prem environments.
         </p>
         <div className="mod-cta" aria-label="Primary actions">
-          <a className="mod-btn" href="/contact">Schedule a consultation</a>
-          <a className="mod-btn mod-btn-alt" href="/downloads/it-modernization-brief.pdf">Download service brief (PDF)</a>
+          <a className="mod-btn" href="/contact-us">Schedule a consultation</a>
+          <a className="mod-btn mod-btn-alt btn-disabled-9298" href="#" aria-disabled="true" tabIndex="-1" onClick={(e) => e.preventDefault()}>Download service brief (PDF) (Coming soon)</a>
         </div>
       </header>
 
@@ -398,8 +398,8 @@ const ITModernizationPage = () => {
             Build infrastructure that prepares advanced AI to be safe, scalable, and certifiable—with a clear pathway to constitutional governance.
           </p>
           <div className="mod-cta">
-            <a className="mod-btn" href="/contact">Talk to an architect</a>
-            <a className="mod-btn mod-btn-alt" href="/downloads/it-modernization-brief.pdf">Download service brief (PDF)</a>
+            <a className="mod-btn" href="/contact-us">Talk to an architect</a>
+            <a className="mod-btn mod-btn-alt btn-disabled-9298" href="#" aria-disabled="true" tabIndex="-1" onClick={(e) => e.preventDefault()}>Download service brief (PDF) (Coming soon)</a>
           </div>
         </section>
       </main>

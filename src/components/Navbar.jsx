@@ -61,6 +61,12 @@ const Navbar = () => {
       closeMenu();
       return;
     }
+    // If it's the Contact category, navigate directly to /contact-us
+    if (category.id === 'contact') {
+      navigate('/contact-us');
+      closeMenu();
+      return;
+    }
     setSelectedCategory(category);
   };
   const handleSearchChange = (e) => {
@@ -214,7 +220,8 @@ const Navbar = () => {
           <div className="menu-content">
             <div className="sidebar">
               <div className="sidebar-content">
-                <h2 className="sidebar-title">FERZ Consulting </h2>
+                <Link to="/" className="sidebar-title" onClick={closeMenu} aria-label="FERZ - Go to homepage"><h2 className="sidebar-title">FERZ Consulting </h2></Link>
+                {/* <h2 className="sidebar-title">FERZ Consulting </h2>  */}
                 <nav className="nav-section" aria-label="Services navigation">
                   {sitemapData.mainCategories.map((category) => (
                     <button

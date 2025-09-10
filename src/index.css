@@ -564,3 +564,24 @@ html{
 }
 
 .cta-hero-group { display: inline-flex; gap: 0.75rem; }
+
+/* Global unique utilities for Coming Soon badges and disabled buttons */
+.text-but9298 {
+  display: inline-block;
+  margin-bottom: 0.4rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fa2132;
+  background: rgba(250, 33, 50, 0.12);
+  border: 1px solid rgba(250, 33, 50, 0.35);
+}
+
+.btn-disabled-9298 {
+  pointer-events: none !important;
+  opacity: 0.6 !important;
+  filter: grayscale(10%);
+}

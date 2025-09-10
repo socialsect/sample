@@ -447,10 +447,10 @@ const MRCF = () => {
             <p>Access patent-protected recursive cognitive enhancement through FERZ training and licensing programs</p>
             
             <div className="mrcf-cta-buttons">
-              <a href="#" className="mrcf-btn-primary">Request MRCF Training</a>
-              <a href="#" className="mrcf-btn-secondary">Download Framework Guide</a>
-              <a href="#" className="mrcf-btn-secondary">Explore Licensing Options</a>
-              <a href="#" className="mrcf-btn-secondary">Schedule Cognitive Assessment</a>
+              <a href="/contact-us" className="mrcf-btn-primary">Request MRCF Training</a>
+              <a href="#" className="mrcf-btn-secondary btn-disabled-9298" aria-disabled="true" tabIndex="-1" onClick={(e) => e.preventDefault()}>Download Framework Guide (Coming soon)</a>
+              <a href="#" className="mrcf-btn-secondary btn-disabled-9298" aria-disabled="true" tabIndex="-1" onClick={(e) => e.preventDefault()}>Explore Licensing Options (Coming soon)</a>
+              <a href="/contact-us" className="mrcf-btn-secondary">Schedule Cognitive Assessment</a>
             </div>
             
             <div className="mrcf-cta-features">

@@ -352,7 +352,7 @@ const ProductTemplate = ({
               </p>
               
               <p className="product-ip-link">
-                <a href="#" className="product-patent-link">Explore FERZ IP Portfolio →</a>
+                <a href="#" className="product-patent-link btn-disabled-9298" aria-disabled="true" tabIndex="-1" onClick={(e) => e.preventDefault()}>Explore FERZ IP Portfolio → (Coming soon)</a>
               </p>
             </div>
           </div>
@@ -367,10 +367,10 @@ const ProductTemplate = ({
             </p>
             
             <div className="product-cta-buttons">
-              <a href="#" className="product-btn-primary">Request Technical Briefing</a>
-              <a href="#" className="product-btn-secondary">Download Executive Whitepaper</a>
-              <a href="#" className="product-btn-secondary">Download Technical Specifications</a>
-              <a href="#" className="product-btn-secondary">Explore Partnership Opportunities</a>
+              <a href="/contact-us" className="product-btn-primary">Request Technical Briefing</a>
+              <a href="#" className="product-btn-secondary btn-disabled-9298" aria-disabled="true" tabIndex="-1" onClick={(e) => e.preventDefault()}>Download Executive Whitepaper (Coming soon)</a>
+              <a href="#" className="product-btn-secondary btn-disabled-9298" aria-disabled="true" tabIndex="-1" onClick={(e) => e.preventDefault()}>Download Technical Specifications (Coming soon)</a>
+              <a href="/licensing-and-partnerships" className="product-btn-secondary">Explore Partnership Opportunities</a>
             </div>
             
             <div className="product-cta-metrics">
@@ -388,7 +388,7 @@ const ProductTemplate = ({
         <section className="product-secondary-cta">
           <div className="product-container">
             <h3 className="product-secondary-cta-title">Ready to Learn More?</h3>
-            <a href="#" className="engine-cta-button">Get in Touch</a>
+            <a href="/contact-us" className="engine-cta-button">Get in Touch</a>
           </div>
         </section>
       </main>

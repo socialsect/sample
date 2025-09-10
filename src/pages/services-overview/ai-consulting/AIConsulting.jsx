@@ -68,8 +68,8 @@ const AIConsulting = () => {
               <span className="ai-pill">Enterprise Integration</span>
             </div>
             <div className="ai-cta" aria-label="Primary actions">
-              <Link className="ai-btn" to="/contact">Schedule AI Assessment</Link>
-              <a className="ai-btn ai-btn-alt" href="/downloads/ai-consulting-brief.pdf">Download Service Brief</a>
+              <Link className="ai-btn" to="/contact-us">Schedule AI Assessment</Link>
+              <a className="ai-btn ai-btn-alt btn-disabled-9298" href="#" aria-disabled="true" tabIndex="-1" onClick={(e) => e.preventDefault()}>Download Service Brief (Coming soon)</a>
             </div>
           </div>
         </header>
@@ -232,8 +232,8 @@ const AIConsulting = () => {
               <h2 id="cta">Transform Your AI with Constitutional Certainty</h2>
               <p className="ai-muted">The next generation of enterprise AI requires systems that prove compliance mathematically, not just document it aspirationally. FERZ AI Consulting transforms probabilistic AI risk into regulation-ready assurance through patent-protected constitutional governance frameworks.</p>
               <div className="ai-cta">
-                <Link className="ai-btn" to="/contact">Schedule Constitutional AI Assessment</Link>
-                <a className="ai-btn ai-btn-alt" href="/downloads/ai-consulting-brief.pdf">Download Technology Fortress Brief</a>
+                <Link className="ai-btn" to="/contact-us">Schedule Constitutional AI Assessment</Link>
+                <a className="ai-btn ai-btn-alt btn-disabled-9298" href="#" aria-disabled="true" tabIndex="-1" onClick={(e) => e.preventDefault()}>Download Technology Fortress Brief (Coming soon)</a>
               </div>
             </div>
           </section>

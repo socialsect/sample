@@ -8,6 +8,8 @@ const Contact = () => {
     email: '',
     message: ''
   });
+  const [submitting, setSubmitting] = useState(false);
+  const [status, setStatus] = useState(null);
 
   const handleChange = (e) => {
     setFormData({
@@ -16,10 +18,44 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
+    setStatus(null);
+    setSubmitting(true);
+    try {
+      const res = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          subject: 'New contact form submission (Homepage Contact section)'
+        })
+      });
+
+      const contentType = res.headers.get('content-type') || '';
+      let payload = null;
+      if (contentType.includes('application/json')) {
+        payload = await res.json();
+      } else {
+        const text = await res.text();
+        if (!res.ok) throw new Error(text || `Unexpected response (${res.status})`);
+        throw new Error('Unexpected non-JSON response from server.');
+      }
+
+      if (!res.ok || !payload?.success) {
+        const msg = payload?.error || res.statusText || 'Failed to send message';
+        throw new Error(msg);
+      }
+
+      setStatus({ type: 'success', message: 'Message sent successfully. We will get back to you shortly.' });
+      setFormData({ name: '', email: '', message: '' });
+    } catch (err) {
+      setStatus({ type: 'error', message: err.message || 'An error occurred while sending your message.' });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -134,6 +170,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     placeholder="Enter your full name"
+                    disabled={submitting}
                   />
                 </div>
 
@@ -147,6 +184,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     placeholder="Enter your email address"
+                    disabled={submitting}
                   />
                 </div>
 
@@ -160,12 +198,17 @@ const Contact = () => {
                     required
                     rows="5"
                     placeholder="Describe your AI governance challenges, project needs, or specific questions for our team."
+                    disabled={submitting}
                   ></textarea>
                 </div>
 
-                <button type="submit" className="submit-button">
+                {status && (
+                  <p className={`form-status ${status.type}`}>{status.message}</p>
+                )}
+
+                <button type="submit" className="submit-button" disabled={submitting}>
                   <Send size={18} />
-                  Send Message
+                  {submitting ? 'Sending…' : 'Send Message'}
                 </button>
               </form>
             </div>

@@ -179,38 +179,38 @@ export const sitemapData = {
       path: '/ip-portfolio',
       description: 'Explore our intellectual property portfolio and research.'
     },
-    {
-      id: 'resources',
-      title: 'RESOURCES',
-      path: '/resources',
-      description: 'Technical documentation, compliance guides, and thought leadership.',
-      subcategories: [
-        {
-          id: 'technical-documentation',
-          title: 'Technical Documentation',
-          path: '/resources/technical-documentation',
-          description: 'Comprehensive technical documentation and guides.'
-        },
-        {
-          id: 'regulatory-compliance',
-          title: 'Regulatory Compliance',
-          path: '/resources/regulatory-compliance',
-          description: 'Regulatory compliance guides and frameworks.'
-        },
-        {
-          id: 'case-studies',
-          title: 'Case Studies',
-          path: '/resources/case-studies',
-          description: 'Real-world case studies and implementation examples.'
-        },
-        {
-          id: 'whitepapers',
-          title: 'Whitepapers',
-          path: '/resources/whitepapers',
-          description: 'In-depth whitepapers on AI governance and compliance.'
-        }
-      ]
-    },
+    // {
+    //   id: 'resources',
+    //   title: 'RESOURCES',
+    //   path: '/resources',
+    //   description: 'Technical documentation, compliance guides, and thought leadership.',
+    //   subcategories: [
+    //     {
+    //       id: 'technical-documentation',
+    //       title: 'Technical Documentation',
+    //       path: '/resources/technical-documentation',
+    //       description: 'Comprehensive technical documentation and guides.'
+    //     },
+    //     {
+    //       id: 'regulatory-compliance',
+    //       title: 'Regulatory Compliance',
+    //       path: '/resources/regulatory-compliance',
+    //       description: 'Regulatory compliance guides and frameworks.'
+    //     },
+    //     {
+    //       id: 'case-studies',
+    //       title: 'Case Studies',
+    //       path: '/resources/case-studies',
+    //       description: 'Real-world case studies and implementation examples.'
+    //     },
+    //     {
+    //       id: 'whitepapers',
+    //       title: 'Whitepapers',
+    //       path: '/resources/whitepapers',
+    //       description: 'In-depth whitepapers on AI governance and compliance.'
+    //     }
+    //   ]
+    // },
     {
       id: 'legal-compliance',
       title: 'LEGAL & COMPLIANCE',

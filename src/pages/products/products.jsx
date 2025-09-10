@@ -533,9 +533,9 @@ const Products = () => {
             <p className="prod-cta-subtitle">Explore FERZ's complete portfolio of mathematically-grounded AI governance solutions</p>
             
             <div className="prod-cta-buttons">
-              <a href="#" className="prod-cta-btn-primary">Schedule Portfolio Demo</a>
-              <a href="#" className="prod-cta-btn-secondary">Download Product Comparison</a>
-              <a href="#" className="prod-cta-btn-secondary">Request Custom Consultation</a>
+              <a href="/contact-us" className="prod-cta-btn-primary">Schedule Portfolio Demo</a>
+              <a href="#" className="prod-cta-btn-secondary btn-disabled-9298" aria-disabled="true" tabIndex="-1" onClick={(e) => e.preventDefault()}>Download Product Comparison (Coming soon)</a>
+              <a href="/contact-us" className="prod-cta-btn-secondary">Request Custom Consultation</a>
             </div>
             
             <div className="prod-cta-footer">

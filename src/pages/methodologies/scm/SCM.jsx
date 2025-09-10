@@ -384,7 +384,7 @@ const SCM = () => {
             <div className="scm-cta-buttons">
               <a href="https://papers.ssrn.com/abstract=5253607" className="scm-btn-primary">Access SSRN Research Paper</a>
               <a href="https://ip.com/IPCOM/000276290" className="scm-btn-secondary">View IP.com Publication</a>
-              <a href="#" className="scm-btn-secondary">Schedule Implementation Consultation</a>
+              <a href="/contact-us" className="scm-btn-secondary">Schedule Implementation Consultation</a>
             </div>
             
             <div className="scm-cta-features">

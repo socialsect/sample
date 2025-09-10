@@ -288,7 +288,7 @@ const ProductPageTemplate = ({
           <section className="product-secondary-cta">
             <div className="product-container">
               <h3 className="product-secondary-cta-title">{secondaryCtaTitle}</h3>
-              <a href="#" className="engine-cta-button">{secondaryCtaButton}</a>
+              <a href="/contact-us" className="engine-cta-button">{secondaryCtaButton}</a>
             </div>
           </section>
         )}

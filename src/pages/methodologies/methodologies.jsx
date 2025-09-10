@@ -382,9 +382,9 @@ const FerzMethodologies = () => {
             <p className="meth-cta-subtitle">Transform your enterprise with methodologies competitors cannot replicate</p>
             
             <div className="meth-cta-buttons">
-              <a href="#" className="meth-btn-primary">Schedule Methodology Assessment</a>
-              <a href="#" className="meth-btn-secondary">Download Complete Portfolio</a>
-              <a href="#" className="meth-btn-secondary">Access Research Publications</a>
+              <a href="/contact-us" className="meth-btn-primary">Schedule Methodology Assessment</a>
+              <a href="#" className="meth-btn-secondary btn-disabled-9298" aria-disabled="true" tabIndex="-1" onClick={(e) => e.preventDefault()}>Download Complete Portfolio (Coming soon)</a>
+              <a href="#" className="meth-btn-secondary btn-disabled-9298" aria-disabled="true" tabIndex="-1" onClick={(e) => e.preventDefault()}>Access Research Publications (Coming soon)</a>
             </div>
             
             <div className="meth-cta-features">

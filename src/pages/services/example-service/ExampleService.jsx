@@ -183,7 +183,7 @@ const ExampleService = () => {
       subtitle: "Join organizations investing in mathematical transformation over probabilistic consulting",
       primaryButton: {
         text: "Schedule AI Governance Assessment",
-        link: "/contact"
+        link: "/contact-us"
       },
       secondaryButtons: [
         { text: "Download Methodology Guide", link: "/resources" },

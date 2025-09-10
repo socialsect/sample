@@ -435,8 +435,8 @@ const StrategicAdvisoryPage = () => {
           <strong>alignment by provability</strong>—turning compliance risk into durable competitive advantage.
         </p>
         <div className="strat-cta" aria-label="Primary actions">
-          <a className="strat-btn" href="/contact">Schedule Executive Briefing</a>
-          <a className="strat-btn strat-btn-alt" href="/downloads/constitutional-ai-executive-brief.pdf">Download Executive Brief (PDF)</a>
+          <a className="strat-btn" href="/contact-us">Schedule Executive Briefing</a>
+          <a className="strat-btn strat-btn-alt btn-disabled-9298" href="#" aria-disabled="true" tabIndex="-1" onClick={(e) => e.preventDefault()}>Download Executive Brief (PDF) (Coming soon)</a>
         </div>
       </header>
 
