@@ -1027,6 +1027,11 @@
     width: 100%;
     box-sizing: border-box;
   }
+
+  /* Hide contact button on tablets and mobile devices */
+  .navbar-right .contact-button {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1067,5 +1072,10 @@
   .contact-button {
     padding: 0.75rem 1.5rem;
     font-size: 0.875rem;
+  }
+
+  /* Hide contact button on mobile devices */
+  .navbar-right .contact-button {
+    display: none;
   }
 }

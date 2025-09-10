@@ -368,7 +368,7 @@ const Products = () => {
   return (
     <>
       <Helmet>
-        <title>FERZ Products: Mathematical AI Governance Solutions | FERZ</title>
+        <title>Deterministic AI Governance Solutions | FERZ</title>
         <meta name="description" content="Discover FERZ's comprehensive AI governance products for deterministic AI control, linguistic precision, and enterprise compliance." />
         <meta name="keywords" content="AI governance products, DELIA, LASO methodology, STRATA-G, constitutional blockchain, FERZ behavioral engine, AI compliance software, deterministic AI, linguistic precision tools" />
         <link rel="canonical" href="https://ferzconsulting.com/products" />

@@ -67,7 +67,11 @@ const AppRoutes = () => {
       <Route path="/" element={<HomePage />} />
       <Route path="/about-us" element={<FerzAbout />} />
       <Route path="/contact-us" element={<ContactUs />} />
- <Route path="/products/delia" element={<DELIA />} />
+      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      <Route path="/work-with-ferz" element={<WorkWithFerz />} />
+      <Route path="/licensing-and-partnerships" element={<LicensingPartnerships />} />
+      <Route path="/disclaimer" element={<Disclaimer />} />
+
       {/* =================================================================
        * PRODUCT PAGES
        * ================================================================ */}
@@ -75,7 +79,7 @@ const AppRoutes = () => {
       <Route path="/products/ferz-behavioral-engine" element={<FERZBehavioralEngine />} />
       <Route path="/products/constitutional-blockchain-architecture" element={<ConstitutionalBlockchainArchitecture />} />
       <Route path="/products/strata-g" element={<STRATAG />} />
-     
+      <Route path="/products/delia" element={<DELIA />} />
       <Route path="/products/lasof" element={<LASOF />} />
       <Route path="/products/lasof/lasof-ag" element={<LASOFAG />} />
       <Route path="/products/causacore" element={<CausaCore />} />
@@ -114,17 +118,9 @@ const AppRoutes = () => {
       <Route path="/articles/:slug" element={<ArticleDetail />} />
 
       {/* =================================================================
-       * LEGAL
-       * ================================================================ */}
-      <Route path="/disclaimer" element={<Disclaimer />} />
-
-      {/* =================================================================
        * 404 ROUTE - MUST BE LAST
        * ================================================================ */}
       <Route path="*" element={<NotFound />} />
-      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-      <Route path="/work-with-ferz" element={<WorkWithFerz />} />
-      <Route path="/licensing-and-partnerships" element={<LicensingPartnerships />} />
     </Routes>
   );
 };

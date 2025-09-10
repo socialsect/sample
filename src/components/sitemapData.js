@@ -232,7 +232,7 @@ export const sitemapData = {
         {
           id: 'ai-integrity-statement',
           title: 'AI Integrity Statement',
-          path: '/ai-integrity',
+          path: '/ai-integrity-statement',
           description: 'Our commitment to AI integrity and ethical practices.'
         }
       ]

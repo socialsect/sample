@@ -127,6 +127,20 @@
     <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://ferzconsulting.com/products/vectara-f</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://ferzconsulting.com/products/biasguard</loc>
+    <lastmod>2025-01-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Service Pages -->
   <url>
     <loc>https://ferzconsulting.com/services-overview/ai-consulting</loc>
