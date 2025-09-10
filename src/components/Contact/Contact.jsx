@@ -49,10 +49,11 @@ const Contact = () => {
         throw new Error(msg);
       }
 
-      setStatus({ type: 'success', message: 'Message sent successfully. We will get back to you shortly.' });
+      setStatus({ type: 'success' });
       setFormData({ name: '', email: '', message: '' });
+      setTimeout(() => setStatus(null), 3000);
     } catch (err) {
-      setStatus({ type: 'error', message: err.message || 'An error occurred while sending your message.' });
+      setStatus({ type: 'error' });
     } finally {
       setSubmitting(false);
     }
@@ -96,6 +97,8 @@ const Contact = () => {
       description: "Scalable control systems and infrastructure"
     }
   ];
+
+  const buttonLabel = submitting ? 'Sending…' : (status?.type === 'success' ? 'Sent!' : 'Send Message');
 
   return (
     <section className="contact" id="contact">
@@ -202,13 +205,9 @@ const Contact = () => {
                   ></textarea>
                 </div>
 
-                {status && (
-                  <p className={`form-status ${status.type}`}>{status.message}</p>
-                )}
-
                 <button type="submit" className="submit-button" disabled={submitting}>
                   <Send size={18} />
-                  {submitting ? 'Sending…' : 'Send Message'}
+                  {buttonLabel}
                 </button>
               </form>
             </div>
