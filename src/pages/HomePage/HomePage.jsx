@@ -49,8 +49,8 @@ const HomePage = () => {
   return(
     <>
       <Helmet>
-        <title>FERZ | AI Precision Meets Mathematical Certainty</title>
-        <meta name="description" content="CIOs facing €35M AI Act fines achieve mathematical certainty through FERZ's patent-protected deterministic governance. Federal-proven frameworks. Schedule assessment." />
+        <title>Precision in AI | FERZ</title>
+        <meta name="description" content="Precision-driven AI for law, healthcare &amp; finance. FERZ builds deterministic systems with linguistic control—no guesswork, just compliance." />
         <meta name="keywords" content="deterministic AI governance, mathematical AI certainty, EU AI Act compliance, patent-protected AI frameworks, federal AI authority" />
         <link rel="canonical" href="https://ferzconsulting.com/" />
         <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
