@@ -23,7 +23,7 @@ export default async function handler(req, res) {
 
   const resend = new Resend(process.env.RESEND_API_KEY);
 
-  const recipient = to || 'vinayakxsingh21@gmail.com';
+  const recipient = to || 'edward@ferzconsulting.com';
   const emailSubject = subject || `New contact form message from ${name}`;
 
   const html = `
